@@ -3,3 +3,5 @@
 [user]
 	email = yngw.rintaro@gmail.com
 	name = airRnot1106
+[init]
+	defaultBranch = main
