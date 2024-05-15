@@ -1,0 +1,8 @@
+{
+  "coc.preferences.formatOnSave": true,
+  "Lua.workspace.library": [
+    "${3rd}/luv/library"
+  ],
+  "sumneko-lua.enableNvimLuaDev": true,
+  "ruff.autoFixOnSave": true
+}
