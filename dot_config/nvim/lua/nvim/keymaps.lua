@@ -26,6 +26,9 @@ keymap("x", "<C-d>", "d", { noremap = true, silent = true })
 
 -- buffer
 keymap("n", "<Leader>w", ":w<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>[", ":bprev<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>]", ":bnext<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>d", ":bd<CR>", { noremap = true, silent = true })
 
 -- filer
 keymap("n", "<Leader>e", ":lua MiniFiles.open()<CR>", { noremap = true, silent = true })
