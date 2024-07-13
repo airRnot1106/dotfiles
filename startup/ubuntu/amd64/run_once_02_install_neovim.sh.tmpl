@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -eu
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "amd64" }}
+
+echo "Installing Neovim..."
+
+# Download the latest release of neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+
+# Remove the existing neovim directory
+sudo rm -rf /opt/nvim
+
+# Extract the downloaded tar.gz file to /opt directory
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+
+# Remove the downloaded tar.gz file
+rm nvim-linux64.tar.gz
+
+{{ end }}
+{{ end }}
