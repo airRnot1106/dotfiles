@@ -7,8 +7,7 @@ set -eu
 
 echo "Installing docker..."
 
-sudo apt -y update; sudo apt -y ca-certificates curl gnupg lsb-release
-
+sudo apt -y update; sudo apt -y install ca-certificates curl gnupg lsb-release
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg

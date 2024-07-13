@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -eu
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "arm64" }}
+
+echo "Installing neovim..."
+
+sudo apt -y update; sudo apt -y install fuse
+curl -LO https://github.com/matsuu/neovim-aarch64-appimage/releases/download/v0.10.0/nvim-v0.10.0-aarch64.appimage
+chmod u+x nvim-v0.10.0-aarch64.appimage
+sudo mkdir -p /opt/nvim
+sudo mv nvim-v0.10.0-aarch64.appimage /opt/nvim/nvim
+
+{{ end }}
+{{ end }}
