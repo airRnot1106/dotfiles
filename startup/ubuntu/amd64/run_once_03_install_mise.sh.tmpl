@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -eu
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "amd64" }}
+
+echo "Installing mise..."
+
+# mise
+curl https://mise.run | sh
+
+# node
+mise install node@latest
+
+# python
+mise install python@latest
+
+# go
+mise install go@latest
+
+# gleam
+mise install gleam@latest
+
+# erlang
+mise install erlang@latest
+
+{{ end }}
+{{ end }}
