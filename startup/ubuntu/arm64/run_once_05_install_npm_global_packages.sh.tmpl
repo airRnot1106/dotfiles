@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -eu
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "arm64" }}
+
+echo "Installing npm global packages..."
+
+npm i -g bash-language-server
+npm i -g dockerfile-language-server-nodejs
+npm i -g @microsoft/compose-language-service
+npm i -g graphql-language-service-cli
+npm i -g sql-language-server
+
+{{ end }}
+{{ end }}
