@@ -15,6 +15,7 @@ echo "Installing node..."
 mise install node@latest
 
 echo "Installing npm global packages..."
+eval "$(/home/airrnot/.local/bin/mise activate bash)"
 npm i -g bash-language-server
 npm i -g dockerfile-language-server-nodejs
 npm i -g @microsoft/compose-language-service
