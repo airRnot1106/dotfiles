@@ -8,11 +8,7 @@ set -eu
 echo "Installing npm global packages..."
 
 source .bashrc
-
-(
-  source .bashrc
-  ~/.local/share/mise/installs/node/latest/bin/npm i -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
-)
+~/.local/share/mise/installs/node/latest/bin/npm i -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
 
 {{ end }}
 {{ end }}
