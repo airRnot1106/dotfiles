@@ -7,7 +7,8 @@ set -eu
 
 echo "Installing npm global packages..."
 
-~/.local/bin/mise exec node@latest --  ~/.local/share/mise/installs/node/latest/bin/npm i -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
+~/.local/bin/mise exec node@latest --  ~/.local/share/mise/installs/node/latest/bin/npm i -g pnpm
+pnpm add -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
 
 {{ end }}
 {{ end }}
