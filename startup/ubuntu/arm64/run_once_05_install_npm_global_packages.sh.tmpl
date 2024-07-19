@@ -9,8 +9,10 @@ echo "Installing npm global packages..."
 
 source .bashrc
 
-echo "Installing language server protocols..."
-~/.local/share/mise/installs/node/latest/bin/npm i -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
+(
+  source .bashrc
+  ~/.local/share/mise/installs/node/latest/bin/npm i -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
+)
 
 {{ end }}
 {{ end }}
