@@ -122,6 +122,13 @@ printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "bash" }}\x9c'
 # mise
 eval "$(/home/airrnot/.local/bin/mise activate bash)"
 
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 {{ if eq .chezmoi.os "linux" }}
 {{ if eq .chezmoi.arch "arm64" }}
 # neovim
