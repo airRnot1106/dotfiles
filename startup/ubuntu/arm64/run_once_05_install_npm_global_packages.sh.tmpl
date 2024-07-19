@@ -6,6 +6,7 @@ set -eu
 {{ if eq .chezmoi.arch "arm64" }}
 
 echo "Installing npm global packages..."
+eval "$(/home/airrnot/.local/bin/mise activate bash)"
 ~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g bash-language-server
 ~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g dockerfile-language-server-nodejs
 ~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g @microsoft/compose-language-service
