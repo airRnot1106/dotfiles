@@ -2,6 +2,9 @@
 
 set -eu
 
+echo {{ .chezmoi.osRelease.id }}
+echo {{ .chezmoi.arch }}
+
 {{ if eq .chezmoi.osRelease.id "ubuntu" }}
 {{ if eq .chezmoi.arch "amd64" }}
 
