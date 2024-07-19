@@ -14,14 +14,6 @@ eval "$(/home/airrnot/.local/bin/mise activate bash)"
 echo "Installing node..."
 mise install node@latest
 
-echo "Installing npm global packages..."
-eval "$(/home/airrnot/.local/bin/mise activate bash)"
-npm i -g bash-language-server
-npm i -g dockerfile-language-server-nodejs
-npm i -g @microsoft/compose-language-service
-npm i -g graphql-language-service-cli
-npm i -g sql-language-server
-
 # python
 echo "Installing python..."
 mise install python@latest
