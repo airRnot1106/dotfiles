@@ -7,7 +7,7 @@ set -eu
 
 echo "Installing npm global packages..."
 
-eval "$(/home/airrnot/.local/bin/mise activate bash)"
+source .bashrc
 
 echo "Installing language server protocols..."
 ~/.local/share/mise/installs/node/latest/bin/npm i -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
