@@ -7,11 +7,14 @@ set -eu
 
 echo "Installing npm global packages..."
 eval "$(/home/airrnot/.local/bin/mise activate bash)"
-~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g bash-language-server
-~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g dockerfile-language-server-nodejs
-~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g @microsoft/compose-language-service
-~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g graphql-language-service-cli
-~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g sql-language-server
+echo "Installing bash-language-server..."
+mise exec node@latest -- npm install -g bash-language-server
+echo "Installing dockerfile-language-server-nodejs..."
+mise exec node@latest -- npm install -g dockerfile-language-server-nodejs
+echo "Installing @microsoft/compose-language-service..."
+mise exec node@latest -- npm install -g @microsoft/compose-language-service
+echo "Installing graphql-language-service-cli..."
+mise exec node@latest -- npm install -g graphql-language-service-cli
 
 {{ end }}
 {{ end }}
