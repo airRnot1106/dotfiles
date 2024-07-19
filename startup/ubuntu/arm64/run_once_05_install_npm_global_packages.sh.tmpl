@@ -6,7 +6,7 @@ set -eu
 {{ if eq .chezmoi.arch "arm64" }}
 
 echo "Installing npm global packages..."
-eval "$(/home/airrnot/.local/bin/mise activate bash)"
+eval "$(~/.local/bin/mise activate bash)"
 echo "Installing bash-language-server..."
 mise exec node@latest -- npm install -g bash-language-server
 echo "Installing dockerfile-language-server-nodejs..."
