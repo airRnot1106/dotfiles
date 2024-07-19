@@ -8,7 +8,7 @@ set -eu
 echo "Installing pnpm..."
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-echo "Installing npm global packages..."
+echo "Installing pnpm global packages..."
 ~/.local/bin/mise exec node@latest -- pnpm add -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
 
 {{ end }}
