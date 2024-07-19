@@ -5,11 +5,12 @@ set -eu
 {{ if eq .chezmoi.osRelease.id "ubuntu" }}
 {{ if eq .chezmoi.arch "arm64" }}
 
-echo "Installing pnpm..."
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-
-echo "Installing pnpm global packages...."
-source ~/.bashrc; ~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g bash-language-server dockerfile-language-server-nodejs @microsoft/compose-language-service graphql-language-service-cli sql-language-server
+echo "Installing npm global packages..."
+~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g bash-language-server
+~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g dockerfile-language-server-nodejs
+~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g @microsoft/compose-language-service
+~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g graphql-language-service-cli
+~/.local/bin/mise exec node@latest -- ~/.local/share/mise/installs/node/latest/bin/npm install -g sql-language-server
 
 {{ end }}
 {{ end }}
