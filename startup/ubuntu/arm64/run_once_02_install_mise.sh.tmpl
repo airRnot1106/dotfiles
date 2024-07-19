@@ -5,25 +5,36 @@ set -eu
 {{ if eq .chezmoi.osRelease.id "ubuntu" }}
 {{ if eq .chezmoi.arch "arm64" }}
 
-echo "Installing mise..."
-
 # mise
+echo "Installing mise..."
 curl https://mise.run | sh
 eval "$(/home/airrnot/.local/bin/mise activate bash)"
 
 # node
+echo "Installing node..."
 mise install node@latest
 
+echo "Installing npm global packages..."
+npm i -g bash-language-server
+npm i -g dockerfile-language-server-nodejs
+npm i -g @microsoft/compose-language-service
+npm i -g graphql-language-service-cli
+npm i -g sql-language-server
+
 # python
+echo "Installing python..."
 mise install python@latest
 
 # go
+echo "Installing go..."
 mise install go@latest
 
 # gleam
+echo "Installing gleam..."
 mise install gleam@latest
 
 # erlang
+echo "Installing erlang..."
 mise install erlang@latest
 
 {{ end }}
