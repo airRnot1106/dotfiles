@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install dotfiles
-        run: sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply https://github.com/airRnot1106/dotfiles.git --promptString email=example@example.com,name=example
+        run: sh -c "$(curl -fsLS chezmoi.io/get)" -- init --promptDefaults --apply -S .
