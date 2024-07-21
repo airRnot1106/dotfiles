@@ -6,7 +6,9 @@ set -eu
 {{ if eq .chezmoi.arch "amd64" }}
 
 echo "Cleanup startup scripts..."
-rm -rf ~/startup
+if test -d ~/startup; then
+    rm -rf ~/startup
+fi
 
 {{ end }}
 {{ end }}
