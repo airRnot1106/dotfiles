@@ -1,9 +1,12 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $name := promptStringOnce . "name" "Name" -}}
+{{- $email := promptStringOnce . "email" "Email address" "default@example.com"}}
+{{- $name := promptStringOnce . "name" "Name" "default"}}
 
 [data]
     email = {{ $email | quote }}
     name = {{ $name | quote }}
+
+[edit]
+    command = "nvim"
 
 [git]
     autoCommit = true
