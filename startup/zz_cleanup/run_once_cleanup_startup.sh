@@ -2,13 +2,7 @@
 
 set -eu
 
-{{ if eq .chezmoi.osRelease.id "ubuntu" }}
-{{ if eq .chezmoi.arch "arm64" }}
-
 echo "Cleanup startup scripts..."
 if test -d ~/startup; then
     rm -rf ~/startup
 fi
-
-{{ end }}
-{{ end }}
