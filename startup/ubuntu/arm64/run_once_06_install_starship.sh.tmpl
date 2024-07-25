@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "arm64" }}
+
+echo "Installing starship..."
+curl -sS https://starship.rs/install.sh | sudo sh
+
+{{ end }}
+{{ end }}
