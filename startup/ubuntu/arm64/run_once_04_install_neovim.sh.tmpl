@@ -14,12 +14,5 @@ chmod u+x nvim-v0.10.0-aarch64.appimage
 sudo mkdir -p /opt/nvim
 sudo mv nvim-v0.10.0-aarch64.appimage /opt/nvim/nvim
 
-# stylua
-curl -LO https://github.com/JohnnyMorganz/StyLua/releases/download/v0.20.0/stylua-linux-aarch64.zip
-unar stylua-linux-aarch64.zip
-mkdir -p ~/.config/coc/extensions/coc-stylua-data/
-mv stylua ~/.config/coc/extensions/coc-stylua-data/
-rm -rf stylua-linux-aarch64.zip
-
 {{ end }}
 {{ end }}
