@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "amd64" }}
+
+echo "Installing oh-my-posh"
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+{{ end }}
+{{ end }}
