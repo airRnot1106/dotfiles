@@ -14,5 +14,9 @@ chmod u+x nvim-v0.10.0-aarch64.appimage
 sudo mkdir -p /opt/nvim
 sudo mv nvim-v0.10.0-aarch64.appimage /opt/nvim/nvim
 
+cd ~/.config/nvim
+git remote set-url origin git@github.com:airRnot1106/nvimrc.git
+cd -
+
 {{ end }}
 {{ end }}
