@@ -26,6 +26,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# oh-my-posh
+eval "$(oh-my-posh init bash --config '~/.config/omp/theme.json')"
+
 # golang
 export GOPATH=$HOME
 export PATH=$PATH:$HOME/go/bin
