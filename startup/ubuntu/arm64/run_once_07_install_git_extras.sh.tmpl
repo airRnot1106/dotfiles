@@ -14,8 +14,8 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit ~/bin
 
 echo "Installing delta..."
-curl -Lo delta.tar.gz "https://github.com/dandavison/delta/releases/download/0.18.1/delta-0.18.1-aarch64-unknown-linux-gnu.tar.gz"
-sudo tar -xzf delta.tar.gz -C ~/bin --strip-components=1 delta.tar.gz/delta
+curl -LO "https://github.com/dandavison/delta/releases/download/0.18.1/delta-0.18.1-aarch64-unknown-linux-gnu.tar.gz"
+sudo tar -xzf delta-0.18.1-aarch64-unknown-linux-gnu.tar.gz -C ~/bin --strip-components=1 delta-0.18.1-aarch64-unknown-linux-gnu/delta
 
 {{ end }}
 {{ end }}
