@@ -6,6 +6,7 @@ set -eu
 
 # mise
 echo "activate mise..."
+curl https://mise.run | sh
 eval "$(~/.local/bin/mise activate bash)"
 
 # node
