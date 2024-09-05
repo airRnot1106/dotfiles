@@ -1,0 +1,90 @@
+{{ if eq .chezmoi.osRelease.id "ubuntu" }}
+{{ if eq .chezmoi.arch "arm64" }}
+
+# mise
+{{ $miseVersion := (gitHubLatestRelease "jdx/mise").TagName -}}
+[".local/bin/mise"]
+  type = "archive-file"
+  url = "https://github.com/jdx/mise/releases/download/{{ $miseVersion }}/mise-{{ $miseVersion }}-linux-arm64.tar.gz"
+  path = "mise/bin/mise"
+  executable = true
+  refreshPeriod = "168h"
+
+# neovim
+## binary
+{{ $neovimVersion := (gitHubLatestRelease "matsuu/neovim-aarch64-appimage").TagName -}}
+[".local/bin/nvim"]
+  type = "file"
+  url = "https://github.com/matsuu/neovim-aarch64-appimage/releases/download/{{ $neovimVersion }}/nvim-{{ $neovimVersion }}-aarch64.appimage"
+  executable = true
+  refreshPeriod = "168h"
+## nvimrc
+[".config/nvim"]
+  type = "git-repo"
+  url = "https://github.com/airRnot1106/nvimrc.git"
+  refreshPeriod = "24h"
+
+# delta
+{{ $deltaVersion := (gitHubLatestRelease "dandavison/delta").TagName -}}
+[".local/bin/delta"]
+  type = "archive-file"
+  url = "https://github.com/dandavison/delta/releases/download/{{ $deltaVersion }}/delta-{{ $deltaVersion }}-aarch64-unknown-linux-gnu.tar.gz"
+  path = "delta"
+  stripComponents = 1
+  executable = true
+  refreshPeriod = "168h"
+
+# lazygit
+{{ $lazygitVersion := (gitHubLatestRelease "jesseduffield/lazygit").TagName | trimPrefix "v" -}}
+[".local/bin/lazygit"]
+  type = "archive-file"
+  url = "https://github.com/jesseduffield/lazygit/releases/download/v{{ $lazygitVersion }}/lazygit_{{ $lazygitVersion }}_Linux_arm64.tar.gz"
+  path = "lazygit"
+  executable = true
+  refreshPeriod = "168h"
+
+# oh-my-posh
+[".local/bin/oh-my-posh"]
+{{ $ohMyPoshVersion := (gitHubLatestRelease "JanDeDobbeleer/oh-my-posh").TagName -}}
+  type = "file"
+  url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/{{ $ohMyPoshVersion }}/posh-linux-arm64"
+  executable = true
+  refreshPeriod = "168h"
+
+# eza
+{{ $ezaVersion := (gitHubLatestRelease "eza-community/eza").TagName -}}
+[".local/bin/eza"]
+  type = "archive-file"
+  url = "https://github.com/eza-community/eza/releases/download/{{ $ezaVersion }}/eza_aarch64-unknown-linux-gnu.tar.gz"
+  path = "eza"
+  stripComponents = 1
+  executable = true
+  refreshPeriod = "168h"
+
+# fd
+{{ $fdVersion := (gitHubLatestRelease "sharkdp/fd").TagName -}}
+[".local/bin/fd"]
+  type = "archive-file"
+  url = "https://github.com/sharkdp/fd/releases/download/{{ $fdVersion }}/fd-{{ $fdVersion }}-aarch64-unknown-linux-gnu.tar.gz"
+  path = "fd"
+  stripComponents = 1
+  executable = true
+  refreshPeriod = "168h"
+## autocomplate
+[".bash_completion.d/fd"]
+  type = "archive"
+  url = "https://github.com/sharkdp/fd/releases/download/{{ $fdVersion }}/fd-{{ $fdVersion }}-aarch64-unknown-linux-gnu.tar.gz"
+  include = ["*/autocomplete/**"]
+  stripComponents = 1
+  refreshPeriod = "168h"
+
+# genact
+{{ $genactVersion := (gitHubLatestRelease "svenstaro/genact").TagName | trimPrefix "v" -}}
+[".local/bin/genact"]
+  type = "file"
+  url = "https://github.com/svenstaro/genact/releases/download/v{{ $genactVersion }}/genact-{{ $genactVersion }}-aarch64-unknown-linux-gnu"
+  executable = true
+  refreshPeriod = "168h"
+
+{{ end }}
+{{ end }}
