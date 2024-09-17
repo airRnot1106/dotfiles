@@ -15,7 +15,7 @@
 ### Installation
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --branch nix git@github.com:airRnot1106/dotfiles.git
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply --branch nix git@github.com:airRnot1106/dotfiles.git
 ```
 
 ## LICENSE
