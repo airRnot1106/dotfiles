@@ -1,0 +1,5 @@
+README.md
+.vscode/
+flake.nix
+flake.lock
+home/
