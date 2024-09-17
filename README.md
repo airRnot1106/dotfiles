@@ -6,10 +6,17 @@
 </samp>
 </div>
 
-## Branches
+## Getting Started
 
-- chezmoi
-- nix
+### Prerequisites
+
+- git
+
+### Installation
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --branch nix git@github.com:airRnot1106/dotfiles.git
+```
 
 ## LICENSE
 
