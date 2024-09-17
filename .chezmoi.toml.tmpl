@@ -1,0 +1,14 @@
+{{- $email := promptStringOnce . "email" "Email address" "default@example.com"}}
+{{- $name := promptStringOnce . "name" "Name" "default"}}
+
+[data]
+    email = {{ $email | quote }}
+    name = {{ $name | quote }}
+
+[edit]
+    command = "nvim"
+    args = ["-c", ":lcd ~/.local/share/chezmoi"]
+
+[git]
+    autoCommit = true
+    autoPush = true

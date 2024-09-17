@@ -1,0 +1,3 @@
+OPENAI_KEY=
+type=conventional
+model=gpt-4o-mini
