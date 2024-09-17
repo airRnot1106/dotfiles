@@ -10,6 +10,6 @@ rm $HOME/.profile
 
 echo "Installation completed.
 Next Steps: Execute the following commands.
-chezmoi cd
+$HOME/.local/bin/chezmoi cd
 nix run nixpkgs#home-manager -- switch --flake .#airrnot
 "
