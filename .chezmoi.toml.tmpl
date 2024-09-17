@@ -1,0 +1,12 @@
+{{- $openai_key := promptStringOnce . "openai_key" "OpenAI API Key" ""}}
+
+[data]
+    openai_key = {{ $openai_key | quote }}
+
+[edit]
+    command = "nvim"
+    args = ["-c", ":lcd ~/.local/share/chezmoi"]
+
+[git]
+    autoCommit = true
+    autoPush = true
