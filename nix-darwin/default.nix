@@ -32,6 +32,13 @@
       };
     };
   };
+
+  fonts = {
+    packages = with pkgs; [
+      hackgen-nf-font
+    ];
+  };
+
   homebrew = {
     enable = true;
     onActivation = {
