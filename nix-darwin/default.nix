@@ -34,7 +34,7 @@
       WindowManager.EnableStandardClickToShowDesktop = false;
       WindowManager.GloballyEnabled = true;
       ".GlobalPreferences" = {
-        "com.apple.mouse.scaling" = 2.0;
+        "com.apple.mouse.scaling" = 0.9;
       };
       finder = {
         AppleShowAllFiles = true;
