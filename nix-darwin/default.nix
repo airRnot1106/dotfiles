@@ -67,9 +67,9 @@
         Dragging = true;
         TrackpadRightClick = true;
       };
-      keyboard = {
-        remapCapsLockToControl = true;
-      };
+    };
+    keyboard = {
+      remapCapsLockToControl = true;
     };
   };
 
