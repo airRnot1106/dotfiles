@@ -28,13 +28,13 @@
       NSGlobalDomain."com.apple.keyboard.fnState" = true;
       NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
       NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
-      NSGlobalDomain."com.apple.trackpad.scaling" = 3;
+      NSGlobalDomain."com.apple.trackpad.scaling" = 3.0;
       NSGlobalDomain."com.apple.trackpad.trackpadCornerClickBehavior" = 1;
       SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
       WindowManager.EnableStandardClickToShowDesktop = false;
       WindowManager.GloballyEnabled = true;
       ".GlobalPreferences" = {
-        "com.apple.mouse.scaling" = 0.9;
+        "com.apple.mouse.scaling" = 2.0;
       };
       finder = {
         AppleShowAllFiles = true;
