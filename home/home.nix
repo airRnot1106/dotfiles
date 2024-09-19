@@ -20,7 +20,7 @@ in
 
   home = {
     username = username;
-    homeDirectory = "/home/${username}";
+    homeDirectory = "/Users/${username}";
 
     sessionPath = [ "$HOME/.local/bin" ];
 
