@@ -61,6 +61,9 @@
           };
           darwinConfigurations."${username}" = nix-darwin.lib.darwinSystem {
             system = system;
+            extraSpecialArgs = {
+              inherit inputs;
+            };
             modules = [ ./nix-darwin ];
           };
         };
