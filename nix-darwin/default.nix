@@ -46,6 +46,7 @@
       cleanup = "uninstall";
     };
     casks = [
+      "arc"
       "warp"
     ];
   };
