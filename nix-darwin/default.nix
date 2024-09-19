@@ -69,6 +69,7 @@
       };
     };
     keyboard = {
+      enableKeyMapping = true;
       remapCapsLockToControl = true;
     };
   };
