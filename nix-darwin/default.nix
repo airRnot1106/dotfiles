@@ -10,6 +10,7 @@
   services.nix-daemon.enable = true;
 
   system = {
+    stateVersion = 5;
     defaults = {
       NSGlobalDomain.AppleShowAllExtensions = true;
       finder = {
