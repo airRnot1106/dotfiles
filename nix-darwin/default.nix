@@ -13,6 +13,29 @@
     stateVersion = 5;
     defaults = {
       NSGlobalDomain.AppleShowAllExtensions = true;
+      NSGlobalDomain.AppleShowAllFiles = true;
+      NSGlobalDomain.AppleShowScrollBars = "Automatic";
+      NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
+      NSGlobalDomain.InitialKeyRepeat = 0;
+      NSGlobalDomain.KeyRepeat = 0;
+      NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
+      NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
+      NSGlobalDomain.NSAutomaticInlinePredictionEnabled = false;
+      NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
+      NSGlobalDomain.NSAutomaticQuoteSubstitutionEnabled = false;
+      NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+      NSGlobalDomain.NSDocumentSaveNewDocumentsToCloud = false;
+      NSGlobalDomain."com.apple.keyboard.fnState" = true;
+      NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+      NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
+      NSGlobalDomain."com.apple.trackpad.scaling" = 3;
+      NSGlobalDomain."com.apple.trackpad.trackpadCornerClickBehavior" = 1;
+      SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
+      WindowManager.EnableStandardClickToShowDesktop = false;
+      WindowManager.GloballyEnabled = true;
+      ".GlobalPreferences" = {
+        "com.apple.mouse.scaling" = 2.0;
+      };
       finder = {
         AppleShowAllFiles = true;
         AppleShowAllExtensions = true;
@@ -20,6 +43,7 @@
         FXEnableExtensionChangeWarning = false;
         ShowPathbar = true;
         ShowStatusBar = true;
+        QuitMenuItem = true;
       };
       dock = {
         autohide = true;
@@ -27,8 +51,24 @@
         orientation = "bottom";
         tilesize = 50;
         magnification = true;
-        largesize = 64;
+        largesize = 128;
         mineffect = "scale";
+        mru-spaces = false;
+        persistent-apps = [
+          "/Applications/Arc.app/"
+          "/Applications/Warp.app/"
+          "/System/Applications/System\ Settings.app/"
+        ];
+        wvous-bl-corner = 5;
+        wvous-br-corner = 11;
+      };
+      trackpad = {
+        Clicking = true;
+        Dragging = true;
+        TrackpadRightClick = true;
+      };
+      keyboard = {
+        remapCapsLockToControl = true;
       };
     };
   };
