@@ -16,11 +16,19 @@
       finder = {
         AppleShowAllFiles = true;
         AppleShowAllExtensions = true;
+        CreateDesktop = true;
+        FXEnableExtensionChangeWarning = false;
+        ShowPathbar = true;
+        ShowStatusBar = true;
       };
       dock = {
         autohide = true;
         show-recents = false;
         orientation = "bottom";
+        tilesize = 50;
+        magnification = true;
+        largesize = 64;
+        mineffect = "scale";
       };
     };
   };
