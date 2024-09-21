@@ -8,6 +8,7 @@
     ./google-japanese-ime.nix
     ./hiddenbar.nix
     ./keyboardcleantool.nix
+    ./logitech-options.nix
     ./orbstack.nix
     ./raycast.nix
     ./symboliclinker.nix
