@@ -6,5 +6,6 @@
     ./gcc.nix
     ./pnpm.nix
     ./stylua.nix
+    ./tree-sitter.nix
   ];
 }

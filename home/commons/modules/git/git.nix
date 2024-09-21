@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  inherit (import ../../options.nix) gitUsername gitEmail;
+  inherit (import ../../../options.nix) gitUsername gitEmail;
 in
 {
   programs.git = {

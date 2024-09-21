@@ -7,7 +7,11 @@
       max-jobs = 8;
     };
   };
+
   services.nix-daemon.enable = true;
+  services.karabiner-elements.enable = true;
+
+  security.pam.enableSudoTouchIdAuth = true;
 
   system = {
     stateVersion = 5;
@@ -16,8 +20,8 @@
       NSGlobalDomain.AppleShowAllFiles = true;
       NSGlobalDomain.AppleShowScrollBars = "Automatic";
       NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
-      NSGlobalDomain.InitialKeyRepeat = 0;
-      NSGlobalDomain.KeyRepeat = 0;
+      NSGlobalDomain.InitialKeyRepeat = 14;
+      NSGlobalDomain.KeyRepeat = 1;
       NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
       NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
       NSGlobalDomain.NSAutomaticInlinePredictionEnabled = false;
@@ -49,13 +53,14 @@
         autohide = true;
         show-recents = false;
         orientation = "bottom";
-        tilesize = 50;
+        tilesize = 20;
         magnification = true;
-        largesize = 128;
+        largesize = 110;
         mineffect = "scale";
         mru-spaces = false;
         persistent-apps = [
           "/Applications/Arc.app/"
+          "/Applications/Visual Studio Code.app"
           "/Applications/Warp.app/"
           "/System/Applications/System\ Settings.app/"
         ];
@@ -84,11 +89,25 @@
     enable = true;
     onActivation = {
       autoUpdate = true;
-#      cleanup = "uninstall";
+      cleanup = "uninstall";
     };
     casks = [
+      "affinity-designer"
+      "affinity-photo"
+      "affinity-publisher"
+      "appcleaner"
       "arc"
+      "discord"
+      "google-japanese-ime"
+      "hiddenbar"
+      "karabiner-elements"
+      "keyboardcleantool"
+      "orbstack"
+      "raycast"
+      "symboliclinker"
+      "visual-studio-code"
       "warp"
+      "zoom"
     ];
   };
 }

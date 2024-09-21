@@ -1,9 +1,6 @@
+{ pkgs, ... }:
 {
-  pkgs,
-  ...
-}:
-{
-  home.packages = with pkgs; [
+  home.packages = [
     (pkgs.stdenv.mkDerivation {
       name = "era";
       src =

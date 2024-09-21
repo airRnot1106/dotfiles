@@ -1,18 +1,11 @@
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}:
+{ pkgs, inputs, ... }:
 let
-  inherit (import ./options.nix) username;
+  inherit (import ../options.nix) username;
 in
 {
   nixpkgs = {
-    overlays = [
-      inputs.neovim-nightly-overlay.overlays.default
-    ];
+    # overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
+    overlays = [ (import ../overlays/neovim.nix { inherit pkgs; }) ];
     config = {
       allowUnfree = true;
     };
@@ -20,7 +13,7 @@ in
 
   home = {
     username = username;
-    homeDirectory = "/Users/${username}";
+    homeDirectory = "/home/${username}";
 
     sessionPath = [ "$HOME/.local/bin" ];
 
@@ -30,6 +23,7 @@ in
   };
 
   imports = [
+    ../commons/modules
     ./modules
   ];
 
