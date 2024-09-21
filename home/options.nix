@@ -1,4 +1,4 @@
-rec {
+{
   # general
   username = "airrnot";
 

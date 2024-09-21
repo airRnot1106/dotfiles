@@ -1,11 +1,12 @@
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
+# { pkgs, inputs, ... }:
 let
   inherit (import ../options.nix) username;
 in
 {
   nixpkgs = {
-    # overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
-    overlays = [ (import ../overlays/neovim.nix { inherit pkgs; }) ];
+    overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
+    # overlays = [ (import ../overlays/neovim.nix { inherit pkgs; }) ];
     config = {
       allowUnfree = true;
     };

@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }:
+{ inputs, ... }:
+# { pkgs, inputs, ... }:
 let
   inherit (import ../options.nix) username;
 in

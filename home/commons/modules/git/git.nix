@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 let
   inherit (import ../../../options.nix) gitUsername gitEmail;
 in

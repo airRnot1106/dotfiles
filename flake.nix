@@ -15,7 +15,6 @@
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
     };
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs =
@@ -25,7 +24,6 @@
       home-manager,
       nix-darwin,
       neovim-nightly-overlay,
-      flake-utils,
       ...
     }@inputs:
     {
