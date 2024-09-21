@@ -7,7 +7,7 @@
         KeyRepeat = 1;
         AppleKeyboardUIMode = true;
         ApplePressAndHoldEnabled = false;
-        com.apple.keyboard.fnState = true;
+        "com.apple.keyboard.fnState" = true;
       };
     };
     keyboard = {
