@@ -12,7 +12,6 @@
     ./orbstack.nix
     ./raycast.nix
     ./symboliclinker.nix
-    ./visual-studio-code.nix
     ./warp.nix
   ];
 }
