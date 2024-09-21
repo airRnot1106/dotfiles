@@ -8,5 +8,8 @@
     };
   };
 
-  imports = [ ./casks ];
+  imports = [
+    ./casks
+    ./masApps
+  ];
 }
