@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    erlang
-  ];
+  home.packages = with pkgs; [ erlang ];
 }

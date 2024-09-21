@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    unzipNLS
-  ];
+  home.packages = with pkgs; [ unzipNLS ];
 }

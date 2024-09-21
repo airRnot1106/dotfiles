@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    gleam
-  ];
+  home.packages = with pkgs; [ gleam ];
 }

@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./nixfmt-rfc-style.nix
-  ];
+  imports = [ ./nixfmt-rfc-style.nix ];
 }

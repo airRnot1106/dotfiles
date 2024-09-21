@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 let
   nodejs = pkgs.nodejs;
   pnpm = pkgs.pnpm;

@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    genact
-  ];
+  home.packages = with pkgs; [ genact ];
 }

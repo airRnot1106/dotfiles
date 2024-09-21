@@ -1,12 +1,6 @@
 { pkgs, ... }:
 {
-  nix = {
-    optimise.automatic = true;
-    settings = {
-      experimental-features = "nix-command flakes";
-      max-jobs = 8;
-    };
-  };
+  imports = [ ./nix ];
 
   services.nix-daemon.enable = true;
   services.karabiner-elements.enable = true;
@@ -80,9 +74,7 @@
   };
 
   fonts = {
-    packages = with pkgs; [
-      nerdfonts
-    ];
+    packages = with pkgs; [ nerdfonts ];
   };
 
   homebrew = {

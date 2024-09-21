@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    efm-langserver
-  ];
+  home.packages = with pkgs; [ efm-langserver ];
 }

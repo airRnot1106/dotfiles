@@ -1,6 +1,4 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    pkgs.nodePackages.bash-language-server
-  ];
+  home.packages = with pkgs; [ pkgs.nodePackages.bash-language-server ];
 }
