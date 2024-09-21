@@ -1,4 +1,4 @@
 { ... }:
 {
-  imports = [ "./mas.nix" ];
+  imports = [ ./mas.nix ];
 }
