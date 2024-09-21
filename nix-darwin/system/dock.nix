@@ -15,6 +15,7 @@
         persistent-apps = [
           "/Applications/Arc.app/"
           "/Applications/Visual Studio Code.app"
+          # "$HOME/.nix-profile/bin/code"
           "/Applications/Warp.app/"
           "/System/Applications/System\ Settings.app/"
         ];
