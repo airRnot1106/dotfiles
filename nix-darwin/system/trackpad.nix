@@ -3,7 +3,7 @@
   system = {
     defaults = {
       ".GlobalPreferences" = {
-        com.apple.mouse.scaling = 16.0;
+        "com.apple.mouse.scaling" = 16.0;
       };
       NSGlobalDomain = {
         com.apple.swipescrolldirection = true;
