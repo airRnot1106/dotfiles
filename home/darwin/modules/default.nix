@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  imports = [ ./shell ];
+  imports = [
+    ./shell
+    ./util
+  ];
 }
