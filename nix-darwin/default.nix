@@ -84,7 +84,7 @@
     enable = true;
     onActivation = {
       autoUpdate = true;
-      cleanup = "uninstall";
+#      cleanup = "uninstall";
     };
     casks = [
       "arc"
