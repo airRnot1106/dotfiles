@@ -43,7 +43,7 @@
               echo "Updating home-manager..."
               nix run nixpkgs#home-manager -- switch --flake .#${username} --show-trace
               echo "Updating nix-darwin..."
-              nix run nix-darwin -- switch --flake .#${username} --show-trace
+#              nix run nix-darwin -- switch --flake .#${username} --show-trace
               echo "Update complete!"
             ''
           );
