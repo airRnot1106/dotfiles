@@ -5,7 +5,7 @@
       NSGlobalDomain = {
         InitialKeyRepeat = 14;
         KeyRepeat = 1;
-        AppleKeyboardUIMode = true;
+        AppleKeyboardUIMode = 3;
         ApplePressAndHoldEnabled = false;
         "com.apple.keyboard.fnState" = true;
       };
