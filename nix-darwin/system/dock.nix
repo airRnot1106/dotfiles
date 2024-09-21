@@ -14,6 +14,7 @@
         mru-spaces = false;
         persistent-apps = [
           "/Applications/Arc.app/"
+          "/nix/store/2790rj9mndm2h6qysik0rwasnqfzab32-vscode-1.92.0/Applications/Visual Studio Code.app"
           "/Applications/Warp.app/"
           "/System/Applications/System\ Settings.app/"
         ];

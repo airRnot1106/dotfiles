@@ -5,7 +5,10 @@ let
 in
 {
   nixpkgs = {
-    overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
+    overlays = [
+      inputs.neovim-nightly-overlay.overlays.default
+      inputs.nix-vscode-extensions.overlays.default
+    ];
     # overlays = [ (import ../overlays/neovim.nix { inherit pkgs; }) ];
     config = {
       allowUnfree = true;

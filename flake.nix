@@ -15,6 +15,9 @@
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
     };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+    };
   };
 
   outputs =
@@ -24,6 +27,7 @@
       home-manager,
       nix-darwin,
       neovim-nightly-overlay,
+      nix-vscode-extensions,
       ...
     }@inputs:
     {
