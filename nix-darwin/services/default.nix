@@ -1,5 +1,7 @@
 { ... }:
 {
-  services.nix-daemon.enable = true;
-  services.karabiner-elements.enable = true;
+  services = {
+    nix-daemon.enable = true;
+    karabiner-elements.enable = true;
+  };
 }
