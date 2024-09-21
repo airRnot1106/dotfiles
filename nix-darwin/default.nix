@@ -1,11 +1,10 @@
 { pkgs, ... }:
 {
-  imports = [ ./nix ];
-
-  services.nix-daemon.enable = true;
-  services.karabiner-elements.enable = true;
-
-  security.pam.enableSudoTouchIdAuth = true;
+  imports = [
+    ./nix
+    ./security
+    ./services
+  ];
 
   system = {
     stateVersion = 5;
@@ -71,10 +70,6 @@
       enableKeyMapping = true;
       remapCapsLockToControl = true;
     };
-  };
-
-  fonts = {
-    packages = with pkgs; [ nerdfonts ];
   };
 
   homebrew = {

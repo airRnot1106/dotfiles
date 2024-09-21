@@ -4,8 +4,8 @@ let
 in
 {
   nixpkgs = {
-    # overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
-    overlays = [ (import ../overlays/neovim.nix { inherit pkgs; }) ];
+    overlays = [ inputs.neovim-nightly-overlay.overlays.default ];
+    # overlays = [ (import ../overlays/neovim.nix { inherit pkgs; }) ];
     config = {
       allowUnfree = true;
     };

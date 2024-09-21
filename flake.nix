@@ -12,9 +12,9 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # neovim-nightly-overlay = {
-    #   url = "github:nix-community/neovim-nightly-overlay";
-    # };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+    };
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -24,7 +24,7 @@
       nixpkgs,
       home-manager,
       nix-darwin,
-      # neovim-nightly-overlay,
+      neovim-nightly-overlay,
       flake-utils,
       ...
     }@inputs:
