@@ -7,4 +7,3 @@ in
 {
   programs.vscode.userSettings = git;
 }
-

@@ -8,4 +8,3 @@ in
 {
   programs.vscode.userSettings = explorer;
 }
-

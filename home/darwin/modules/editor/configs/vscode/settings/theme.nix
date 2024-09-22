@@ -15,4 +15,3 @@ in
 {
   programs.vscode.userSettings = theme;
 }
-
