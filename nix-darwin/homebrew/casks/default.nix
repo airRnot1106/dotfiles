@@ -2,7 +2,7 @@
 {
   imports = [
     ./affinity.nix
-    ./appcleaner.nix
+    # ./appcleaner.nix
     ./arc.nix
     ./discord.nix
     ./google-japanese-ime.nix
