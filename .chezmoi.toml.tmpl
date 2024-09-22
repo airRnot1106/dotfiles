@@ -9,7 +9,7 @@
 
 [edit]
     command = "nvim"
-    args = ["-c", ":lcd ~/.local/share/chezmoi"]
+    args = ["-c", ":lcd {{ .chezmoi.config.sourceDir }}"]
 
 [git]
     autoCommit = true

@@ -4,12 +4,12 @@ set -eu
 
 echo "Creating the script to set env variables..."
 
-cat <<EOL > ./set_env_variables.sh
+cat <<EOL > {{ .chezmoi.config.sourceDir }}/set_env_variables.sh
 export GIT_USERNAME="{{ .git_username }}"
 export GIT_EMAIL="{{ .git_email }}"
 export OPENAI_KEY="{{ .openai_key }}"
 EOL
 
-chmod +x ./set_env_variables.sh
+chmod +x {{ .chezmoi.config.sourceDir }}/set_env_variables.sh
 
 echo "script has been created with execution permissions."
