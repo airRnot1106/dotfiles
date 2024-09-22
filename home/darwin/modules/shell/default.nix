@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./warp-terminal.nix
+    # ./warp-terminal.nix
     ./zsh.nix
   ];
 }
