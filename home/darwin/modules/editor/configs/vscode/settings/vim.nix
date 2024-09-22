@@ -473,6 +473,5 @@ let
   };
 in
 {
-  # inherit vim;
   programs.vscode.userSettings = vim;
 }
