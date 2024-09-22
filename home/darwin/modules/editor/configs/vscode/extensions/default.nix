@@ -2,20 +2,12 @@
 {
   programs.vscode = {
     mutableExtensionsDir = true;
-    extensions = (
-      with pkgs.vscode-extensions;
-      [
+    extensions =
+      (with pkgs.vscode-extensions; [
         alexisvt.flutter-snippets
         apollographql.vscode-apollo
         asvetliakov.vscode-neovim
         bbenoist.nix
-        bierner.github-markdown-preview
-        bierner.markdown-checkbox
-        bierner.markdown-emoji
-        bierner.markdown-footnotes
-        bierner.markdown-mermaid
-        bierner.markdown-preview-github-styles
-        bierner.markdown-yaml-preamble
         biomejs.biome
         bourhaouta.tailwindshades
         bradlc.vscode-tailwindcss
@@ -129,7 +121,15 @@
         zarifprogrammer.tailwind-snippets
         zhihaocui.ts-interface-sorter
         zignd.html-css-class-completion
-      ]
-    );
+      ])
+      ++ (with pkgs.vscode-marketplace; [
+        bierner.github-markdown-preview
+        bierner.markdown-checkbox
+        bierner.markdown-emoji
+        bierner.markdown-footnotes
+        bierner.markdown-mermaid
+        bierner.markdown-preview-github-styles
+        bierner.markdown-yaml-preamble
+      ]);
   };
 }
