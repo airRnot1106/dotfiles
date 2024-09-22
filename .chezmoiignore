@@ -1,5 +1,6 @@
 README.md
 .vscode/
+.gitignore
 flake.nix
 flake.lock
 home/
