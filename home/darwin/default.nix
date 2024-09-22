@@ -1,7 +1,12 @@
 { inputs, ... }:
 # { pkgs, inputs, ... }:
 let
-  inherit (import ../options.nix) username gitUsername gitEmail;
+  inherit (import ../options.nix)
+    username
+    gitUsername
+    gitEmail
+    openaiKey
+    ;
 in
 {
   nixpkgs = {
@@ -23,6 +28,7 @@ in
     sessionVariables = {
       GIT_USERNAME = gitUsername;
       GIT_EMAIL = gitEmail;
+      OPENAI_KEY = openaiKey;
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

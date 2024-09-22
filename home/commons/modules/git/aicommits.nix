@@ -44,15 +44,15 @@ in
     })
   ];
 
-  # home.file.".aicommits" = {
-  #   text =
-  #     let
-  #       inherit (import ../../options.nix) openaiKey;
-  #     in
-  #     ''
-  #       OPENAI_KEY=${openaiKey}
-  #       type=conventional
-  #       model=gpt-4o-mini
-  #     '';
-  # };
+  home.file.".aicommits" = {
+    text =
+      let
+        inherit (import ../../../options.nix) openaiKey;
+      in
+      ''
+        OPENAI_KEY=${openaiKey}
+        type=conventional
+        model=gpt-4o-mini
+      '';
+  };
 }
