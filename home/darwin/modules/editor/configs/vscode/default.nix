@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./settings ];
+  imports = [
+    ./keybindings
+    ./settings
+  ];
 }
