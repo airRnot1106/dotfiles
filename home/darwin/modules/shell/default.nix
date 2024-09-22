@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./zsh.nix ];
+  imports = [
+    ./warp-terminal.nix
+    ./zsh.nix
+  ];
 }
