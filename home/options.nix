@@ -1,8 +1,8 @@
 {
   # general
-  username = "airrnot";
+  username = builtins.getEnv "USER";
 
   # git
-  gitUsername = "airRnot1106";
-  gitEmail = "yngw.rintaro@gmail.com";
+  gitUsername = builtins.getEnv "GIT_USERNAME";
+  gitEmail = builtins.getEnv "GIT_EMAIL";
 }

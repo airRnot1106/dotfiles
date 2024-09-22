@@ -45,7 +45,7 @@
               echo "Updating flake..."
               nix flake update
               echo "Updating home-manager..."
-              nix run nixpkgs#home-manager -- switch --flake .#x86_64-linux --show-trace
+              nix run nixpkgs#home-manager -- switch --flake .#x86_64-linux --show-trace --impure
               echo "Update complete!"
             ''
           );
@@ -58,7 +58,7 @@
               echo "Updating flake..."
               nix flake update
               echo "Updating home-manager..."
-              nix run nixpkgs#home-manager -- switch --flake .#aarch64-linux --show-trace
+              nix run nixpkgs#home-manager -- switch --flake .#aarch64-linux --show-trace --impure
               echo "Update complete!"
             ''
           );
@@ -71,9 +71,9 @@
               echo "Updating flake..."
               nix flake update
               echo "Updating home-manager..."
-              nix run nixpkgs#home-manager -- switch --flake .#x86_64-darwin --show-trace
+              nix run nixpkgs#home-manager -- switch --flake .#x86_64-darwin --show-trace --impure
               echo "Updating nix-darwin..."
-              nix run nix-darwin -- switch --flake .#x86_64-darwin --show-trace
+              nix run nix-darwin -- switch --flake .#x86_64-darwin --show-trace --impure
               echo "Update complete!"
             ''
           );
@@ -86,9 +86,9 @@
               echo "Updating flake..."
               nix flake update
               echo "Updating home-manager..."
-              nix run nixpkgs#home-manager -- switch --flake .#aarch64-darwin --show-trace
+              nix run nixpkgs#home-manager -- switch --flake .#aarch64-darwin --show-trace --impure
               echo "Updating nix-darwin..."
-              nix run nix-darwin -- switch --flake .#aarch64-darwin --show-trace
+              nix run nix-darwin -- switch --flake .#aarch64-darwin --show-trace --impure
               echo "Update complete!"
             ''
           );

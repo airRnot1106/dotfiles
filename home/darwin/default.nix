@@ -1,7 +1,7 @@
 { inputs, ... }:
 # { pkgs, inputs, ... }:
 let
-  inherit (import ../options.nix) username;
+  inherit (import ../options.nix) username gitUsername gitEmail;
 in
 {
   nixpkgs = {
@@ -20,6 +20,10 @@ in
     homeDirectory = "/Users/${username}";
 
     sessionPath = [ "$HOME/.local/bin" ];
+    sessionVariables = {
+      GIT_USERNAME = gitUsername;
+      GIT_EMAIL = gitEmail;
+    };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     stateVersion = "24.05";
