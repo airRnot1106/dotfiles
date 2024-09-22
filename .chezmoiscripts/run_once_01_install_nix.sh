@@ -13,10 +13,11 @@ if [ -f "$HOME/.profile" ]; then
     rm "$HOME/.profile"
 fi
 
-echo "Installation completed.
-Next Steps: Execute the following commands.
-------------------------------------------
-$HOME/.local/bin/chezmoi cd
-nix run
-------------------------------------------
-"
+if [ -f "$HOME/.zshrc" ]; then
+    rm "$HOME/.zshrc"
+fi
+if [ -f "$HOME/.zshenv" ]; then
+    rm "$HOME/.zshenv"
+fi
+
+echo "Installation completed."

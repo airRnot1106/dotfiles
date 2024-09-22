@@ -1,6 +1,10 @@
+{{- $git_username := promptStringOnce . "git_username" "Git username" ""}}
+{{- $git_email := promptStringOnce . "openai_key" "Git email" ""}}
 {{- $openai_key := promptStringOnce . "openai_key" "OpenAI API Key" ""}}
 
 [data]
+    git_username = {{ $git_username | quote }}
+    git_email = {{ $git_email | quote }}
     openai_key = {{ $openai_key | quote }}
 
 [edit]
