@@ -3,7 +3,7 @@
   programs.vscode = {
     mutableExtensionsDir = true;
     extensions = (
-      with pkgs.vscode-marketplace;
+      with pkgs.vscode-extensions;
       [
         alexisvt.flutter-snippets
         apollographql.vscode-apollo
