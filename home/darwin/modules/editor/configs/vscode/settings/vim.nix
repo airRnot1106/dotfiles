@@ -1,7 +1,6 @@
 { ... }:
 let
   vim = {
-    # vim
     "vim.leader" = "<space>";
     "vim.useSystemClipboard" = true;
     "vim.visualstar" = true;

@@ -1,10 +1,9 @@
 { ... }:
 let
   window = {
-    # window
-    "window.title" = "\${dirty}\${activeEditorMedium}\${separator}\${rootName}";
     "window.closeWhenEmpty" = false;
     "window.restoreWindows" = "none";
+    "window.title" = "\${dirty}\${activeEditorMedium}\${separator}\${rootName}";
   };
 in
 {
