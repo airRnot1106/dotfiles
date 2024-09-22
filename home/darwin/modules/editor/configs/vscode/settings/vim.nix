@@ -1,3 +1,4 @@
+{ ... }:
 let
   vim = {
     # vim
@@ -472,5 +473,6 @@ let
   };
 in
 {
-  inherit vim;
+  # inherit vim;
+  programs.vscode.userSettings = vim;
 }

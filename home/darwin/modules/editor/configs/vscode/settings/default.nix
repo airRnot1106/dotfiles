@@ -1,7 +1,11 @@
 { ... }:
 let
-  inherit (import ./vim.nix) vim;
 in
+# inherit (import ./vim.nix) vim;
 {
-  programs.vscode.userSettings = vim;
+  # programs.vscode.userSettings = vim;
+  imports = [
+    ./vim.nix
+    ./window.nix
+  ];
 }
