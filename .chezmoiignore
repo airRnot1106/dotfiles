@@ -3,3 +3,4 @@ README.md
 flake.nix
 flake.lock
 home/
+nix-darwin/
