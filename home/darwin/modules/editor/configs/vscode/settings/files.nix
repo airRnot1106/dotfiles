@@ -4,7 +4,7 @@ let
     "files.associations" = {
       "*.arb" = "json";
     };
-    ";iles.autoGuessEncoding" = true;
+    "files.autoGuessEncoding" = true;
     "files.eol" = "\n";
     "files.exclude" = {
       "**/.git" = true;
