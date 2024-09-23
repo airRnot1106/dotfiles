@@ -2,6 +2,8 @@
 
 set -eu
 
+{{ if ne .chezmoi.osRelease.name "NixOS" }}
+
 echo "Installing Nix..."
 
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
@@ -21,3 +23,5 @@ if [ -f "$HOME/.zshenv" ]; then
 fi
 
 echo "Installation completed."
+
+{{ end }}
