@@ -1,8 +1,7 @@
-#!/bin/bash
+{{ if ne .chezmoi.osRelease.name "NixOS" -}}
+#!/bin/sh
 
 set -eu
-
-{{ if ne .chezmoi.osRelease.name "NixOS" }}
 
 echo "Installing Nix..."
 
@@ -23,5 +22,4 @@ if [ -f "$HOME/.zshenv" ]; then
 fi
 
 echo "Installation completed."
-
 {{ end }}
