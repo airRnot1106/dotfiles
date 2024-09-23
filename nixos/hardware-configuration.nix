@@ -7,6 +7,15 @@
     fsType = "ext4";
   };
 
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/NIX_BOOT";
+    fsType = "vfat";
+    options = [
+      "fmask=0022"
+      "dmask=0022"
+    ];
+  };
+
   # Set your system kind (needed for flakes)
   # nixpkgs.hostPlatform = "x86_64-linux";
 }
