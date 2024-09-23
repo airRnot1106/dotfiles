@@ -144,7 +144,7 @@
           };
           modules = [ ./nixos ];
         };
-        aarch64-linux = nixpkgs.lib.nixosSystm {
+        aarch64-linux = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
           };
