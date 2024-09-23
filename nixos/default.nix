@@ -5,6 +5,9 @@
 
   imports = [
     ./boot
+    ./hardware-configuration
     ./nix
+    ./services
+    ./users
   ];
 }
