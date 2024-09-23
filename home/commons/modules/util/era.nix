@@ -12,7 +12,7 @@
         else if pkgs.system == "aarch64-linux" then
           builtins.fetchTarball {
             url = "https://github.com/airRnot1106/era/releases/download/v0.1.3/era-v0.1.3-aarch64-linux.tar.gz";
-            sha256 = "0c894f0z83cds9pk4jxr4rryck9nfb67gy3v9c2x1q0mx0psbcx5";
+            sha256 = "0r804l7l5xlxzyap32i5q2l706xfgwsdqiylw71rk6hk2m487w79";
           }
         else if pkgs.system == "x86_64-darwin" then
           builtins.fetchTarball {
