@@ -136,26 +136,5 @@
           modules = [ ./nix-darwin ];
         };
       };
-
-      nixosConfigurations =
-        let
-          inherit (self) outputs;
-        in
-        {
-          x86_64-linux = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
-            specialArgs = {
-              inherit inputs outputs;
-            };
-            modules = [ ./nixos ];
-          };
-          aarch64-linux = nixpkgs.lib.nixosSystem {
-            system = "aarch64-linux";
-            specialArgs = {
-              inherit inputs outputs;
-            };
-            modules = [ ./nixos ];
-          };
-        };
     };
 }
