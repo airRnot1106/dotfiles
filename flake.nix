@@ -137,21 +137,25 @@
         };
       };
 
-      nixosConfigurations = {
-        x86_64-linux = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = {
-            inherit inputs;
+      nixosConfigurations =
+        let
+          inherit (self) outputs;
+        in
+        {
+          x86_64-linux = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            specialArgs = {
+              inherit inputs outputs;
+            };
+            modules = [ ./nixos ];
           };
-          modules = [ ./nixos ];
-        };
-        aarch64-linux = nixpkgs.lib.nixosSystem {
-          system = "aarch64-linux";
-          specialArgs = {
-            inherit inputs;
+          aarch64-linux = nixpkgs.lib.nixosSystem {
+            system = "aarch64-linux";
+            specialArgs = {
+              inherit inputs outputs;
+            };
+            modules = [ ./nixos ];
           };
-          modules = [ ./nixos ];
         };
-      };
     };
 }
