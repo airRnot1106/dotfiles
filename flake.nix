@@ -136,5 +136,20 @@
           modules = [ ./nix-darwin ];
         };
       };
+
+      nixosConfigurations = {
+        x86_64-linux = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [ ./nixos ];
+        };
+        aarch64-linux = nixpkgs.lib.nixosSystm {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [ ./nixos ];
+        };
+      };
     };
 }
