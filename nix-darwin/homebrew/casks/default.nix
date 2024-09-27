@@ -13,6 +13,7 @@
     ./orbstack.nix
     ./raycast.nix
     ./symboliclinker.nix
+    ./vmware-fusion.nix
     ./warp.nix
   ];
 }
