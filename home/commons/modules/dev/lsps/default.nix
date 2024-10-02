@@ -6,5 +6,6 @@
     ./lua-language-server.nix
     ./nil.nix
     ./typescript-language-server.nix
+    ./tailwindcss-language-server.nix
   ];
 }
