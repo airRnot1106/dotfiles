@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./astro-language-server.nix
     ./bash-language-server.nix
     ./efm-langserver.nix
     ./lua-language-server.nix
