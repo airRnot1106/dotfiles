@@ -21,7 +21,7 @@ keybinds {
             SwitchToMode "normal"
         }
     }
-    notmal clear-defaults=true {
+    normal clear-defaults=true {
         bind "Ctrl b" {
             SwitchToMode "tmux"
         }
