@@ -1,4 +1,4 @@
-themes "rose-pine-moon"
+theme "rose-pine-moon"
 themes {
     rose-pine-moon {
         bg "#44415a"
