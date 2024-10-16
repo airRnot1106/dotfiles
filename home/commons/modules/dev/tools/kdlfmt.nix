@@ -10,7 +10,7 @@
         rev = "v0.0.3";
         hash = "";
       };
-      cargoLock.lockFile = ./Cargo.lock;
+      cargoLock.lockFile = "$src/Cargo.lock";
     })
   ];
 }
