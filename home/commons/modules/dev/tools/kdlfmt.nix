@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = [
-    (pkgs.rustPlatform.buildRustPackage {
+    (pkgs.rustPlatform.buildRustPackage rec {
       pname = "kdlfmt";
       version = "0.0.3";
       src = pkgs.fetchFromGitHub {
@@ -10,7 +10,7 @@
         rev = "v0.0.3";
         hash = "";
       };
-      cargoLock.lockFile = "$src/Cargo.lock";
+      cargoLock.lockFile = "${src}/Cargo.lock";
     })
   ];
 }
