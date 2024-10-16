@@ -19,6 +19,7 @@
           white = "#e0def4";
         };
       };
+      pane_frames = false;
     };
   };
 }
