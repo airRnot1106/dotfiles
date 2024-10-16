@@ -24,7 +24,7 @@ in
     settings = {
       font = {
         normal = {
-          family = "PlemolJP Console NF";
+          family = "HackGen Console NF";
         };
         size = 18.0;
         offset = {
