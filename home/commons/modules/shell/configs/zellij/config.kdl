@@ -26,5 +26,11 @@ keybinds {
             SwitchToMode "tmux"
         }
     }
+    tmux {
+        unbind "Ctrl p"
+        bind "Ctrl g" {
+            SwitchToMode "pane"
+        }
+    }
 }
 
