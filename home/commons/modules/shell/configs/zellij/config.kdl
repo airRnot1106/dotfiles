@@ -25,11 +25,17 @@ keybinds {
         bind "Ctrl b" {
             SwitchToMode "tmux"
         }
+        bind "F12" {
+            SwitchToMode "locked"
+        }
     }
     tmux {
         unbind "Ctrl p"
         bind "Ctrl g" {
             SwitchToMode "pane"
+        }
+        bind "F12" {
+            SwitchToMode "locked"
         }
     }
 }
