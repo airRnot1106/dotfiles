@@ -24,6 +24,8 @@
       set -g update-environment -r
 
       set -ag terminal-overrides ",alacritty*:Tc,foot*:Tc,xterm-kitty*:Tc,xterm-256color:Tc"
+
+      set -g status-right '%a | %Y-%m-%d | %H:%M'
     '';
   };
 }
