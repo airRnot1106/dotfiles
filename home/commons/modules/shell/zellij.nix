@@ -26,6 +26,9 @@
             SwitchToMode = "normal";
           };
         };
+        normal = {
+          unbind = "Ctrl n";
+        };
       };
     };
   };
