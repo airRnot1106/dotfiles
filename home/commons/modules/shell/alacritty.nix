@@ -26,7 +26,7 @@ in
         normal = {
           family = "PlemolJP Console NF";
         };
-        size = 16.0;
+        size = 18.0;
         offset = {
           x = 1;
           y = 1;
