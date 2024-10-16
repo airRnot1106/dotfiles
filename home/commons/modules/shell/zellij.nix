@@ -26,8 +26,10 @@
             SwitchToMode = "normal";
           };
         };
-        normal = {
-          unbind = "Ctrl n";
+        "normal clear-defaults=true" = {
+          "bind \"Ctrl b\"" = {
+            SwitchToMode = "tmux";
+          };
         };
       };
     };
