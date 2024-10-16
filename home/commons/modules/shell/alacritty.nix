@@ -26,7 +26,7 @@ in
         normal = {
           family = "HackGen Console NF";
         };
-        size = 18.0;
+        size = 16.0;
         offset = {
           x = 1;
           y = 1;
