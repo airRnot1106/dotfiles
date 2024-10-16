@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./oh-my-posh.nix ];
+  imports = [
+    ./alacritty.nix
+    ./oh-my-posh.nix
+  ];
 }
