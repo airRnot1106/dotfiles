@@ -20,6 +20,11 @@
         };
       };
       pane_frames = false;
+      keybinds = {
+        "shared_except \"normal\"" = {
+          bind "q"
+        };
+      };
     };
   };
 }
