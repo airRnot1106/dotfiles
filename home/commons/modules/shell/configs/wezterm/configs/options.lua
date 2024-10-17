@@ -10,7 +10,8 @@ function M.setup(config)
 	config.show_new_tab_button_in_tab_bar = false
 	config.show_close_tab_button_in_tabs = false
 
-	config.default_prog = { os.getenv("SHELL") or "bash", "-l", "-c", "zellij" }
+	local shell = os.getenv("SHELL") or "bash"
+	config.default_prog = { shell, "-l", "-c", "zellij" }
 
 	return config
 end
