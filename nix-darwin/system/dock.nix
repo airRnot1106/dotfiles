@@ -18,7 +18,7 @@ in
         persistent-apps = [
           "/Applications/Arc.app"
           "/Users/${username}/.nix-profile/Applications/Visual Studio Code.app"
-          "/Applications/Warp.app"
+          "/Applications/WezTerm.app"
           "/System/Applications/System\ Settings.app/"
         ];
         wvous-bl-corner = 5;
