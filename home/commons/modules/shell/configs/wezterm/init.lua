@@ -7,5 +7,6 @@ if wezterm.config_builder then
 end
 
 config = require("configs.font").setup(config)
+config = require("configs.theme").setup(config)
 
 return config
