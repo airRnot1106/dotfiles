@@ -11,7 +11,7 @@ function M.setup(config)
 	config.show_close_tab_button_in_tabs = false
 
 	local shell = os.getenv("SHELL") or "bash"
-	config.default_prog = { shell, "-l", "-c", "zellij" }
+	config.default_prog = { shell, "-l", "-c", "cd ~ && zellij" }
 
 	return config
 end
