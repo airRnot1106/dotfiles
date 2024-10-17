@@ -10,7 +10,7 @@ function M.setup(config)
 	config.show_new_tab_button_in_tab_bar = false
 	config.show_close_tab_button_in_tabs = false
 
-	config.default_prog = { "zsh", "-l" }
+	config.default_prog = { "zsh", "-l", "-c", "zellij" }
 
 	return config
 end
