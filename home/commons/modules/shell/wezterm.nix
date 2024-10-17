@@ -1,4 +1,4 @@
 { ... }:
 {
-  xdg.configFile."wezterm/wezterm.lua".source = ./configs/wezterm/wezterm.lua;
+  xdg.configFile."wezterm".source = ./configs/wezterm;
 }
