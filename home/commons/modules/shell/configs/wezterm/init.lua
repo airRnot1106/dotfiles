@@ -8,5 +8,6 @@ end
 
 config = require("configs.font").setup(config)
 config = require("configs.theme").setup(config)
+config = require("configs.options").setup(config)
 
 return config
