@@ -1,5 +1,4 @@
 local M = {}
-local wezterm = require("wezterm")
 
 function M.setup(config)
 	config.use_ime = true
@@ -10,6 +9,8 @@ function M.setup(config)
 	config.use_fancy_tab_bar = false
 	config.show_new_tab_button_in_tab_bar = false
 	config.show_close_tab_button_in_tabs = false
+
+	config.default_prog = { os.getenv("SHELL") or "bash", "-l", "-c", "zellij" }
 
 	return config
 end
