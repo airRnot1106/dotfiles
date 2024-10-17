@@ -1,3 +1,5 @@
+local wezterm = require("wezterm")
+
 local config = {}
 
 if wezterm.config_builder then
