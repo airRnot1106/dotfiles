@@ -14,5 +14,6 @@
     ./raycast.nix
     ./symboliclinker.nix
     ./warp.nix
+    ./wezterm.nix
   ];
 }
