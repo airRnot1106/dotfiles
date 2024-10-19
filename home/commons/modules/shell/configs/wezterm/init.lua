@@ -14,6 +14,7 @@ config = require("configs.keybinds").setup(config)
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or { width = 158, height = 56 })
+	window:gui_window():set_position(0, 0)
 	window:maximize()
 end)
 
