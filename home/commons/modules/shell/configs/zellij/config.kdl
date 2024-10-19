@@ -38,5 +38,25 @@ keybinds {
             SwitchToMode "locked"
         }
     }
+    pane {
+        unbind "Ctrl n"
+        unbind "Ctrl r"
+        unbind "Ctrl d"
+        bind "Ctrl v" {
+            NewPane "Right"
+        }
+        bind "Ctrl s" {
+            NewPane "Down"
+        }
+        bind "Ctrl d" {
+            CloseFocus
+        }
+    }
+    tab {
+        unbind "Ctrl x"
+        bind "Ctrl d" {
+            CloseTab
+        }
+    }
 }
 
