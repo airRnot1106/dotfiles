@@ -39,22 +39,22 @@ keybinds {
         }
     }
     pane {
-        unbind "Ctrl n"
-        unbind "Ctrl r"
-        unbind "Ctrl d"
-        bind "Ctrl v" {
+        unbind "n"
+        unbind "r"
+        unbind "d"
+        bind "v" {
             NewPane "Right"
         }
-        bind "Ctrl s" {
+        bind "s" {
             NewPane "Down"
         }
-        bind "Ctrl d" {
+        bind "d" {
             CloseFocus
         }
     }
     tab {
-        unbind "Ctrl x"
-        bind "Ctrl d" {
+        unbind "x"
+        bind "d" {
             CloseTab
         }
     }
