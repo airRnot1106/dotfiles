@@ -41,7 +41,7 @@ keybinds {
     pane {
         unbind "n"
         unbind "r"
-        unbind "d"
+        unbind "x"
         bind "v" {
             NewPane "Right"
         }
