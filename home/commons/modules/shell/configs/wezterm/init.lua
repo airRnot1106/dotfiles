@@ -11,4 +11,11 @@ config = require("configs.theme").setup(config)
 config = require("configs.options").setup(config)
 config = require("configs.keybinds").setup(config)
 
+local mux = wezterm.mux
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = mux.spawn_window(cmd or { width = 158, height = 56 })
+	window:gui_window():set_position(0, 0)
+	window:set_inner_size(800, 1020)
+end)
+
 return config
