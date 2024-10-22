@@ -16,7 +16,7 @@
       };
       customCommands = [
         {
-          key = "a";
+          key = "<c-a>";
           description = "aicommits";
           command = "aicommits";
           context = "files";
