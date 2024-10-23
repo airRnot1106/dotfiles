@@ -15,6 +15,7 @@
         esbenp.prettier-vscode
         formulahendry.auto-close-tag
         formulahendry.auto-rename-tag
+        github.copilot
         golang.go
         jebbs.plantuml
         jnoortheen.nix-ide
