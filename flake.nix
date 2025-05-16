@@ -12,6 +12,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +33,7 @@
       flake-utils,
       treefmt-nix,
       home-manager,
+      nix-darwin,
       neovim-nightly-overlay,
       nix-vscode-extensions,
       ...
@@ -81,6 +86,12 @@
               modules = [
                 ./home
               ];
+            };
+          };
+          darwinConfigurations = {
+            personal = nix-darwin.lib.darwinSystem {
+              system = system;
+              modules = [ ./nix-darwin ];
             };
           };
         };
