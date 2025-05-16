@@ -8,6 +8,18 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-vscode-extensions = {
+      url = "github:nix-community/nix-vscode-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -16,6 +28,9 @@
       nixpkgs,
       flake-utils,
       treefmt-nix,
+      home-manager,
+      neovim-nightly-overlay,
+      nix-vscode-extensions,
       ...
     }@inputs:
     flake-utils.lib.eachDefaultSystem (
@@ -41,6 +56,33 @@
         checks.formatting = treefmt-nix.lib.mkCheck pkgs {
           inherit treefmt;
           projectRoot = self;
+        };
+        apps.default = {
+          type = "app";
+          program = toString (
+            pkgs.writeShellScript "update-script" ''
+              set -e
+              echo "Updating flake..."
+              nix flake update
+              echo "Updating home-manager..."
+              nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
+              echo "Updating nix-darwin..."
+              nix run nix-darwin -- switch --flake .#personal --show-trace --impure
+              echo "Update complete!"
+            ''
+          );
+        };
+        legacyPackages = {
+          inherit (pkgs) home-manager;
+          homeConfigurations = {
+            personal = home-manager.lib.homeManagerConfiguration {
+              pkgs = pkgs;
+              extraSpecialArgs = { inherit inputs; };
+              modules = [
+                ./home
+              ];
+            };
+          };
         };
       }
     );
