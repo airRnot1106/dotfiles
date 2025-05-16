@@ -1,0 +1,83 @@
+{ pkgs, ... }:
+{
+  programs.vscode = {
+    mutableExtensionsDir = true;
+    profiles.default.extensions =
+      (with pkgs.vscode-extensions; [
+        bbenoist.nix
+        bradlc.vscode-tailwindcss
+        brettm12345.nixfmt-vscode
+        charliermarsh.ruff
+        christian-kohler.path-intellisense
+        codezombiech.gitignore
+        dbaeumer.vscode-eslint
+        denoland.vscode-deno
+        ecmel.vscode-html-css
+        esbenp.prettier-vscode
+        formulahendry.auto-close-tag
+        formulahendry.auto-rename-tag
+        github.copilot
+        golang.go
+        jebbs.plantuml
+        jnoortheen.nix-ide
+        mechatroner.rainbow-csv
+        mhutchie.git-graph
+        ms-azuretools.vscode-docker
+        ms-ceintl.vscode-language-pack-ja
+        ms-dotnettools.csharp
+        ms-dotnettools.vscode-dotnet-runtime
+        ms-python.python
+        ms-vscode-remote.remote-containers
+        ms-vscode-remote.remote-ssh
+        ms-vscode-remote.remote-ssh-edit
+        oderwat.indent-rainbow
+        prisma.prisma
+        ritwickdey.liveserver
+        rust-lang.rust-analyzer
+        shardulm94.trailing-spaces
+        streetsidesoftware.code-spell-checker
+        stylelint.vscode-stylelint
+        sumneko.lua
+        visualstudioexptteam.intellicode-api-usage-examples
+        visualstudioexptteam.vscodeintellicode
+        vscode-icons-team.vscode-icons
+        vscodevim.vim
+        vue.volar
+      ])
+      ++ (with pkgs.vscode-marketplace; [
+        bierner.github-markdown-preview
+        bierner.markdown-checkbox
+        bierner.markdown-emoji
+        bierner.markdown-footnotes
+        bierner.markdown-mermaid
+        bierner.markdown-preview-github-styles
+        bierner.markdown-yaml-preamble
+        biomejs.biome
+        bourhaouta.tailwindshades
+        csstools.postcss
+        davidlgoldberg.jumpy2
+        dsznajder.es7-react-js-snippets
+        htmlhint.vscode-htmlhint
+        icrawl.discord-vscode
+        ipatalas.vscode-postfix-ts
+        jeff-hykin.better-cpp-syntax
+        johnnymorganz.stylua
+        kimuson.ts-type-expand
+        mrmlnc.vscode-scss
+        ms-vscode.remote-explorer
+        nmrmsys.vscode-sql-formatter-mod
+        orta.vscode-jest
+        oven.bun-vscode
+        rangav.vscode-thunder-client
+        rwietter.illusion
+        saikou9901.evilinspector
+        vunguyentuan.vscode-postcss
+        wraith13.bracket-lens
+        xabikos.javascriptsnippets
+        yoavbls.pretty-ts-errors
+        yusukehirao.vscode-markuplint
+        zarifprogrammer.tailwind-snippets
+        zignd.html-css-class-completion
+      ]);
+  };
+}

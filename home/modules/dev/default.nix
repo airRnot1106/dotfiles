@@ -1,0 +1,8 @@
+{ ... }:
+{
+  imports = [
+    ./languages
+    ./lsps
+    ./tools
+  ];
+}
