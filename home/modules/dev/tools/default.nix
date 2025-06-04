@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./claude-code.nix
     ./cmake.nix
     ./cspell.nix
     ./direnv.nix
