@@ -4,7 +4,7 @@
     enable = true;
   };
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     eval "$(zellij setup --generate-auto-start zsh)"
   '';
 
