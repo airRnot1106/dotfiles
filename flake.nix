@@ -42,26 +42,18 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        treefmt = treefmt-nix.lib.mkWrapper pkgs {
-          projectRootFile = "flake.nix";
-          programs = {
-            nixfmt.enable = true;
-          };
-        };
+        treefmt = (treefmt-nix.lib.evalModule pkgs ./treefmt.nix).config.build;
       in
       {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             direnv
             git
-            treefmt
+            treefmt.wrapper
           ];
         };
-        formatter = treefmt;
-        checks.formatting = treefmt-nix.lib.mkCheck pkgs {
-          inherit treefmt;
-          projectRoot = self;
-        };
+        formatter = treefmt.wrapper;
+        checks.formatting = treefmt.check self;
         apps.default = {
           type = "app";
           program = toString (
