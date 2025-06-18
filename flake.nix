@@ -64,7 +64,7 @@
               echo "Updating home-manager..."
               nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
               echo "Updating nix-darwin..."
-              nix run nix-darwin -- switch --flake .#personal --show-trace --impure
+              darwin-rebuild switch --flake .#personal --show-trace --impure
               echo "Update complete!"
             ''
           );
