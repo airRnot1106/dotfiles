@@ -8,6 +8,7 @@
     ./finder.nix
     ./general.nix
     ./keyborad.nix
+    ./primary-user.nix
     ./trackpad.nix
   ];
 }
