@@ -10,6 +10,7 @@ in
 {
   nixpkgs = {
     overlays = [
+      (import ../nix/overlays/kdlfmt)
       inputs.neovim-nightly-overlay.overlays.default
       inputs.nix-vscode-extensions.overlays.default
     ];
