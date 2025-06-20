@@ -1,4 +1,3 @@
-{ ... }:
 let
   editor = {
     "editor.acceptSuggestionOnCommitCharacter" = false;

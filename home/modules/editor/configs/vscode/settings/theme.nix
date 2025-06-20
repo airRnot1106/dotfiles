@@ -1,4 +1,3 @@
-{ ... }:
 let
   theme = {
     "workbench.colorTheme" = "Illusion Bordered";

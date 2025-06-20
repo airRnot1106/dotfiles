@@ -1,4 +1,3 @@
-{ ... }:
 let
   explorer = {
     "explorer.confirmDelete" = false;

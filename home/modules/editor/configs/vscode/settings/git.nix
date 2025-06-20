@@ -1,4 +1,3 @@
-{ ... }:
 let
   git = {
     "git.autofetch" = true;

@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./astro-language-server.nix

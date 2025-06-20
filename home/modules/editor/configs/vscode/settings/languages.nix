@@ -1,4 +1,3 @@
-{ ... }:
 let
   javascript = {
     "[javascript]" = {

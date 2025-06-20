@@ -1,4 +1,3 @@
-{ ... }:
 {
   homebrew = {
     casks = [ "google-chrome" ];

@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./nix-init.nix

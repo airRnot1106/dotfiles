@@ -1,4 +1,3 @@
-{ ... }:
 let
   workbench = {
     "workbench.editor.showTabs" = "multiple";

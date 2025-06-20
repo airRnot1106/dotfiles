@@ -1,4 +1,3 @@
-{ ... }:
 let
   vim = {
     "vim.leader" = "<space>";
