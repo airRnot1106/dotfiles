@@ -1,10 +1,7 @@
 { pkgs, ... }:
-let
-  aicommits = pkgs.callPackage ./pkgs/aicommits/package.nix { };
-in
 {
   home.packages = [
-    aicommits
+    pkgs.aicommits
   ];
 
   home.file.".aicommits" = {
