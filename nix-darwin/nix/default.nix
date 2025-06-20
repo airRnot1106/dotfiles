@@ -1,4 +1,3 @@
-{ ... }:
 {
   nix = {
     optimise.automatic = true;

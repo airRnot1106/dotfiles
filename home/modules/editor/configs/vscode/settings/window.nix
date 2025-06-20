@@ -1,4 +1,3 @@
-{ ... }:
 let
   window = {
     "window.closeWhenEmpty" = false;

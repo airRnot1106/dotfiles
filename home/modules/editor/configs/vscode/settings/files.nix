@@ -1,4 +1,3 @@
-{ ... }:
 let
   files = {
     "files.associations" = {
