@@ -1,4 +1,3 @@
-{ ... }:
 {
   imports = [
     ./claude-code.nix
