@@ -81,7 +81,7 @@
                 echo "Updating home-manager..."
                 nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
                 echo "Updating nix-darwin..."
-                darwin-rebuild switch --flake .#personal --show-trace --impure
+                sudo darwin-rebuild switch --flake .#personal --show-trace --impure
                 echo "Update complete!"
               ''
             );
