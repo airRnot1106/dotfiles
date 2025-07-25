@@ -13,6 +13,7 @@ in
       (import ../nix/overlays/aicommits)
       # (import ../nix/overlays/deno)
       # (import ../nix/overlays/kdlfmt)
+      (import ../nix/overlays/gritql)
       inputs.neovim-nightly-overlay.overlays.default
       inputs.nix-vscode-extensions.overlays.default
     ];
