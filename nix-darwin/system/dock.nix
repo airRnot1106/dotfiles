@@ -16,7 +16,6 @@ in
         mru-spaces = false;
         persistent-apps = [
           "/Applications/Arc.app"
-          "/Users/${username}/.nix-profile/Applications/Visual Studio Code.app"
           "/Applications/WezTerm.app"
           "/System/Applications/System\ Settings.app/"
         ];
