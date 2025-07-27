@@ -10,6 +10,7 @@
     ./luacheck.nix
     ./pnpm.nix
     ./prettierd.nix
+    ./similarity.nix
     ./stylua.nix
     ./tree-sitter.nix
   ];
