@@ -11,6 +11,7 @@ in
   nixpkgs = {
     overlays = [
       (import ../nix/overlays/aicommits)
+      (import ../nix/overlays/claude-code)
       # (import ../nix/overlays/deno)
       # (import ../nix/overlays/kdlfmt)
       (import ../nix/overlays/gritql)
