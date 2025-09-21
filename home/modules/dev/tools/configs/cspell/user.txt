@@ -4,6 +4,7 @@ astro
 astrojs
 astronvim
 biomejs
+cachix
 clsx
 efmls
 esbuild
@@ -11,6 +12,7 @@ daisyui
 denols
 fabbrica
 flac
+gunshi
 hono
 honojs
 jsonls
@@ -26,13 +28,16 @@ noice
 nuxt
 nuxtjs
 nvimrc
+praha
 qiita
 shougo
 tsconfig
 tsconfigs
 unplugin
+uuidv
 vite
 vitejs
+vitest
 vsnip
 wakatime
 yargs
