@@ -1,7 +1,9 @@
 {
   programs.go = {
     enable = true;
-    goPath = "go";
-    goBin = "$HOME/.local/bin";
+    env = {
+      GOPATH = "$HOME/.local/share/go";
+      GOBIN = "$HOME/.local/bin";
+    };
   };
 }
