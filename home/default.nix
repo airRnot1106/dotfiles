@@ -9,6 +9,7 @@ in
 {
   nixpkgs = {
     overlays = [
+      inputs.edgepkgs.overlays.default
       inputs.neovim-nightly-overlay.overlays.default
       # inputs.nix-vscode-extensions.overlays.default
     ];
