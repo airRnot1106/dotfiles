@@ -59,12 +59,6 @@
           ...
         }:
         {
-          _module.args.pkgs = import inputs.nixpkgs {
-            inherit system;
-            overlays = [
-              (import ./nix/overlays/kdlfmt)
-            ];
-          };
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
               direnv

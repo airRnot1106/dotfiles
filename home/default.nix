@@ -4,17 +4,11 @@ let
     username
     gitUsername
     gitEmail
-    openaiKey
     ;
 in
 {
   nixpkgs = {
     overlays = [
-      (import ../nix/overlays/aicommits)
-      (import ../nix/overlays/claude-code)
-      # (import ../nix/overlays/deno)
-      # (import ../nix/overlays/kdlfmt)
-      (import ../nix/overlays/gritql)
       inputs.neovim-nightly-overlay.overlays.default
       inputs.nix-vscode-extensions.overlays.default
     ];
@@ -31,7 +25,6 @@ in
     sessionVariables = {
       GIT_USERNAME = gitUsername;
       GIT_EMAIL = gitEmail;
-      OPENAI_KEY = openaiKey;
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
