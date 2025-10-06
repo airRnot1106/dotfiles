@@ -1,6 +1,6 @@
 {
   imports = [
     ./neovim.nix
-    ./vscode.nix
+    # ./vscode.nix
   ];
 }
