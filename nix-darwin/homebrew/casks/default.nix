@@ -16,6 +16,7 @@
     ./orbstack.nix
     ./raycast.nix
     ./slack.nix
+    ./smoothcsv.nix
     ./symboliclinker.nix
     ./wakatime.nix
     ./wezterm.nix
