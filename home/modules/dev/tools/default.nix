@@ -5,6 +5,7 @@
     ./cspell.nix
     ./direnv.nix
     ./docker.nix
+    ./eslint_d.nix
     ./gcc.nix
     ./kdlfmt.nix
     ./luacheck.nix
