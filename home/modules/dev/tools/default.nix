@@ -8,10 +8,10 @@
     ./eslint_d.nix
     ./gcc.nix
     ./kdlfmt.nix
-    ./luacheck.nix
     ./pnpm.nix
     ./prettierd.nix
     ./similarity.nix
+    ./selene.nix
     ./stylua.nix
     ./tree-sitter.nix
   ];
