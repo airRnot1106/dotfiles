@@ -4,6 +4,7 @@ let
     username
     gitUsername
     gitEmail
+    gitSigningkey
     ;
 in
 {
@@ -26,6 +27,7 @@ in
     sessionVariables = {
       GIT_USERNAME = gitUsername;
       GIT_EMAIL = gitEmail;
+      GIT_SIGNINGKEY = gitSigningkey;
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

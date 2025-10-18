@@ -10,6 +10,7 @@
     ./fzf.nix
     ./genact.nix
     ./gh.nix
+    ./gnupg.nix
     ./iro.nix
     ./karabiner-elements.nix
     ./lazydocker.nix
