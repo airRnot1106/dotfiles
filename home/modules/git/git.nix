@@ -4,13 +4,15 @@ in
 {
   programs.git = {
     enable = true;
-    userName = gitUsername;
-    userEmail = gitEmail;
-    aliases = {
-      st = "status";
-      ss = "status -s";
-    };
-    extraConfig = {
+    settings = {
+      alias = {
+        st = "status";
+        ss = "status -s";
+      };
+      user = {
+        email = gitEmail;
+        name = gitUsername;
+      };
       core = {
         editor = "nvim";
       };
@@ -27,9 +29,9 @@ in
         colorMoved = "default";
       };
     };
-    delta = {
-      enable = true;
-    };
-
+  };
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 }
