@@ -11,7 +11,7 @@
     ./keyboardcleantool.nix
     ./keycastr.nix
     ./logitech-options.nix
-    ./macskk.nix
+    # ./macskk.nix
     ./musescore.nix
     ./obsidian.nix
     ./orbstack.nix
