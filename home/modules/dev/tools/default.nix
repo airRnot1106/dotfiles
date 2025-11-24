@@ -8,6 +8,7 @@
     ./eslint_d.nix
     ./gcc.nix
     ./kdlfmt.nix
+    ./markdownlint-cli2.nix
     ./pnpm.nix
     ./prettierd.nix
     # ./similarity.nix
