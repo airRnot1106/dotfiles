@@ -10,7 +10,7 @@
     ./kdlfmt.nix
     ./pnpm.nix
     ./prettierd.nix
-    ./similarity.nix
+    # ./similarity.nix
     ./selene.nix
     ./stylua.nix
     ./tree-sitter.nix
