@@ -28,11 +28,13 @@ noice
 nuxt
 nuxtjs
 nvimrc
+oxlint
 praha
 qiita
 shougo
 tsconfig
 tsconfigs
+unbrand
 unplugin
 uuidv
 vite
