@@ -20,5 +20,6 @@
     ./tree.nix
     ./unzip.nix
     ./wget.nix
+    ./zoxide.nix
   ];
 }
