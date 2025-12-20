@@ -1,5 +1,6 @@
 {
   imports = [
+    ./1password.nix
     ./affinity.nix
     ./appcleaner.nix
     ./arc.nix
