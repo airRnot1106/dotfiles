@@ -7,7 +7,6 @@
     ./discord.nix
     ./google-chrome.nix
     ./google-japanese-ime.nix
-    ./hiddenbar.nix
     ./karabiner-elements.nix
     ./keyboardcleantool.nix
     ./keycastr.nix
