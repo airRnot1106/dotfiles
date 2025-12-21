@@ -4,6 +4,7 @@
     ./affinity.nix
     ./appcleaner.nix
     ./arc.nix
+    ./claude.nix
     ./discord.nix
     ./google-chrome.nix
     ./google-japanese-ime.nix
