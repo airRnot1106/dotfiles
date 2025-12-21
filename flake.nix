@@ -93,6 +93,8 @@
           };
         };
       flake = {
+        overlays.default = import ./overlays;
+
         homeConfigurations = {
           personal = inputs.home-manager.lib.homeManagerConfiguration {
             pkgs = import inputs.nixpkgs {

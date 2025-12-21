@@ -15,6 +15,7 @@
     ./karabiner-elements.nix
     # ./lazydocker.nix
     ./macskk.nix
+    ./nani.nix
     # ./pim.nix
     ./ripgrep.nix
     ./tree.nix

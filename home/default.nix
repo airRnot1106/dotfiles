@@ -13,6 +13,7 @@ in
       inputs.edgepkgs.overlays.default
       inputs.neovim-nightly-overlay.overlays.default
       # inputs.nix-vscode-extensions.overlays.default
+      inputs.self.overlays.default
     ];
     config = {
       allowUnfree = true;
