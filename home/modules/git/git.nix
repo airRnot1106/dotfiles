@@ -28,6 +28,9 @@ in
       diff = {
         colorMoved = "default";
       };
+      commit = {
+        gpgsign = true;
+      };
     };
   };
   programs.delta = {
