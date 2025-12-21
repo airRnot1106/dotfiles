@@ -1,8 +1,12 @@
 {
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+
     autosuggestion = {
+      enable = true;
+    };
+    enableCompletion = true;
+    syntaxHighlighting = {
       enable = true;
     };
   };
