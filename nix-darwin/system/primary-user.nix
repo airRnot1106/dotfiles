@@ -1,3 +1,8 @@
+let
+  inherit (import ../../profile.nix)
+    username
+    ;
+in
 {
-  system.primaryUser = "airrnot";
+  system.primaryUser = username;
 }
