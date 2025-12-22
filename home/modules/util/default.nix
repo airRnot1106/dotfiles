@@ -1,7 +1,5 @@
 {
   imports = [
-    ./bottom.nix
-    ./cmatrix.nix
     ./curl.nix
     ./era.nix
     ./eza.nix

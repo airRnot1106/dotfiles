@@ -1,5 +1,0 @@
-{
-  programs.bottom = {
-    enable = true;
-  };
-}
