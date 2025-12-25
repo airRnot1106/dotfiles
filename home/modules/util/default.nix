@@ -18,6 +18,7 @@
     ./ripgrep.nix
     ./tree.nix
     ./unzip.nix
+    ./volt.nix
     ./wget.nix
     ./zoxide.nix
   ];
