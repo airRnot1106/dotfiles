@@ -87,20 +87,42 @@
           };
           pre-commit = import ./nix/pre-commit { inherit config; };
           treefmt = import ./nix/treefmt;
-          apps.default = {
-            type = "app";
-            program = toString (
-              pkgs.writeShellScript "update-script" ''
-                set -e
-                echo "Updating flake..."
-                nix flake update
-                echo "Updating home-manager..."
-                nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
-                echo "Updating nix-darwin..."
-                sudo darwin-rebuild switch --flake .#personal --show-trace --impure
-                echo "Update complete!"
-              ''
-            );
+          apps = {
+            update-flake = {
+              type = "app";
+              program = toString (
+                pkgs.writeShellScript "update-flake" ''
+                  set -e
+                  echo "updating flake..."
+                  nix flake update
+                  echo "flake update complete!"
+                ''
+              );
+            };
+
+            update-home-manager = {
+              type = "app";
+              program = toString (
+                pkgs.writeShellScript "update-home-manager" ''
+                  set -e
+                  echo "updating home-manager..."
+                  nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
+                  echo "home-manager update complete!"
+                ''
+              );
+            };
+
+            update-nix-darwin = {
+              type = "app";
+              program = toString (
+                pkgs.writeShellScript "update-nix-darwin" ''
+                  set -e
+                  echo "updating nix-darwin..."
+                  sudo darwin-rebuild switch --flake .#personal --show-trace --impure
+                  echo "nix-darwin update complete!"
+                ''
+              );
+            };
           };
         };
       flake = {
