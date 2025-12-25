@@ -2,6 +2,7 @@ let
   inherit (import ../../../profile.nix)
     gitUsername
     gitEmail
+    gitSigningKey
     ;
 in
 {
@@ -15,6 +16,7 @@ in
       user = {
         email = gitEmail;
         name = gitUsername;
+        signingkey = gitSigningKey;
       };
       core = {
         editor = "nvim";
