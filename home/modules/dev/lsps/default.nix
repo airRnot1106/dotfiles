@@ -11,6 +11,7 @@
     ./tailwindcss-language-server.nix
     ./typescript-language-server.nix
     ./vscode-langservers-extracted.nix
+    ./vtsls.nix
     ./vue-language-server.nix
   ];
 }
