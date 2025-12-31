@@ -14,6 +14,7 @@
     ./logitech-options.nix
     # ./macskk.nix
     ./musescore.nix
+    ./nani.nix
     ./obsidian.nix
     ./orbstack.nix
     ./raycast.nix
