@@ -14,6 +14,8 @@
         persistent-apps = [
           "/Applications/Arc.app"
           "/Applications/WezTerm.app"
+          "/Applications/Nani.app"
+          "/Applications/1Password.app"
           "/System/Applications/System\ Settings.app/"
         ];
         wvous-bl-corner = 5;
