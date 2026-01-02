@@ -28,7 +28,11 @@
     }
 
     cd(){
-      __zoxide_z "$@"
+      if (( $+functions[__zoxide_z] )); then
+        __zoxide_z "$@"
+      else
+        builtin cd "$@"
+      fi
     }
 
     cdi() {
