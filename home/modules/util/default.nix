@@ -13,7 +13,7 @@
     ./karabiner-elements.nix
     # ./lazydocker.nix
     ./macskk.nix
-    # ./pim.nix
+    ./pim.nix
     ./ripgrep.nix
     ./tree.nix
     ./unzip.nix

@@ -13,6 +13,7 @@ in
       inputs.neovim-nightly-overlay.overlays.default
       # inputs.nix-vscode-extensions.overlays.default
       inputs.self.overlays.default
+      inputs.nur-packages.overlays.default
     ];
     config = {
       allowUnfree = true;

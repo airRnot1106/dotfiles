@@ -30,10 +30,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nur-packages = {
       url = "github:airRnot1106/nur-packages";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        treefmt-nix.follows = "treefmt-nix";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/default";
     treefmt-nix = {

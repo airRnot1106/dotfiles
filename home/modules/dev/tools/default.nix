@@ -11,7 +11,6 @@
     ./markdownlint-cli2.nix
     ./pnpm.nix
     ./prettierd.nix
-    # ./similarity.nix
     ./selene.nix
     ./stylua.nix
     ./tree-sitter.nix

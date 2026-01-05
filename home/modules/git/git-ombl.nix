@@ -1,6 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
-  home.packages = [
-    inputs.nur-packages.legacyPackages.${pkgs.system}.git-ombl
-  ];
+  home.packages = with pkgs; [ git-ombl ];
 }
