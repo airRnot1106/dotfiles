@@ -67,7 +67,6 @@
         {
           config,
           pkgs,
-          system,
           ...
         }:
         {
