@@ -6,7 +6,7 @@
     ./lua-language-server.nix
     ./mdx-language-server.nix
     ./mypy.nix
-    ./nil.nix
+    ./nixd.nix
     ./python-lsp-server.nix
     ./tailwindcss-language-server.nix
     ./typescript-language-server.nix
