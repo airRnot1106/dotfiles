@@ -13,7 +13,7 @@
         mru-spaces = false;
         persistent-apps = [
           "/Applications/Arc.app"
-          "/Applications/WezTerm.app"
+          "/Applications/Ghostty.app"
           "/Applications/Nani.app"
           "/Applications/1Password.app"
           "/System/Applications/System\ Settings.app/"

@@ -1,5 +1,0 @@
-{
-  homebrew = {
-    casks = [ "wezterm@nightly" ];
-  };
-}

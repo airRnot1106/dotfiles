@@ -6,6 +6,7 @@
     ./arc.nix
     ./claude.nix
     ./discord.nix
+    ./ghostty.nix
     ./google-chrome.nix
     ./google-japanese-ime.nix
     ./karabiner-elements.nix
@@ -22,6 +23,5 @@
     ./smoothcsv.nix
     ./symboliclinker.nix
     ./wakatime.nix
-    ./wezterm.nix
   ];
 }
