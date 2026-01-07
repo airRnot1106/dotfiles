@@ -6,7 +6,7 @@
     ./dock.nix
     ./finder.nix
     ./general.nix
-    ./keyborad.nix
+    ./keyboard.nix
     ./primary-user.nix
     ./trackpad.nix
   ];
