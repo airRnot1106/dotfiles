@@ -21,7 +21,7 @@
         AutomaticallyInstallMacOSUpdates = false;
       };
       WindowManager = {
-        GloballyEnabled = true;
+        GloballyEnabled = false;
         HideDesktop = false;
         StageManagerHideWidgets = false;
         StandardHideDesktopIcons = false;
