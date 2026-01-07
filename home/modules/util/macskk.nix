@@ -1,10 +1,7 @@
 { pkgs, lib, ... }:
 {
   # Symlink for ~/.config/skk
-  home.file."skk-SKK-JISYO.L" = {
-    source = "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L";
-    target = ".config/skk/SKK-JISYO.L";
-  };
+  xdg.configFile."skk/SKK-JISYO.L".source = "${pkgs.skkDictionaries.l}/share/skk/SKK-JISYO.L";
 
   # # Copy actual file for macSKK (not symlink)
   # home.activation.copyMacSKKDictionary = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

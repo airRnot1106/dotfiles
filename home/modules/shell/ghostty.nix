@@ -1,3 +1,3 @@
 {
-  xdg.configFile."ghostty".source = ./configs/ghostty;
+  xdg.configFile.ghostty.source = ./configs/ghostty;
 }

@@ -1,8 +1,3 @@
 {
-  home.file = {
-    karabiner = {
-      source = ./configs/karabiner-elements/karabiner;
-      target = ".config/karabiner";
-    };
-  };
+  xdg.configFile.karabiner.source = ./configs/karabiner-elements/karabiner;
 }
