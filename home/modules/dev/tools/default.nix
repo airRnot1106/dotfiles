@@ -14,5 +14,6 @@
     ./selene.nix
     ./stylua.nix
     ./tree-sitter.nix
+    ./uv.nix
   ];
 }
