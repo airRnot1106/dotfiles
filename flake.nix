@@ -121,29 +121,48 @@
             };
           };
         };
-      flake = {
-        overlays.default = import ./overlays;
-
-        homeConfigurations = {
-          personal = inputs.home-manager.lib.homeManagerConfiguration {
-            pkgs = import inputs.nixpkgs {
-              system = "aarch64-darwin";
+      flake =
+        let
+          # Define pkgs with overlays applied for each system
+          pkgsFor =
+            system:
+            import inputs.nixpkgs {
+              inherit system;
+              overlays = [
+                inputs.edgepkgs.overlays.default
+                inputs.neovim-nightly-overlay.overlays.default
+                inputs.nur-packages.overlays.default
+                (import ./overlays)
+              ];
+              config = {
+                allowUnfree = true;
+              };
             };
-            extraSpecialArgs = { inherit inputs; };
-            modules = [
-              ./home
-            ];
-          };
-        };
 
-        darwinConfigurations = {
-          personal = inputs.nix-darwin.lib.darwinSystem {
-            system = "aarch64-darwin";
-            modules = [
-              ./nix-darwin
-            ];
+          system = "aarch64-darwin";
+        in
+        {
+          homeConfigurations = {
+            personal = inputs.home-manager.lib.homeManagerConfiguration {
+              pkgs = pkgsFor system;
+              extraSpecialArgs = { inherit inputs; };
+              modules = [
+                ./home
+              ];
+            };
+          };
+
+          darwinConfigurations = {
+            personal = inputs.nix-darwin.lib.darwinSystem {
+              inherit system;
+              modules = [
+                {
+                  nixpkgs.pkgs = pkgsFor system;
+                }
+                ./nix-darwin
+              ];
+            };
           };
         };
-      };
     };
 }

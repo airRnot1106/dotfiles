@@ -1,4 +1,3 @@
-{ inputs, ... }:
 let
   inherit (import ../profile.nix)
     username
@@ -7,19 +6,6 @@ let
     ;
 in
 {
-  nixpkgs = {
-    overlays = [
-      inputs.edgepkgs.overlays.default
-      inputs.neovim-nightly-overlay.overlays.default
-      # inputs.nix-vscode-extensions.overlays.default
-      inputs.self.overlays.default
-      inputs.nur-packages.overlays.default
-    ];
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   home = {
     homeDirectory = "/Users/${username}";
 
