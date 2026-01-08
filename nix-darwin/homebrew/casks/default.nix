@@ -17,7 +17,6 @@
     ./musescore.nix
     ./nani.nix
     ./obsidian.nix
-    ./orbstack.nix
     ./raycast.nix
     ./slack.nix
     ./smoothcsv.nix
