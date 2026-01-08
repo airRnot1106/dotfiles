@@ -123,6 +123,8 @@
         };
       flake =
         let
+          profile = import ./profile.nix;
+
           # Define pkgs with overlays applied for each system
           pkgsFor =
             system:
@@ -145,7 +147,9 @@
           homeConfigurations = {
             personal = inputs.home-manager.lib.homeManagerConfiguration {
               pkgs = pkgsFor system;
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = {
+                inherit inputs profile;
+              };
               modules = [
                 ./home
               ];
@@ -158,6 +162,9 @@
               modules = [
                 {
                   nixpkgs.pkgs = pkgsFor system;
+                  _module.args = {
+                    inherit profile;
+                  };
                 }
                 ./nix-darwin
               ];

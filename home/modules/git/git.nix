@@ -1,10 +1,4 @@
-let
-  inherit (import ../../../profile.nix)
-    gitUsername
-    gitEmail
-    gitSigningKey
-    ;
-in
+{ profile, ... }:
 {
   programs.git = {
     enable = true;
@@ -14,9 +8,9 @@ in
         ss = "status -s";
       };
       user = {
-        email = gitEmail;
-        name = gitUsername;
-        signingkey = gitSigningKey;
+        email = profile.gitEmail;
+        name = profile.gitUsername;
+        signingkey = profile.gitSigningKey;
       };
       core = {
         editor = "nvim";

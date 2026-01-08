@@ -1,19 +1,13 @@
-let
-  inherit (import ../profile.nix)
-    username
-    gitUsername
-    gitEmail
-    ;
-in
+{ profile, ... }:
 {
   home = {
-    homeDirectory = "/Users/${username}";
+    homeDirectory = "/Users/${profile.username}";
 
-    username = username;
+    username = profile.username;
 
     sessionVariables = {
-      GIT_USERNAME = gitUsername;
-      GIT_EMAIL = gitEmail;
+      GIT_USERNAME = profile.gitUsername;
+      GIT_EMAIL = profile.gitEmail;
     };
 
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

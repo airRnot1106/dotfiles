@@ -1,8 +1,4 @@
-let
-  inherit (import ../../profile.nix)
-    username
-    ;
-in
+{ profile, ... }:
 {
-  system.primaryUser = username;
+  system.primaryUser = profile.username;
 }
