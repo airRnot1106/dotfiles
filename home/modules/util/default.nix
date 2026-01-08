@@ -11,13 +11,14 @@
     ./gnupg.nix
     ./iro.nix
     ./karabiner-elements.nix
-    ./macskk.nix
     ./pim.nix
     ./ripgrep.nix
+    ./skk.nix
     ./tree.nix
     ./unzip.nix
     ./volt.nix
     ./wget.nix
+    ./yaskkserv2.nix
     ./zoxide.nix
   ];
 }
