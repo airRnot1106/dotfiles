@@ -28,5 +28,9 @@
         StandardHideWidgets = false;
       };
     };
+    activationScripts.extraActivation.text = ''
+      # Set StartupMute to disable boot chime
+      nvram StartupMute=%01
+    '';
   };
 }
