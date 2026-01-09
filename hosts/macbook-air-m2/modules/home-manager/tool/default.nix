@@ -27,7 +27,7 @@ in
     "luacheck.nix"
     "markdownlint-cli2.nix"
     "nix-init.nix"
-    "nixfmt-rfc-style.nix"
+    "nixfmt.nix"
     "pim.nix"
     "pnpm.nix"
     "prettierd.nix"
