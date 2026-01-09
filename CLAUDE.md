@@ -8,15 +8,40 @@ Personal dotfiles repository for macOS using Nix Flakes, Home Manager, and nix-d
 
 ## Architecture
 
-### Two-Layer Configuration System
+### Host-based Configuration System
 
-**Home Manager** (`home/`) - User-level packages and configurations
-- Entry: `home/default.nix` → `home/modules/default.nix` → category modules
-- Categories: `dev/`, `editor/`, `git/`, `shell/`, `util/`
+The repository uses a host-based structure where configurations are organized by machine:
 
-**nix-darwin** (`nix-darwin/`) - System-level macOS settings
-- Entry: `nix-darwin/default.nix` → system modules
-- Categories: `fonts/`, `homebrew/`, `launchd/`, `security/`, `system/`
+**Host Directory** (`hosts/<hostname>/`)
+- Each host has its own `default.nix` that defines `homeConfigurations` and `darwinConfigurations`
+- Host-specific module selections live in `hosts/<hostname>/modules/`
+- Currently supports: `macbook-air-m2`
+
+**Shared Modules** (`modules/`)
+- Reusable modules shared across all hosts
+- Two main categories: `home-manager/` and `nix-darwin/`
+
+### Module Organization
+
+**Home Manager Modules** (`modules/home-manager/`)
+- `core/` - Essential shell and terminal tools (git, zsh, ghostty, zellij, oh-my-posh)
+- `editor/` - Text editors (neovim, vscode)
+- `home/` - Home Manager base configuration
+- `language/` - Programming language runtimes (deno, go, node, python, etc.)
+- `lsp/` - Language servers for development
+- `tool/` - CLI utilities and development tools
+
+**nix-darwin Modules** (`modules/nix-darwin/`)
+- `fonts/` - System fonts
+- `homebrew/` - Homebrew casks and Mac App Store apps
+- `launchd/` - Launch daemons
+- `nix/` - Nix daemon settings
+- `security/` - Security settings
+- `system/` - macOS system preferences (dock, finder, keyboard, trackpad)
+
+**Host-specific Modules** (`hosts/<hostname>/modules/`)
+- Each host imports selected modules from `modules/` using relative paths
+- Pattern: `let base = ../../modules/home-manager/<category>; in { imports = map (f: base + "/${f}") [ "file1.nix" "file2.nix" ]; }`
 
 ### Profile-based Configuration
 
@@ -39,11 +64,11 @@ Injected into all modules via `extraSpecialArgs` in `flake.nix`. Access in modul
 
 ### Package Overlay System
 
-Four overlays composed in `flake.nix` (applied in order):
+Four overlays composed in `hosts/<hostname>/default.nix` (applied in order):
 1. `edgepkgs` - Bleeding-edge packages (claude-code, etc.)
 2. `neovim-nightly-overlay` - Neovim nightly builds
 3. `nur-packages` - Custom NUR packages (github:airRnot1106/nur-packages)
-4. `./overlays` - Local package overlays
+4. `modules/overlays` - Local package overlays
 
 ### Module Pattern
 
@@ -55,7 +80,18 @@ Each tool/package is a separate file with minimal configuration:
 }
 ```
 
-Enable/disable features by adding/removing imports in category `default.nix` files.
+Enable/disable features by adding/removing imports in `hosts/<hostname>/modules/<category>/default.nix` files using the pattern:
+```nix
+let
+  base = ../../modules/home-manager/<category>;
+in
+{
+  imports = map (f: base + "/${f}") [
+    "tool1.nix"
+    "tool2.nix"
+  ];
+}
+```
 
 ## Common Commands
 
@@ -72,13 +108,15 @@ nix run .#update-nix-darwin
 nix run
 
 # Individual updates (from flake.nix apps)
-nix run .#update-flake          # Update flake.lock
-nix run .#update-home-manager   # Apply Home Manager only
-nix run .#update-nix-darwin     # Apply nix-darwin only
+nix run .#update-flake                      # Update flake.lock
+nix run .#update-home-manager               # Apply Home Manager (default: macbook-air-m2)
+nix run .#update-home-manager -- <hostname> # Specify host
+nix run .#update-nix-darwin                 # Apply nix-darwin (default: macbook-air-m2)
+nix run .#update-nix-darwin -- <hostname>   # Specify host
 
 # Manual with trace (for debugging)
-nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
-darwin-rebuild switch --flake .#personal --show-trace --impure
+nix run nixpkgs#home-manager -- switch --flake .#macbook-air-m2 --show-trace --impure
+darwin-rebuild switch --flake .#macbook-air-m2 --show-trace --impure
 ```
 
 **Required flags**:
@@ -137,19 +175,26 @@ Useful for:
 ## Adding New Packages
 
 ### Home Manager Package
-1. Create `home/modules/<category>/<tool-name>.nix`:
+1. Create `modules/home-manager/<category>/<tool-name>.nix`:
    ```nix
    { pkgs, ... }:
    {
      home.packages = with pkgs; [ tool-name ];
    }
    ```
-2. Import in `home/modules/<category>/default.nix`: `./tool-name.nix`
+2. Add to `hosts/<hostname>/modules/home-manager/<category>/default.nix`:
+   ```nix
+   imports = map (f: base + "/${f}") [
+     # ... existing imports ...
+     "tool-name.nix"  # Add this line
+   ];
+   ```
 3. Run `nix fmt && nix flake check`
 
 ### Homebrew Cask (GUI apps)
-1. Add to `nix-darwin/homebrew/casks/default.nix`
-2. Run `nix run .#update-nix-darwin`
+1. Create `modules/nix-darwin/homebrew/casks/<app-name>.nix`
+2. Add to `hosts/<hostname>/modules/nix-darwin/homebrew/casks/default.nix`
+3. Run `nix run .#update-nix-darwin`
 
 ### Configuration Files
 Place in module directory and reference via `xdg.configFile`:
@@ -171,11 +216,15 @@ Use Home Manager's `programs.<name>` module:
 
 ## Important Files
 
-- `flake.nix` - Central orchestration, inputs/outputs, overlays
+- `flake.nix` - Central orchestration, flake inputs/outputs, imports host configs
 - `profile.nix` - User-specific settings (git, username)
-- `home/default.nix` - Home Manager entry point
-- `nix-darwin/default.nix` - System configuration entry point
-- `nix/treefmt/default.nix` - Formatter configuration
+- `hosts/<hostname>/default.nix` - Host entry point (defines homeConfigurations, darwinConfigurations, overlays)
+- `hosts/<hostname>/modules/` - Host-specific module selections
+- `modules/home-manager/` - Shared Home Manager modules
+- `modules/nix-darwin/` - Shared nix-darwin modules
+- `modules/overlays/` - Local package overlays
+- `treefmt/default.nix` - Formatter configuration
+- `pre-commit/default.nix` - Pre-commit hooks configuration
 
 ## Task Completion Requirements
 
