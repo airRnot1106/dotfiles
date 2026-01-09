@@ -30,10 +30,10 @@ jobs:
         run: nix develop --show-trace -c true
 
       - name: Build homeConfigurations
-        run: nix build --show-trace --no-link .#homeConfigurations.personal.activationPackage
+        run: nix build --show-trace --no-link .#homeConfigurations.macbook-air-m2.activationPackage
 
       - name: Build darwinConfigurations
-        run: nix build --show-trace --no-link .#darwinConfigurations.personal.system
+        run: nix build --show-trace --no-link .#darwinConfigurations.macbook-air-m2.system
 
       - name: Print disk usage
         run: df -h

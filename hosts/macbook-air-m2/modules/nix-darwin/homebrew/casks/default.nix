@@ -1,0 +1,29 @@
+let
+  base = ../../../../../../modules/nix-darwin/homebrew/casks;
+in
+{
+  imports = map (f: base + "/${f}") [
+    "1password.nix"
+    "affinity.nix"
+    "appcleaner.nix"
+    "arc.nix"
+    "claude.nix"
+    "discord.nix"
+    "ghostty.nix"
+    "google-chrome.nix"
+    "google-japanese-ime.nix"
+    "karabiner-elements.nix"
+    "keyboardcleantool.nix"
+    "keycastr.nix"
+    "logitech-options.nix"
+    "macskk.nix"
+    "musescore.nix"
+    "nani.nix"
+    "obsidian.nix"
+    "raycast.nix"
+    "slack.nix"
+    "smoothcsv.nix"
+    "symboliclinker.nix"
+    "wakatime.nix"
+  ];
+}

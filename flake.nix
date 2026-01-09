@@ -81,8 +81,8 @@
               ${config.pre-commit.installationScript}
             '';
           };
-          pre-commit = import ./nix/pre-commit { inherit config; };
-          treefmt = import ./nix/treefmt;
+          pre-commit = import ./pre-commit { inherit config; };
+          treefmt = import ./treefmt;
           apps = {
             update-flake = {
               type = "app";
@@ -101,8 +101,9 @@
               program = toString (
                 pkgs.writeShellScript "update-home-manager" ''
                   set -e
-                  echo "updating home-manager..."
-                  nix run nixpkgs#home-manager -- switch --flake .#personal --show-trace --impure
+                  HOST="''${1:-macbook-air-m2}"
+                  echo "updating home-manager for host: $HOST..."
+                  nix run nixpkgs#home-manager -- switch --flake .#"$HOST" --show-trace --impure
                   echo "home-manager update complete!"
                 ''
               );
@@ -113,63 +114,19 @@
               program = toString (
                 pkgs.writeShellScript "update-nix-darwin" ''
                   set -e
-                  echo "updating nix-darwin..."
-                  sudo darwin-rebuild switch --flake .#personal --show-trace --impure
+                  HOST="''${1:-macbook-air-m2}"
+                  echo "updating nix-darwin for host: $HOST..."
+                  sudo darwin-rebuild switch --flake .#"$HOST" --show-trace --impure
                   echo "nix-darwin update complete!"
                 ''
               );
             };
           };
         };
-      flake =
-        let
-          profile = import ./profile.nix;
-
-          # Define pkgs with overlays applied for each system
-          pkgsFor =
-            system:
-            import inputs.nixpkgs {
-              inherit system;
-              overlays = [
-                inputs.edgepkgs.overlays.default
-                inputs.neovim-nightly-overlay.overlays.default
-                inputs.nur-packages.overlays.default
-                (import ./overlays)
-              ];
-              config = {
-                allowUnfree = true;
-              };
-            };
-
-          system = "aarch64-darwin";
-        in
-        {
-          homeConfigurations = {
-            personal = inputs.home-manager.lib.homeManagerConfiguration {
-              pkgs = pkgsFor system;
-              extraSpecialArgs = {
-                inherit inputs profile;
-              };
-              modules = [
-                ./home
-              ];
-            };
-          };
-
-          darwinConfigurations = {
-            personal = inputs.nix-darwin.lib.darwinSystem {
-              inherit system;
-              modules = [
-                {
-                  nixpkgs.pkgs = pkgsFor system;
-                  _module.args = {
-                    inherit profile;
-                  };
-                }
-                ./nix-darwin
-              ];
-            };
-          };
-        };
+      flake = {
+        imports = [
+          (import ./hosts { inherit inputs; })
+        ];
+      };
     };
 }
