@@ -75,7 +75,7 @@
               direnv
               git
               lua-language-server
-              nil
+              nixd
             ];
             shellHook = ''
               ${config.pre-commit.installationScript}
