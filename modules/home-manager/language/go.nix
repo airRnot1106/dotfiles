@@ -1,9 +1,10 @@
+{ config, ... }:
 {
   programs.go = {
     enable = true;
     env = {
-      GOPATH = "$HOME/.local/share/go";
-      GOBIN = "$HOME/.local/bin";
+      GOPATH = "${config.home.homeDirectory}/.local/share/go";
+      GOBIN = "${config.home.homeDirectory}/.local/bin";
     };
   };
 }
