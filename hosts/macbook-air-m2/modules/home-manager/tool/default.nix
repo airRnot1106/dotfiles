@@ -3,6 +3,7 @@ let
 in
 {
   imports = map (f: base + "/${f}") [
+    "bkm.nix"
     "claude-code.nix"
     "cmake.nix"
     "cspell.nix"
