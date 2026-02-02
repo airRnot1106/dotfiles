@@ -4,6 +4,7 @@ in
 {
   imports = map (f: base + "/${f}") [
     "bkm.nix"
+    "blake.nix"
     "claude-code.nix"
     "cmake.nix"
     "cspell.nix"
