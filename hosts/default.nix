@@ -8,6 +8,7 @@ let
         inputs.edgepkgs.overlays.default
         inputs.neovim-nightly-overlay.overlays.default
         inputs.nur-packages.overlays.default
+        inputs.rustowl-flake.overlays.default
         (import ../modules/overlays)
       ];
       config = {

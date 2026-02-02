@@ -11,6 +11,7 @@ in
     "mypy.nix"
     "nixd.nix"
     "python-lsp-server.nix"
+    "rustowl.nix"
     "tailwindcss-language-server.nix"
     "typescript-language-server.nix"
     "version-lsp.nix"

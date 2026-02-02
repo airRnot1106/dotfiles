@@ -32,6 +32,12 @@
       url = "github:airRnot1106/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rustowl-flake = {
+      url = "github:nix-community/rustowl-flake";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.git-hooks.follows = "git-hooks";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     systems.url = "github:nix-systems/default";
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
