@@ -24,6 +24,7 @@ in
     "slack.nix"
     "smoothcsv.nix"
     "symboliclinker.nix"
+    "thaw.nix"
     "wakatime.nix"
   ];
 }
