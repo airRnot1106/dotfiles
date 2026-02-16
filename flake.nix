@@ -31,7 +31,7 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs.url = "github:nixos/nixpkgs/70801e06d9730c4f1704fbd3bbf5b8e11c03a2a7";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nur-packages = {
       url = "github:airRnot1106/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
