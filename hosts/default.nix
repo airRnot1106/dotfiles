@@ -27,7 +27,10 @@ let
       extraSpecialArgs = {
         inherit inputs profile;
       };
-      inherit modules;
+      modules = [
+        inputs.nix-index-database.homeModules.nix-index
+      ]
+      ++ modules;
     };
   darwinSystemFor =
     {
@@ -44,6 +47,7 @@ let
             inherit profile;
           };
         }
+        inputs.nix-index-database.darwinModules.nix-index
       ]
       ++ modules;
     };

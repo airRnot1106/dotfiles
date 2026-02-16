@@ -7,6 +7,7 @@ in
     "blake.nix"
     "claude-code.nix"
     "cmake.nix"
+    "comma.nix"
     "cspell.nix"
     "curl.nix"
     "direnv.nix"
