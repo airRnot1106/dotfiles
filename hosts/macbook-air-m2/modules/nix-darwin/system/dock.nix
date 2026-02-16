@@ -18,7 +18,6 @@
           "/Applications/1Password.app"
           "/System/Applications/System\ Settings.app/"
         ];
-        wvous-bl-corner = 5;
         wvous-br-corner = 11;
       };
     };
