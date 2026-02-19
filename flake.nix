@@ -2,6 +2,11 @@
   description = "airRnot's dotfiles";
 
   inputs = {
+    agent-skills = {
+      url = "github:Kyure-A/agent-skills-nix";
+      inputs.home-manager.follows = "home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     edgepkgs = {
       url = "github:natsukium/edgepkgs";
       inputs.nixpkgs.follows = "nixpkgs";

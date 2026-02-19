@@ -3,6 +3,7 @@ let
 in
 {
   imports = map (f: base + "/${f}") [
+    "agent-skills.nix"
     "bkm.nix"
     "blake.nix"
     "claude-code.nix"
