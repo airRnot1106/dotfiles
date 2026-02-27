@@ -7,5 +7,5 @@
     };
   };
 
-  imports = [ ./configs/vscode ];
+  imports = [ ./configs ];
 }
