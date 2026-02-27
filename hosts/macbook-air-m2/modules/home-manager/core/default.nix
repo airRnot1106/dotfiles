@@ -6,7 +6,7 @@ in
     "ghostty"
     "git.nix"
     "oh-my-posh.nix"
-    "zellij.nix"
+    "zellij"
     "zsh.nix"
   ];
 }
