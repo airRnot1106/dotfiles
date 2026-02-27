@@ -25,7 +25,7 @@ in
     "git-ombl.nix"
     "gnupg.nix"
     "iro.nix"
-    "karabiner-elements.nix"
+    "karabiner-elements"
     "kdlfmt.nix"
     "lazygit.nix"
     "luacheck.nix"
