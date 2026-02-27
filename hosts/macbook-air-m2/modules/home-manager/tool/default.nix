@@ -29,7 +29,7 @@ in
     "kdlfmt.nix"
     "lazygit.nix"
     "luacheck.nix"
-    "macskk.nix"
+    "macskk"
     "markdownlint-cli2.nix"
     "nix-init.nix"
     "nixfmt.nix"

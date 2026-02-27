@@ -2,7 +2,7 @@
 let
   containerDir = "${config.home.homeDirectory}/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents";
   targetDir = "${containerDir}/Settings";
-  sourceFile = ./configs/macskk/kana-rule.conf;
+  sourceFile = ./data/kana-rule.conf;
 in
 {
   home.activation.macskk = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
