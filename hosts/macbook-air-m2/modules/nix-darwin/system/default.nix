@@ -1,13 +1,8 @@
+let
+  base = ../../../../../modules/nix-darwin/system;
+in
 {
-  system = {
-    stateVersion = 5;
-  };
   imports = [
-    ./dock.nix
-    ./finder.nix
-    ./general.nix
-    ./keyboard.nix
-    ./primary-user.nix
-    ./trackpad.nix
+    base
   ];
 }

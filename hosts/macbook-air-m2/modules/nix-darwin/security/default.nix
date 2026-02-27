@@ -1,3 +1,8 @@
+let
+  base = ../../../../../modules/nix-darwin/security;
+in
 {
-  security.pam.services.sudo_local.touchIdAuth = true;
+  imports = [
+    base
+  ];
 }

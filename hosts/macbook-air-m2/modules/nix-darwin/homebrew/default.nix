@@ -1,13 +1,9 @@
+let
+  base = ../../../../../modules/nix-darwin/homebrew;
+in
 {
-  homebrew = {
-    enable = true;
-    onActivation = {
-      autoUpdate = true;
-      cleanup = "uninstall";
-    };
-  };
-
   imports = [
+    base
     ./casks
     ./masApps
   ];
