@@ -9,7 +9,7 @@ in
     "claude-code.nix"
     "cmake.nix"
     "comma.nix"
-    "cspell.nix"
+    "cspell"
     "curl.nix"
     "direnv.nix"
     "docker.nix"
