@@ -29,7 +29,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [ nodePackages.cspell ];
+    home.packages = with pkgs; [ cspell ];
     xdg.configFile."cspell/cspell.json".text = builtins.toJSON {
       "$schema" = "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json";
       version = "0.2";
