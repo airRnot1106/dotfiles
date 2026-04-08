@@ -26,7 +26,59 @@ palette = 15=#e0def4
 font-size = 16
 font-feature = -dlig
 font-family = HackGen Console NF
-macos-non-native-fullscreen = true
-macos-titlebar-style = hidden
-macos-titlebar-proxy-icon = hidden
+macos-non-native-fullscreen = false
 macos-option-as-alt = true
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = tabs
+tab-inherit-working-directory = true
+window-decoration = auto
+window-new-tab-position = current
+window-show-tab-bar = auto
+
+# Activate key tables with ctrl+b leader
+keybind = ctrl+b>ctrl+t=activate_key_table:tab_mode
+keybind = ctrl+b>ctrl+g=activate_key_table:pane_mode
+# Send ctrl+b to terminal
+keybind = ctrl+b>ctrl+b=text:\x02
+
+# Tab mode
+keybind = tab_mode/
+keybind = tab_mode/catch_all=ignore
+keybind = tab_mode/q=deactivate_key_table
+keybind = tab_mode/n=new_tab
+keybind = tab_mode/bracket_right=next_tab
+keybind = tab_mode/bracket_left=previous_tab
+keybind = tab_mode/l=next_tab
+keybind = tab_mode/h=previous_tab
+keybind = tab_mode/d=close_tab
+keybind = tab_mode/l=last_tab
+keybind = tab_mode/1=goto_tab:1
+keybind = tab_mode/2=goto_tab:2
+keybind = tab_mode/3=goto_tab:3
+keybind = tab_mode/4=goto_tab:4
+keybind = tab_mode/5=goto_tab:5
+keybind = tab_mode/6=goto_tab:6
+keybind = tab_mode/7=goto_tab:7
+keybind = tab_mode/8=goto_tab:8
+keybind = tab_mode/9=goto_tab:9
+keybind = tab_mode/shift+bracket_right=move_tab:1
+keybind = tab_mode/shift+bracket_left=move_tab:-1
+keybind = tab_mode/r=prompt_tab_title
+
+# Pane mode
+keybind = pane_mode/
+keybind = pane_mode/catch_all=ignore
+keybind = pane_mode/q=deactivate_key_table
+keybind = pane_mode/s=new_split:down
+keybind = pane_mode/v=new_split:right
+keybind = pane_mode/d=close_surface
+keybind = pane_mode/h=goto_split:left
+keybind = pane_mode/j=goto_split:bottom
+keybind = pane_mode/k=goto_split:top
+keybind = pane_mode/l=goto_split:right
+keybind = pane_mode/z=toggle_split_zoom
+keybind = pane_mode/e=equalize_splits
+keybind = pane_mode/shift+h=resize_split:left,50
+keybind = pane_mode/shift+j=resize_split:down,50
+keybind = pane_mode/shift+k=resize_split:up,50
+keybind = pane_mode/shift+l=resize_split:right,50
