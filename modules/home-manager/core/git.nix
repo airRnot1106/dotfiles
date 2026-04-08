@@ -31,6 +31,7 @@
         gpgsign = true;
       };
     };
+    signing.format = "openpgp";
   };
   programs.delta = {
     enable = true;
