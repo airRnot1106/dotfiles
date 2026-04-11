@@ -51,7 +51,6 @@ keybind = tab_mode/bracket_left=previous_tab
 keybind = tab_mode/l=next_tab
 keybind = tab_mode/h=previous_tab
 keybind = tab_mode/d=close_tab
-keybind = tab_mode/l=last_tab
 keybind = tab_mode/1=goto_tab:1
 keybind = tab_mode/2=goto_tab:2
 keybind = tab_mode/3=goto_tab:3
