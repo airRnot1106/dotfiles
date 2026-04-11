@@ -96,7 +96,7 @@
               ${config.pre-commit.installationScript}
             '';
           };
-          pre-commit = import ./pre-commit { inherit config; };
+          pre-commit = import ./pre-commit { inherit pkgs config; };
           treefmt = import ./treefmt;
           apps = {
             update-flake = {
