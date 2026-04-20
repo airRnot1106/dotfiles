@@ -1,5 +1,9 @@
 { profile, ... }:
 {
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
   programs.git = {
     enable = true;
     settings = {
@@ -33,7 +37,7 @@
     };
     signing.format = "openpgp";
   };
-  programs.delta = {
+  programs.mergiraf = {
     enable = true;
     enableGitIntegration = true;
   };
