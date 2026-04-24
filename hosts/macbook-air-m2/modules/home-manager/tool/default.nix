@@ -30,7 +30,6 @@ in
     "luacheck.nix"
     "macskk"
     "markdownlint-cli2.nix"
-    "nix-init.nix"
     "nixfmt.nix"
     "pim.nix"
     "pnpm.nix"
