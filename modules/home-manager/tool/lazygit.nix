@@ -23,6 +23,12 @@
               && git commit -e -m "$MSG"
           '';
         }
+        {
+          key = "<c-a>";
+          context = "files";
+          output = "log";
+          command = "pbpaste | git apply -";
+        }
       ];
     };
   };
