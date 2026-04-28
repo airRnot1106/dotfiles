@@ -7,6 +7,6 @@ in
     "git.nix"
     "oh-my-posh.nix"
     # "zellij"
-    "zsh.nix"
+    "zsh"
   ];
 }

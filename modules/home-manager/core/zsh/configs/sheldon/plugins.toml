@@ -1,0 +1,20 @@
+shell = "zsh"
+
+[plugins]
+
+[plugins.base16]
+github = "chriskempson/base16-shell"
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+
+[plugins.zeno]
+github = "yuki-yano/zeno.zsh"
+use = ["zeno-plugin.zsh"]

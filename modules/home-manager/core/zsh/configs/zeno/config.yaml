@@ -1,0 +1,24 @@
+snippets:
+  - name: "cd there"
+    keyword: "CD"
+    snippet: "&& cd $_"
+    context:
+      lbuffer: '.+\s'
+
+  - name: "copy"
+    keyword: "CC"
+    snippet: "| pbcopy"
+    context:
+      lbuffer: '.+\s'
+
+  - name: "grep"
+    keyword: "G"
+    snippet: "| grep"
+    context:
+      lbuffer: '.+\s'
+
+  - name: "null"
+    keyword: "NULL"
+    snippet: ">/dev/null 2>&1"
+    context:
+      lbuffer: '.+\s'
