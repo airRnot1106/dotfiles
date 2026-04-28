@@ -31,6 +31,7 @@ in
     "macskk"
     "markdownlint-cli2.nix"
     "nixfmt.nix"
+    "opensrc.nix"
     "pim.nix"
     "pnpm.nix"
     "podman.nix"
