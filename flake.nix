@@ -47,6 +47,9 @@
       inputs.git-hooks.follows = "git-hooks";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    skills = {
+      url = "path:./modules/agent-skills";
+    };
     systems.url = "github:nix-systems/default";
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";

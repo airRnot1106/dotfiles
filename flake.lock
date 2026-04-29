@@ -23,6 +23,22 @@
         "type": "github"
       }
     },
+    "anthropic-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776964038,
+        "narHash": "sha256-xFsg66TCtKzSgRIW6Ab771FWEIhei3jPgfE4byMiB44=",
+        "owner": "anthropics",
+        "repo": "skills",
+        "rev": "5128e1865d670f5d6c9cef000e6dfc4e951fb5b9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anthropics",
+        "repo": "skills",
+        "type": "github"
+      }
+    },
     "edgepkgs": {
       "inputs": {
         "nixpkgs": [
@@ -40,6 +56,22 @@
       "original": {
         "owner": "natsukium",
         "repo": "edgepkgs",
+        "type": "github"
+      }
+    },
+    "find-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777394685,
+        "narHash": "sha256-YxCMuTl+pVJ7dXhaL7l9vDw9k2orlG31j7/0pgllMJk=",
+        "owner": "vercel-labs",
+        "repo": "skills",
+        "rev": "7c0a9af3f8738965b71341712710ac7371089b34",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vercel-labs",
+        "repo": "skills",
         "type": "github"
       }
     },
@@ -158,6 +190,22 @@
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "mizchi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777217457,
+        "narHash": "sha256-swhJpPNOltOl+YcqeoTNBVPCgsc95iqgTkhVw2BjU5c=",
+        "owner": "mizchi",
+        "repo": "skills",
+        "rev": "a0ebf680f62836f64d7e9b741ee212f55b108f88",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mizchi",
+        "repo": "skills",
         "type": "github"
       }
     },
@@ -340,6 +388,7 @@
         "nixpkgs": "nixpkgs",
         "nur-packages": "nur-packages",
         "rustowl-flake": "rustowl-flake",
+        "skills": "skills",
         "systems": "systems",
         "treefmt-nix": "treefmt-nix"
       }
@@ -406,6 +455,23 @@
         "type": "github"
       }
     },
+    "skills": {
+      "inputs": {
+        "anthropic-skills": "anthropic-skills",
+        "find-skills": "find-skills",
+        "mizchi": "mizchi",
+        "vercel-skills": "vercel-skills"
+      },
+      "locked": {
+        "path": "./modules/agent-skills",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/agent-skills",
+        "type": "path"
+      },
+      "parent": []
+    },
     "systems": {
       "locked": {
         "lastModified": 1681028828,
@@ -438,6 +504,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "vercel-skills": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776399466,
+        "narHash": "sha256-y5lIR+HTD8JeRYac4QddYe0YAddGXw9wAs9/NZQIAIY=",
+        "owner": "vercel-labs",
+        "repo": "agent-skills",
+        "rev": "ce3e64e468f8fa09a2d075d102771838061fdac0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vercel-labs",
+        "repo": "agent-skills",
         "type": "github"
       }
     }
