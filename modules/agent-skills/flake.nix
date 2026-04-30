@@ -12,6 +12,10 @@
       url = "github:mizchi/skills";
       flake = false;
     };
+    opensrc = {
+      url = "github:vercel-labs/opensrc";
+      flake = false;
+    };
     vercel-skills = {
       url = "github:vercel-labs/agent-skills";
       flake = false;
@@ -23,6 +27,7 @@
       anthropic-skills,
       find-skills,
       mizchi,
+      opensrc,
       vercel-skills,
       ...
     }:
@@ -31,6 +36,7 @@
         anthropic-skills
         find-skills
         mizchi
+        opensrc
         vercel-skills
         ;
     };

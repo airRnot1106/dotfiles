@@ -9,6 +9,7 @@ let
     anthropic-skills
     find-skills
     mizchi
+    opensrc
     vercel-skills
     ;
 in
@@ -33,6 +34,10 @@ in
       };
       mizchi = {
         path = mizchi;
+      };
+      opensrc = {
+        path = opensrc;
+        subdir = "skills";
       };
       vercel = {
         path = vercel-skills;
@@ -62,6 +67,9 @@ in
       "playwright-cli"
       "playwright-test"
       "tech-article-reproducibility"
+    ]
+    ++ [
+      "opensrc"
     ]
     ++ [
       # vercel

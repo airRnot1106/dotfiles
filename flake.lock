@@ -374,6 +374,22 @@
         "type": "github"
       }
     },
+    "opensrc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776474481,
+        "narHash": "sha256-t7QVes9MN8JsJMGtKsTUnErZDRbzGXsIOBpKJxumvFg=",
+        "owner": "vercel-labs",
+        "repo": "opensrc",
+        "rev": "de4f7a4d3816caff2751d99d98d55fb5f5192f95",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vercel-labs",
+        "repo": "opensrc",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "agent-skills": "agent-skills",
@@ -460,6 +476,7 @@
         "anthropic-skills": "anthropic-skills",
         "find-skills": "find-skills",
         "mizchi": "mizchi",
+        "opensrc": "opensrc",
         "vercel-skills": "vercel-skills"
       },
       "locked": {
