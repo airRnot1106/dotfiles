@@ -37,6 +37,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-deno.url = "github:nixos/nixpkgs/01fbdeef22b76df85ea168fbfe1bfd9e63681b30";
     nur-packages = {
       url = "github:airRnot1106/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";

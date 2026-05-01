@@ -9,7 +9,7 @@ let
         inputs.neovim-nightly-overlay.overlays.default
         inputs.nur-packages.overlays.default
         inputs.rustowl-flake.overlays.default
-        (import ../modules/overlays)
+        (import ../modules/overlays { inherit inputs; })
       ];
       config = {
         allowUnfree = true;
