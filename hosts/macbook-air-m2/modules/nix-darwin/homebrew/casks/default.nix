@@ -5,6 +5,7 @@ in
   imports = map (f: base + "/${f}") [
     "1password.nix"
     "affinity.nix"
+    "android-file-transfer.nix"
     "appcleaner.nix"
     "arc.nix"
     "claude.nix"
