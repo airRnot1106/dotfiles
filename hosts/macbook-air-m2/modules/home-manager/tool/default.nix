@@ -40,6 +40,7 @@ in
     "selene.nix"
     "skk.nix"
     "stylua.nix"
+    "takt.nix"
     "tree-sitter.nix"
     "tree.nix"
     "unzip.nix"

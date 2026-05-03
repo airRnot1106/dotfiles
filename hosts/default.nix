@@ -7,6 +7,7 @@ let
       overlays = [
         inputs.edgepkgs.overlays.default
         inputs.neovim-nightly-overlay.overlays.default
+        inputs.nix-takt.overlays.default
         inputs.nur-packages.overlays.default
         inputs.rustowl-flake.overlays.default
         (import ../modules/overlays)
