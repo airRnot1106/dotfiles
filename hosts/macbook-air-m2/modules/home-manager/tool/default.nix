@@ -30,6 +30,7 @@ in
     "luacheck.nix"
     "macskk"
     "markdownlint-cli2.nix"
+    "nix-search-tv.nix"
     "nixfmt.nix"
     "opensrc.nix"
     "pim.nix"
