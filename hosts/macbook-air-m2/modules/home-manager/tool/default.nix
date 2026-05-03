@@ -49,7 +49,6 @@ in
     "volt.nix"
     "wget.nix"
     "yaskkserv2.nix"
-    "zmx"
     "zoxide.nix"
   ];
 }
