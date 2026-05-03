@@ -31,6 +31,7 @@ in
     "macskk"
     "markdownlint-cli2.nix"
     "nix-search-tv.nix"
+    "nix-sweep.nix"
     "nixfmt.nix"
     "opensrc.nix"
     "pim.nix"
