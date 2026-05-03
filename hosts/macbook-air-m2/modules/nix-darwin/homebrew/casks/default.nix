@@ -14,6 +14,7 @@ in
     "google-chrome.nix"
     "google-japanese-ime.nix"
     "karabiner-elements.nix"
+    "keepingyouawake.nix"
     "keyboardcleantool.nix"
     "keycastr.nix"
     "logitech-options.nix"
