@@ -88,6 +88,7 @@
       perSystem =
         {
           config,
+          lib,
           pkgs,
           ...
         }:
@@ -114,6 +115,17 @@
                   echo "updating flake..."
                   nix flake update
                   echo "flake update complete!"
+                ''
+              );
+            };
+
+            build = {
+              type = "app";
+              program = toString (
+                pkgs.writeShellScript "build" ''
+                  set -e
+                  HOST="''${1:-macbook-air-m2}"
+                  ${lib.getExe pkgs.nix-output-monitor} build .#homeConfigurations."$HOST".activationPackage
                 ''
               );
             };
