@@ -294,11 +294,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778397325,
-        "narHash": "sha256-asTM6/vExxfPlRhbY57TFrMEMKGcP3LnUOLgu7bo4HQ=",
+        "lastModified": 1778750097,
+        "narHash": "sha256-kcR0vsfIWfGOHTWlMEQA8L9pi5QmtRBF/qhWhptV+S8=",
         "owner": "ogadra",
         "repo": "nix-takt",
-        "rev": "7461c3fe85f84903c4890768c04c8617eb5b6f94",
+        "rev": "a623b89affd1d61c86a6c1c0bd99331848c333e4",
         "type": "github"
       },
       "original": {
