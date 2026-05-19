@@ -8,8 +8,8 @@
         NSTableViewDefaultSizeMode = lib.mkDefault 3;
       };
       finder = {
-        AppleShowAllFiles = lib.mkDefault true;
         AppleShowAllExtensions = lib.mkDefault true;
+        AppleShowAllFiles = lib.mkDefault true;
         CreateDesktop = lib.mkDefault true;
         FXDefaultSearchScope = lib.mkDefault "SCcf";
         FXEnableExtensionChangeWarning = lib.mkDefault false;

@@ -1,53 +1,10 @@
-{
-  inputs,
-  lib,
-  ...
-}:
-let
-  inherit (inputs) agent-skills skills;
-  inherit (skills)
-    anthropic-skills
-    find-skills
-    mizchi
-    opensrc
-    takt-builder-skill
-    vercel-skills
-    ;
-in
+{ inputs, ... }:
 {
   imports = [
-    (import "${agent-skills.outPath}/modules/home-manager/agent-skills.nix" {
-      inherit lib;
-      inputs = { };
-    })
+    inputs.agent-skills.homeManagerModules.default
   ];
-
   programs.agent-skills = {
     enable = true;
-    sources = {
-      anthropic = {
-        path = anthropic-skills;
-        subdir = "skills";
-      };
-      find-skills = {
-        path = find-skills;
-        subdir = "skills";
-      };
-      mizchi = {
-        path = mizchi;
-      };
-      opensrc = {
-        path = opensrc;
-        subdir = "skills";
-      };
-      takt-builder = {
-        path = takt-builder-skill;
-      };
-      vercel = {
-        path = vercel-skills;
-        subdir = "skills";
-      };
-    };
     skills.enable = [
       # anthropic
       "doc-coauthoring"

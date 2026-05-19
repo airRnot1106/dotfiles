@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
-  home.packages = with pkgs; [ edge.claude-code ];
+  home.packages = [ inputs.nix-claude-code.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 }

@@ -3,11 +3,11 @@
   system = {
     defaults = {
       NSGlobalDomain = {
-        InitialKeyRepeat = lib.mkDefault 14;
-        KeyRepeat = lib.mkDefault 1;
+        "com.apple.keyboard.fnState" = lib.mkDefault true;
         AppleKeyboardUIMode = lib.mkDefault 3;
         ApplePressAndHoldEnabled = lib.mkDefault false;
-        "com.apple.keyboard.fnState" = lib.mkDefault true;
+        InitialKeyRepeat = lib.mkDefault 14;
+        KeyRepeat = lib.mkDefault 1;
       };
     };
     keyboard = {

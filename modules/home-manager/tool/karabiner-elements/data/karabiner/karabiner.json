@@ -24,9 +24,7 @@
                 "from": {
                   "key_code": "left_command",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "parameters": {
@@ -54,9 +52,7 @@
                 "from": {
                   "key_code": "right_command",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "parameters": {

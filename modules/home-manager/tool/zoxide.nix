@@ -7,9 +7,7 @@
       "--no-cmd"
     ];
   };
-  home.packages = with pkgs; [
-    ghq
-  ];
+  home.packages = with pkgs; [ ghq ];
   programs.git.settings.ghq.root = "~/dev";
   programs.zsh.initContent = ''
     __zoxide_list_missing() {

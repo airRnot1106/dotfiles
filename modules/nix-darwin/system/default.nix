@@ -1,7 +1,8 @@
-{ lib, ... }:
+{ self, ... }:
 {
   system = {
-    stateVersion = lib.mkDefault 5;
+    stateVersion = 7;
+    configurationRevision = self.rev or self.dirtyRev or null;
   };
   imports = [
     ./dock.nix

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
-  home.packages = with pkgs; [ rustowl ];
+  home.packages = [ inputs.rustowl-flake.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 }

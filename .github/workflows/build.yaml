@@ -34,9 +34,6 @@ jobs:
       - name: Build devShell
         run: nix develop --show-trace -c true
 
-      - name: Build homeConfigurations
-        run: nix build --show-trace --no-link .#homeConfigurations.macbook-air-m2.activationPackage
-
       - name: Build darwinConfigurations
         run: nix build --show-trace --no-link .#darwinConfigurations.macbook-air-m2.system
 

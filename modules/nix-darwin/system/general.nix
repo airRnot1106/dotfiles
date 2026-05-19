@@ -11,8 +11,8 @@
         NSAutomaticCapitalizationEnabled = lib.mkDefault false;
         NSAutomaticDashSubstitutionEnabled = lib.mkDefault false;
         NSAutomaticInlinePredictionEnabled = lib.mkDefault true;
-        NSAutomaticQuoteSubstitutionEnabled = lib.mkDefault false;
         NSAutomaticPeriodSubstitutionEnabled = lib.mkDefault false;
+        NSAutomaticQuoteSubstitutionEnabled = lib.mkDefault false;
         NSAutomaticSpellingCorrectionEnabled = lib.mkDefault false;
         NSDisableAutomaticTermination = lib.mkDefault true;
         NSDocumentSaveNewDocumentsToCloud = lib.mkDefault false;

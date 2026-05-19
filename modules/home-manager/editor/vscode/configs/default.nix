@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./extensions
-    ./keybindings
-    ./settings
-  ];
-}

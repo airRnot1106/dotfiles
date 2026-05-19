@@ -1,19 +1,11 @@
-{
-  homeManagerConfigurationFor,
-  darwinSystemFor,
-  ...
-}:
+{ profile, ... }:
 let
-  system = "aarch64-darwin";
-  profile = import ./profile.nix;
+  inherit (profile) username;
 in
 {
-  homeManagerConfiguration = homeManagerConfigurationFor {
-    modules = [ ./modules/home-manager ];
-    inherit system profile;
-  };
-  darwinSystem = darwinSystemFor {
-    modules = [ ./modules/nix-darwin ];
-    inherit system profile;
-  };
+  users.users.${username}.home = "/Users/${username}";
+
+  imports = [
+    ./modules
+  ];
 }

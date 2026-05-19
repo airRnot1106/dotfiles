@@ -2,165 +2,139 @@
   description = "airRnot's dotfiles";
 
   inputs = {
-    agent-skills = {
-      url = "github:Kyure-A/agent-skills-nix";
-      inputs.home-manager.follows = "home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    edgepkgs = {
-      url = "github:natsukium/edgepkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    agent-skills.url = "path:./modules/agent-skills";
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-takt = {
-      url = "github:ogadra/nix-takt";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixpkgs.url = "github:nixos/nixpkgs/b12141ef619e0a9c1c84dc8c684040326f27cdcc";
-    nur-packages = {
-      url = "github:airRnot1106/nur-packages";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    rustowl-flake = {
-      url = "github:nix-community/rustowl-flake";
-      inputs.flake-parts.follows = "flake-parts";
-      inputs.git-hooks.follows = "git-hooks";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    skills = {
-      url = "path:./modules/agent-skills";
-    };
-    systems.url = "github:nix-systems/default";
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-takt.url = "github:ogadra/nix-takt";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nur-packages.url = "github:airRnot1106/nur-packages";
+    rustowl-flake.url = "github:nix-community/rustowl-flake";
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  nixConfig = {
-    extra-substituters = [
-      "https://airrnot.cachix.org"
-      "https://nix-community.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      "airrnot.cachix.org-1:w3kgp+iIESfezlrppODxo9Ahm1QLkCJXDhEuxYfUV7k="
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    ];
-  };
-
   outputs =
     {
-      flake-parts,
+      self,
+      nixpkgs,
+      home-manager,
+      nix-darwin,
+      nur-packages,
+      git-hooks,
+      nix-index-database,
+      treefmt-nix,
       ...
     }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [
-        inputs.git-hooks.flakeModule
-        inputs.home-manager.flakeModules.home-manager
-        inputs.treefmt-nix.flakeModule
+    let
+      inherit (nixpkgs) lib;
+      forAllSystems = lib.genAttrs [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "x86_64-linux"
       ];
-      systems = import inputs.systems;
-
-      perSystem =
+      mkDarwinHost =
         {
-          config,
-          lib,
-          pkgs,
-          ...
+          system,
+          profile,
+          modules,
         }:
-        {
-          devShells.default = pkgs.mkShell {
-            packages = with pkgs; [
-              direnv
-              git
-              lua-language-server
-              nixd
-            ];
-            shellHook = ''
-              ${config.pre-commit.installationScript}
-            '';
+        nix-darwin.lib.darwinSystem {
+          specialArgs = {
+            inherit self inputs profile;
           };
-          pre-commit = import ./pre-commit { inherit pkgs config; };
-          treefmt = import ./treefmt;
-          apps = {
-            update-flake = {
-              type = "app";
-              program = toString (
-                pkgs.writeShellScript "update-flake" ''
-                  set -e
-                  echo "updating flake..."
-                  nix flake update
-                  echo "flake update complete!"
-                ''
-              );
-            };
-
-            build = {
-              type = "app";
-              program = toString (
-                pkgs.writeShellScript "build" ''
-                  set -e
-                  HOST="''${1:-macbook-air-m2}"
-                  ${lib.getExe pkgs.nix-output-monitor} build .#homeConfigurations."$HOST".activationPackage
-                ''
-              );
-            };
-
-            update-home-manager = {
-              type = "app";
-              program = toString (
-                pkgs.writeShellScript "update-home-manager" ''
-                  set -e
-                  HOST="''${1:-macbook-air-m2}"
-                  echo "updating home-manager for host: $HOST..."
-                  nix run nixpkgs#home-manager -- switch --flake .#"$HOST" --show-trace --impure
-                  echo "home-manager update complete!"
-                ''
-              );
-            };
-
-            update-nix-darwin = {
-              type = "app";
-              program = toString (
-                pkgs.writeShellScript "update-nix-darwin" ''
-                  set -e
-                  HOST="''${1:-macbook-air-m2}"
-                  echo "updating nix-darwin for host: $HOST..."
-                  sudo darwin-rebuild switch --flake .#"$HOST" --show-trace --impure
-                  echo "nix-darwin update complete!"
-                ''
-              );
-            };
-          };
+          modules = [
+            {
+              nixpkgs = {
+                hostPlatform = system;
+                overlays = [ nur-packages.overlays.default ];
+                config.allowUnfree = true;
+              };
+            }
+            home-manager.darwinModules.home-manager
+            nix-index-database.darwinModules.nix-index
+          ]
+          ++ modules;
         };
-      flake = {
-        imports = [
-          (import ./hosts { inherit inputs; })
-        ];
+    in
+    {
+      apps = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+          hosts = lib.attrNames self.darwinConfigurations;
+        in
+        {
+          build-darwin = {
+            type = "app";
+            program = "${pkgs.writeShellScript "build-darwin" ''
+              host=$(printf '%s\n' ${lib.escapeShellArgs hosts} | ${lib.getExe pkgs.fzf} --prompt='host> ')
+              [ -z "$host" ] && exit 1
+              ${lib.getExe pkgs.nix-output-monitor} build ".#darwinConfigurations.$host.system"
+            ''}";
+          };
+          switch-darwin = {
+            type = "app";
+            program = "${pkgs.writeShellScript "switch-darwin" ''
+              host=$(printf '%s\n' ${lib.escapeShellArgs hosts} | ${lib.getExe pkgs.fzf} --prompt='host> ')
+              [ -z "$host" ] && exit 1
+              sudo darwin-rebuild switch --flake ".#$host" --show-trace
+            ''}";
+          };
+        }
+      );
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+          inherit (self.checks.${system}.pre-commit) shellHook enabledPackages;
+        in
+        {
+          default = pkgs.mkShellNoCC {
+            inherit shellHook;
+            packages = enabledPackages;
+          };
+        }
+      );
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+          treefmtEval = treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
+        in
+        treefmtEval.config.build.wrapper
+      );
+      checks = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          pre-commit = git-hooks.lib.${system}.run (
+            import ./pre-commit.nix {
+              inherit self pkgs;
+            }
+          );
+        }
+      );
+      darwinConfigurations = {
+        macbook-air-m2 = mkDarwinHost {
+          system = "aarch64-darwin";
+          profile = import ./hosts/macbook-air-m2/profile.nix;
+          modules = [ ./hosts/macbook-air-m2 ];
+        };
       };
     };
 }

@@ -1,5 +1,6 @@
 {
   inputs = {
+    agent-skills.url = "github:Kyure-A/agent-skills-nix";
     anthropic-skills = {
       url = "github:anthropics/skills";
       flake = false;
@@ -28,22 +29,15 @@
 
   outputs =
     {
-      anthropic-skills,
-      find-skills,
-      mizchi,
-      opensrc,
-      takt-builder-skill,
-      vercel-skills,
+      agent-skills,
       ...
-    }:
+    }@inputs:
     {
-      inherit
-        anthropic-skills
-        find-skills
-        mizchi
-        opensrc
-        takt-builder-skill
-        vercel-skills
-        ;
+      homeManagerModules.default = {
+        imports = [
+          agent-skills.homeManagerModules.default
+          (import ./default.nix { inherit inputs; })
+        ];
+      };
     };
 }

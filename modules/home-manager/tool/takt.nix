@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
-  home.packages = with pkgs; [ nix-takt ];
+  home.packages = [ inputs.nix-takt.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 }
