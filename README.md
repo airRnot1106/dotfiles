@@ -13,11 +13,11 @@
 1. Execute the following commands.
 
 ```sh
-nix run .#update-home-manager
+nix run .#build-darwin
 ```
 
 ```sh
-nix run .#update-nix-darwin
+nix run .#switch-darwin
 ```
 
 ## LICENSE
