@@ -383,11 +383,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1778750097,
-        "narHash": "sha256-kcR0vsfIWfGOHTWlMEQA8L9pi5QmtRBF/qhWhptV+S8=",
+        "lastModified": 1779255634,
+        "narHash": "sha256-4/aSjYWbTTd/C0UGVOPWZCxp40NAOob4xSb5YLebVNY=",
         "owner": "ogadra",
         "repo": "nix-takt",
-        "rev": "a623b89affd1d61c86a6c1c0bd99331848c333e4",
+        "rev": "c64967a1218e3339c5ef615e05ec7e86344b8cd1",
         "type": "github"
       },
       "original": {
