@@ -22,3 +22,15 @@ snippets:
     snippet: ">/dev/null 2>&1"
     context:
       lbuffer: '.+\s'
+
+  - name: "nom build"
+    keyword: "nb"
+    snippet: ", nom build"
+
+  - name: "nom shell"
+    keyword: "ns"
+    snippet: ", nom shell"
+
+  - name: "nom develop"
+    keyword: "nd"
+    snippet: ", nom develop"
