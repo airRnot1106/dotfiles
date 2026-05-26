@@ -576,11 +576,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1779423168,
-        "narHash": "sha256-HF5ikEExnGOA7DJZZYOEVM/b8D6o179Sp0zY8JPdWg0=",
+        "lastModified": 1779669867,
+        "narHash": "sha256-cZEWCnwARYwlJ+K0hiUSwav8kNptwLLVdt2h2QDZe/M=",
         "owner": "airRnot1106",
         "repo": "nur-packages",
-        "rev": "0f3d0f4bc4f6d9168da892c98ee691a69550d743",
+        "rev": "ae1eb9ffe8631cd65671d0bf0997aa26b3283d3f",
         "type": "github"
       },
       "original": {
