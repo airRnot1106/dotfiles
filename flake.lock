@@ -327,11 +327,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1779845866,
-        "narHash": "sha256-vhPjZdKMjdNxKhiBJqOMe/Bq7kG4PyDIKZUVSgLsQ/I=",
+        "lastModified": 1779985471,
+        "narHash": "sha256-jysG61R6nEP+4bLyXmuOBuP+Mu6eij+ZM8wMDtTN20g=",
         "owner": "ryoppippi",
         "repo": "nix-claude-code",
-        "rev": "6f79d1534394d1ab59d89fdabf68b7af26ab6abb",
+        "rev": "3bf57e8bcd8b8737f703125d972f175732d3f0d2",
         "type": "github"
       },
       "original": {
