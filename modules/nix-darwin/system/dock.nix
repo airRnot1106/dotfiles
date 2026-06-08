@@ -13,7 +13,6 @@
         persistent-apps = lib.mkDefault [
           "/Applications/Arc.app"
           "/Applications/Ghostty.app"
-          "/Applications/Nani.app"
           "/Applications/1Password.app"
           "/System/Applications/System\ Settings.app/"
         ];
