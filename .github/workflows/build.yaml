@@ -8,13 +8,29 @@ on:
       - "**.nix"
       - "flake.lock"
   pull_request:
-    paths:
-      - "**.nix"
-      - "flake.lock"
   workflow_dispatch:
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    outputs:
+      nix: ${{ steps.filter.outputs.nix }}
+    steps:
+      - name: Filter changed paths
+        if: github.event_name == 'pull_request'
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            nix:
+              - "**.nix"
+              - "flake.lock"
+
   build:
+    needs: changes
+    if: github.event_name != 'pull_request' || needs.changes.outputs.nix == 'true'
     runs-on: macos-15
     timeout-minutes: 600
     permissions:
