@@ -6,6 +6,7 @@
     ./launchd
     ./nix
     ./security
+    ./services
     ./system
   ];
 }
