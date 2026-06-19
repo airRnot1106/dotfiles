@@ -3,6 +3,7 @@ let
 in
 {
   imports = map (f: base + "/${f}") [
+    "mosh"
     "tailscale.nix"
   ];
 }
