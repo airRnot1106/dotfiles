@@ -558,11 +558,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1781657189,
-        "narHash": "sha256-XMJegyg9FRBB/XSGpiW+HflqFGrcMHl/XrzCS0Vx8Eg=",
+        "lastModified": 1781840823,
+        "narHash": "sha256-4kgJQ7Fd4XGu33CC0VTu9ClIMtCaFNVhjtxtoauUjII=",
         "owner": "airRnot1106",
         "repo": "nur-packages",
-        "rev": "de2f1582b3674f7a48392fd663af1508c2fa48aa",
+        "rev": "5f91769c2ee9159f6b0477f2cb6ff1b3739c109f",
         "type": "github"
       },
       "original": {
