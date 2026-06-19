@@ -9,6 +9,10 @@
       url = "github:vercel-labs/skills";
       flake = false;
     };
+    mattpocock = {
+      url = "github:mattpocock/skills";
+      flake = false;
+    };
     mizchi = {
       url = "github:mizchi/skills";
       flake = false;

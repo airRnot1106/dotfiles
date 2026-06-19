@@ -3,6 +3,7 @@ let
   inherit (inputs)
     anthropic-skills
     find-skills
+    mattpocock
     mizchi
     opensrc
     vercel-skills
@@ -17,6 +18,10 @@ in
       };
       find-skills = {
         path = find-skills;
+        subdir = "skills";
+      };
+      mattpocock = {
+        path = mattpocock;
         subdir = "skills";
       };
       mizchi = {

@@ -22,14 +22,7 @@
       "find-skills"
     ]
     ++ [
-      # mizchi
-      "empirical-prompt-tuning"
-      "gh-fix-ci"
-      "playwright-cli"
-      "playwright-test"
-      "tech-article-reproducibility"
-    ]
-    ++ [
+      # opensrc
       "opensrc"
     ]
     ++ [
@@ -38,6 +31,46 @@
       "react-best-practices"
       "web-design-guidelines"
     ];
+    skills.explicit =
+      # mattpocock
+      {
+        grill-me = {
+          from = "mattpocock";
+          path = "productivity/grill-me";
+        };
+        grilling = {
+          from = "mattpocock";
+          path = "productivity/grilling";
+        };
+        handoff = {
+          from = "mattpocock";
+          path = "productivity/handoff";
+        };
+      }
+      //
+      # mizchi
+      {
+        empirical-prompt-tuning = {
+          from = "mizchi";
+          path = "meta/empirical-prompt-tuning";
+        };
+        gh-fix-ci = {
+          from = "mizchi";
+          path = "devops/gh-fix-ci";
+        };
+        playwright-cli = {
+          from = "mizchi";
+          path = "testing/playwright-cli";
+        };
+        playwright-test = {
+          from = "mizchi";
+          path = "testing/playwright-test";
+        };
+        tech-article-reproducibility = {
+          from = "mizchi";
+          path = "meta/tech-article-reproducibility";
+        };
+      };
     targets = {
       claude = {
         dest = ".claude/skills";
