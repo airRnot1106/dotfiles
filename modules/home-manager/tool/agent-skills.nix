@@ -33,10 +33,6 @@
       "opensrc"
     ]
     ++ [
-      # takt-builder
-      "takt-builder"
-    ]
-    ++ [
       # vercel
       "composition-patterns"
       "react-best-practices"

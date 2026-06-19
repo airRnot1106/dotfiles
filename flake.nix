@@ -15,7 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database.url = "github:nix-community/nix-index-database";
-    nix-takt.url = "github:ogadra/nix-takt";
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nur-packages.url = "github:airRnot1106/nur-packages";
     rustowl-flake.url = "github:nix-community/rustowl-flake";

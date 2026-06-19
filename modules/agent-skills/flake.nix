@@ -17,10 +17,6 @@
       url = "github:vercel-labs/opensrc";
       flake = false;
     };
-    takt-builder-skill = {
-      url = "github:nrslib/takt-builder-skill";
-      flake = false;
-    };
     vercel-skills = {
       url = "github:vercel-labs/agent-skills";
       flake = false;

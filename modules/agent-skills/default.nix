@@ -5,7 +5,6 @@ let
     find-skills
     mizchi
     opensrc
-    takt-builder-skill
     vercel-skills
     ;
 in
@@ -26,9 +25,6 @@ in
       opensrc = {
         path = opensrc;
         subdir = "skills";
-      };
-      takt-builder = {
-        path = takt-builder-skill;
       };
       vercel = {
         path = vercel-skills;
