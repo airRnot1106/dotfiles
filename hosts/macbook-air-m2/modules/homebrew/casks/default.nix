@@ -17,6 +17,7 @@ in
     "keyboardcleantool.nix"
     "keycastr.nix"
     "logitech-options.nix"
+    "maccy.nix"
     "macskk.nix"
     "musescore.nix"
     "nani.nix"
