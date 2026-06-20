@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
-  ns = pkgs.writeShellApplication {
-    name = "ns";
+  nt = pkgs.writeShellApplication {
+    name = "nt";
     runtimeInputs = with pkgs; [
       fzf
       nix-search-tv
@@ -14,5 +14,5 @@ let
   };
 in
 {
-  home.packages = [ ns ];
+  home.packages = [ nt ];
 }
