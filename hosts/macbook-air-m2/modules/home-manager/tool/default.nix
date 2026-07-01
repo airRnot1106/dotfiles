@@ -25,6 +25,7 @@ in
     "luacheck.nix"
     "macskk"
     "markdownlint-cli2.nix"
+    "mocword.nix"
     "nix-search-tv.nix"
     "nix-sweep.nix"
     "nixfmt.nix"

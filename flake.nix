@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager.url = "github:nix-community/home-manager";
+    mocword.url = "github:blyoa/nix-mocword";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nix-darwin = {
