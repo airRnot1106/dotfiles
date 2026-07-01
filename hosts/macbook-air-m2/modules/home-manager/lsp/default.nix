@@ -5,6 +5,7 @@ in
   imports = map (f: base + "/${f}") [
     "astro-language-server.nix"
     "bash-language-server.nix"
+    "copilot-language-server.nix"
     "lua-language-server.nix"
     "mdx-language-server.nix"
     "mypy.nix"
