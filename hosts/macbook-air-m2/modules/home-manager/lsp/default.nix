@@ -17,6 +17,7 @@ in
     "version-lsp.nix"
     "vscode-langservers-extracted.nix"
     "vtsls.nix"
-    "vue-language-server.nix"
+    # "vue-language-server.nix" # temporarily disabled: nixpkgs build depends on pnpm-10.34.0,
+    # which is marked insecure due to CVE-2026-55697. Re-enable once nixpkgs fixes the pin.
   ];
 }
