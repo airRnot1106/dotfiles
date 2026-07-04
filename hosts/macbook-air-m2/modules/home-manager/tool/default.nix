@@ -8,6 +8,8 @@ in
     "blake.nix"
     "claude-code.nix"
     "cmake.nix"
+    "shellcheck.nix"
+    "shfmt.nix"
     "cspell"
     "curl.nix"
     "direnv.nix"
