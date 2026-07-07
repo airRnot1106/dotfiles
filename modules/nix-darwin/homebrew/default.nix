@@ -1,5 +1,10 @@
 { lib, ... }:
 {
+  environment.systemPath = [
+    "/opt/homebrew/bin"
+    "/opt/homebrew/sbin"
+  ];
+
   homebrew = {
     enable = lib.mkDefault true;
     onActivation = {
