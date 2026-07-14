@@ -7,4 +7,5 @@
     pinentry.package = pkgs.pinentry_mac;
     enableZshIntegration = true;
   };
+  home.packages = with pkgs; [ gnupg ];
 }

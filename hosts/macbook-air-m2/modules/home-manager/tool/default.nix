@@ -20,7 +20,6 @@ in
     "fzf.nix"
     "gcc.nix"
     "gh.nix"
-    "gnupg.nix"
     "karabiner-elements"
     "kdlfmt.nix"
     "lazygit.nix"
