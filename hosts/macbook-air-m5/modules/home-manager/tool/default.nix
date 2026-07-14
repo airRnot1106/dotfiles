@@ -13,6 +13,7 @@ in
     "fd.nix"
     "fzf.nix"
     "gh.nix"
+    "ghq.nix"
     "karabiner-elements"
     "lazygit.nix"
     "macskk"

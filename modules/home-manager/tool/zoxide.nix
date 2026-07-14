@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.zoxide = {
     enable = true;
@@ -7,8 +6,6 @@
       "--no-cmd"
     ];
   };
-  home.packages = with pkgs; [ ghq ];
-  programs.git.settings.ghq.root = "~/dev";
   programs.zsh.initContent = ''
     __zoxide_list_missing() {
       diff \
