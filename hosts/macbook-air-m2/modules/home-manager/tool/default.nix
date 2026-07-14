@@ -44,7 +44,6 @@ in
     "tree.nix"
     "uv.nix"
     "wget.nix"
-    "yaskkserv2.nix"
     "zoxide.nix"
   ];
 }
