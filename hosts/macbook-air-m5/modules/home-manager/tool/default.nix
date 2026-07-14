@@ -5,8 +5,6 @@ in
   imports = map (f: base + "/${f}") [
     "agent-skills.nix"
     "claude-code.nix"
-    "shellcheck.nix"
-    "shfmt.nix"
     "cspell"
     "curl.nix"
     "direnv.nix"
@@ -28,6 +26,8 @@ in
     "prettierd.nix"
     "ripgrep.nix"
     "selene.nix"
+    "shellcheck.nix"
+    "shfmt.nix"
     "skk.nix"
     "stylua.nix"
     "tree-sitter.nix"
