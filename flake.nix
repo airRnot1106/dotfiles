@@ -135,6 +135,11 @@
           profile = import ./hosts/macbook-air-m2/profile.nix;
           modules = [ ./hosts/macbook-air-m2 ];
         };
+        macbook-air-m5 = mkDarwinHost {
+          system = "aarch64-darwin";
+          profile = import ./hosts/macbook-air-m5/profile.nix;
+          modules = [ ./hosts/macbook-air-m5 ];
+        };
       };
     };
 }

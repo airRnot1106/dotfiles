@@ -1,0 +1,37 @@
+let
+  base = ../../../../../modules/home-manager/tool;
+in
+{
+  imports = map (f: base + "/${f}") [
+    "agent-skills.nix"
+    "claude-code.nix"
+    "shellcheck.nix"
+    "shfmt.nix"
+    "cspell"
+    "curl.nix"
+    "direnv.nix"
+    "eslint_d.nix"
+    "eza.nix"
+    "fd.nix"
+    "fzf.nix"
+    "gh.nix"
+    "karabiner-elements"
+    "lazygit.nix"
+    "macskk"
+    "mocword.nix"
+    "nix-search-tv.nix"
+    "nix-sweep.nix"
+    "nixfmt.nix"
+    "opensrc.nix"
+    "pnpm.nix"
+    "podman.nix"
+    "prettierd.nix"
+    "ripgrep.nix"
+    "selene.nix"
+    "skk.nix"
+    "stylua.nix"
+    "tree-sitter.nix"
+    "uv.nix"
+    "zoxide.nix"
+  ];
+}
