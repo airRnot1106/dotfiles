@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  programs.gpg.enable = true;
   services.gpg-agent = {
     enable = true;
     defaultCacheTtl = 86400;
@@ -7,5 +8,4 @@
     pinentry.package = pkgs.pinentry_mac;
     enableZshIntegration = true;
   };
-  home.packages = with pkgs; [ gnupg ];
 }

@@ -5,7 +5,7 @@ in
   imports = map (f: base + "/${f}") [
     "ghostty"
     "git.nix"
-    "gpg-agent.nix"
+    "gpg.nix"
     "oh-my-posh.nix"
     "zsh"
   ];
