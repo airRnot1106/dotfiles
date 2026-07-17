@@ -1,7 +1,7 @@
 {
   homebrew = {
     masApps = {
-      "RunCat" = 1429033973;
+      "RunCatNeo" = 6757801838;
     };
   };
 }

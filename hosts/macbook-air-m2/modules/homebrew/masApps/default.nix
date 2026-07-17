@@ -4,7 +4,7 @@ in
 {
   imports = map (f: base + "/${f}") [
     "line.nix"
-    "run-cat.nix"
+    "run-cat-neo.nix"
     "yoink.nix"
   ];
 }
