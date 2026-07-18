@@ -87,14 +87,31 @@
       darwinConfigurations =
         let
           inherit (nixpkgs) lib;
+          inherit (inputs.haumea.lib) load loaders;
+
+          # Since haumea represents directory modules as { default = <path>; },
+          # we flatten such sets to just the path for a consistent interface.
+          collapse =
+            a:
+            if builtins.isAttrs a then
+              if a ? default && builtins.attrNames a == [ "default" ] then
+                a.default # {default=path;} → path
+              else
+                builtins.mapAttrs (_: collapse) a
+            else
+              a;
+          # Load the modules/ directory as a catalog for hosts to select from.
+          # loaders.path treats files as paths rather than imports, mirroring the
+          # directory structure as a namespace (e.g., modules.home-manager.core.git).
+          modules = collapse (load {
+            src = ./modules;
+            loader = loaders.path;
+          });
+
           mkDarwinHost =
             hostname:
             let
               profile = import ./hosts/${hostname}/profile.nix;
-              modules = inputs.haumea.lib.load {
-                src = ./modules;
-                loader = inputs.haumea.lib.loaders.path;
-              };
             in
             nix-darwin.lib.darwinSystem {
               specialArgs = {
