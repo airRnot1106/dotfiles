@@ -12,6 +12,7 @@ in
     extraSpecialArgs = { inherit self inputs profile; };
     users.${username} = {
       imports = [
+        ./core
         ./language
       ];
     };
