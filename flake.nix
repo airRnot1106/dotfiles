@@ -78,5 +78,32 @@
           );
         };
       }
-    );
+    )
+    // {
+      darwinConfigurations =
+        let
+          inherit (nixpkgs) lib;
+          mkDarwinHost =
+            hostname:
+            let
+              profile = import ./hosts/${hostname}/profile.nix;
+            in
+            nix-darwin.lib.darwinSystem {
+              specialArgs = { inherit self inputs profile; };
+              modules = [
+                home-manager.darwinModules.home-manager
+                ./hosts/${hostname}
+                {
+                  nixpkgs = {
+                    hostPlatform = profile.system;
+                    config.allowUnfree = true;
+                  };
+                }
+              ];
+            };
+        in
+        lib.genAttrs (lib.attrNames (
+          lib.filterAttrs (_: type: type == "directory") (builtins.readDir ./hosts)
+        )) mkDarwinHost;
+    };
 }
