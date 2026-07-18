@@ -20,6 +20,10 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    haumea = {
+      url = "github:nix-community/haumea";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager.url = "github:nix-community/home-manager";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -87,9 +91,20 @@
             hostname:
             let
               profile = import ./hosts/${hostname}/profile.nix;
+              modules = inputs.haumea.lib.load {
+                src = ./modules;
+                loader = inputs.haumea.lib.loaders.path;
+              };
             in
             nix-darwin.lib.darwinSystem {
-              specialArgs = { inherit self inputs profile; };
+              specialArgs = {
+                inherit
+                  self
+                  inputs
+                  profile
+                  modules
+                  ;
+              };
               modules = [
                 home-manager.darwinModules.home-manager
                 ./hosts/${hostname}
