@@ -1,5 +1,0 @@
-{
-  homebrew = {
-    casks = [ "karabiner-elements" ];
-  };
-}
