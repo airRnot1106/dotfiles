@@ -2,8 +2,8 @@
   self,
   inputs,
   profile,
-  modules,
   common,
+  modules,
   ...
 }:
 {
@@ -13,8 +13,8 @@
         self
         inputs
         profile
-        modules
         common
+        modules
         ;
     };
     sharedModules = [ inputs.nix-index-database.homeModules.default ];
