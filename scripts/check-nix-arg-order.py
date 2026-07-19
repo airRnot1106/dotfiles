@@ -4,8 +4,9 @@
 Canonical order (present args only; missing ones are skipped):
   self -> inputs -> lib -> pkgs -> config -> options -> profile -> common -> modules
 
-Only the known names above are ordered; unknown args are ignored. Files whose
-first syntactic element is not a `{ ... }:` function header are skipped.
+Known names above must appear in this order; any unknown arg must come after
+all known ones (unknowns keep their own relative order). Files whose first
+syntactic element is not a `{ ... }:` function header are skipped.
 """
 import re
 import sys
@@ -122,11 +123,15 @@ def check(path):
     args = header_args(text)
     if not args:
         return None
-    known = [a for a in args if a in RANK]
-    ranks = [RANK[a] for a in known]
+    # Known args are ranked by ORDER; unknown args share the highest rank so
+    # they must all come after the known ones (their mutual order is free).
+    unknown_rank = len(ORDER)
+    ranks = [RANK.get(a, unknown_rank) for a in args]
     if ranks != sorted(ranks):
-        expected = [o for o in ORDER if o in known]
-        return f"{path}: found {known}, expected {expected}"
+        known = [a for a in args if a in RANK]
+        unknown = [a for a in args if a not in RANK]
+        expected = [o for o in ORDER if o in known] + unknown
+        return f"{path}: found {args}, expected {expected}"
     return None
 
 
