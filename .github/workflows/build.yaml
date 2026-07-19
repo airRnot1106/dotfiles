@@ -10,9 +10,12 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   changes:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       pull-requests: read
     outputs:
@@ -41,17 +44,22 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Setup Nix
-        uses: ./.github/actions/setup-nix
+      - name: Install Nix
+        uses: nixbuild/nix-quick-install-action@9f63be77f412a248c9d9a65a4c82cf066cdf8f0c # v35
+
+      - name: Setup Cachix
+        uses: cachix/cachix-action@5f2d7c5294214f71b873db4b969586b980625e71 # v17
         with:
+          name: airrnot
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+          extraPullNames: nix-community
           skipPush: ${{ github.event_name == 'pull_request' }}
 
       - name: Build devShell
         run: nix develop --show-trace -c true
 
       - name: Build darwinConfigurations
-        run: nix build --show-trace --no-link .#darwinConfigurations.macbook-air-m2.system
+        run: nix build --show-trace --no-link .#darwinConfigurations.macbook-air-m5.system
 
       - name: Print disk usage
         run: df -h

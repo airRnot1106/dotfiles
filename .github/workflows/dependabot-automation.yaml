@@ -6,15 +6,16 @@ on:
       - opened
       - synchronize
 
-permissions:
-  pull-requests: write
-  contents: write
+permissions: {}
 
 jobs:
   dependabot-automation:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     timeout-minutes: 13
+    permissions:
+      pull-requests: write
+      contents: write
     steps:
       - name: Dependabot metadata
         id: metadata
