@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ lib, config, ... }:
 let
   ZENO_HOME = "${config.xdg.configHome}/zeno";
 in
