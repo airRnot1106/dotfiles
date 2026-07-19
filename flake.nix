@@ -71,7 +71,7 @@
           let
             hosts = builtins.attrNames self.darwinConfigurations;
           in
-          {
+          pkgs.lib.optionalAttrs pkgs.stdenv.isDarwin {
             build-darwin =
               flake-utils.lib.mkApp {
                 drv = pkgs.writeShellScript "build-darwin" ''
