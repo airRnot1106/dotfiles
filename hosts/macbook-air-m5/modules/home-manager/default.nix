@@ -10,6 +10,7 @@ in
         ./editor
         ./home
         ./language
+        ./lsp
         ./tool
       ];
     };

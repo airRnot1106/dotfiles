@@ -25,6 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager.url = "github:nix-community/home-manager";
+    kakehashi.url = "github:atusy/kakehashi";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
@@ -40,6 +41,7 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    version-lsp.url = "github:skanehira/version-lsp";
   };
 
   outputs =
@@ -69,7 +71,13 @@
           {
             default = pkgs.mkShell {
               inherit shellHook;
-              packages = enabledPackages;
+              packages =
+                with pkgs;
+                [
+                  inputs.kakehashi.packages.${system}.default
+                  nixd
+                ]
+                ++ enabledPackages;
             };
           };
 
