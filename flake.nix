@@ -25,8 +25,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager.url = "github:nix-community/home-manager";
+    mocword.url = "github:blyoa/nix-mocword";
     kakehashi.url = "github:atusy/kakehashi";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nix-darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
