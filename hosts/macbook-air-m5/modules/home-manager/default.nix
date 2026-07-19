@@ -1,15 +1,9 @@
-{
-  self,
-  inputs,
-  profile,
-  ...
-}:
+{ profile, common, ... }:
 let
   inherit (profile) username;
 in
 {
   home-manager = {
-    extraSpecialArgs = { inherit self inputs profile; };
     users.${username} = {
       imports = [
         ./core
@@ -17,4 +11,8 @@ in
       ];
     };
   };
+
+  imports = [
+    common.home-manager.default
+  ];
 }
