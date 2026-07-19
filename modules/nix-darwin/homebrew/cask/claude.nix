@@ -1,0 +1,5 @@
+{
+  homebrew = {
+    casks = [ "claude" ];
+  };
+}
