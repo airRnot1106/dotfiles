@@ -1,11 +1,23 @@
 { self, pkgs }:
 let
   inherit (pkgs.lib) getExe;
+  check-nix-arg-order = pkgs.writeShellApplication {
+    name = "check-nix-arg-order";
+    runtimeInputs = [ pkgs.python3 ];
+    text = ''exec python3 ${../scripts/check-nix-arg-order.py} "$@"'';
+  };
 in
 {
   src = self;
   hooks = {
     actionlint.enable = true;
+    nix-arg-order = rec {
+      enable = true;
+      name = "nix module argument order";
+      package = check-nix-arg-order;
+      entry = getExe package;
+      files = "\.nix$";
+    };
     ghalint = rec {
       enable = true;
       package = pkgs.ghalint;
