@@ -7,6 +7,7 @@ in
     users.${username} = {
       imports = [
         ./core
+        ./editor
         ./language
         ./tool
       ];
