@@ -67,6 +67,41 @@
         };
       in
       {
+        apps =
+          let
+            hosts = builtins.attrNames self.darwinConfigurations;
+          in
+          {
+            build-darwin =
+              flake-utils.lib.mkApp {
+                drv = pkgs.writeShellScript "build-darwin" ''
+                  host=$(printf '%s\n' ${pkgs.lib.escapeShellArgs hosts} | ${pkgs.lib.getExe pkgs.fzf} --prompt='host> ')
+                  [ -z "$host" ] && exit 1
+                  echo "host: $host"
+                  ${pkgs.lib.getExe pkgs.nix-output-monitor} build ".#darwinConfigurations.$host.system"
+                '';
+                exePath = "";
+              }
+              // {
+                meta.description = "Build a darwinConfiguration, selecting the host via fzf";
+              };
+            switch-darwin =
+              flake-utils.lib.mkApp {
+                drv = pkgs.writeShellScript "switch-darwin" ''
+                  host=$(printf '%s\n' ${pkgs.lib.escapeShellArgs hosts} | ${pkgs.lib.getExe pkgs.fzf} --prompt='host> ')
+                  [ -z "$host" ] && exit 1
+                  echo "host: $host"
+                  sudo ${
+                    pkgs.lib.getExe' inputs.nix-darwin.packages.${system}.darwin-rebuild "darwin-rebuild"
+                  } switch --flake ".#$host" --show-trace
+                '';
+                exePath = "";
+              }
+              // {
+                meta.description = "Switch a darwinConfiguration, selecting the host via fzf";
+              };
+          };
+
         devShells =
           let
             inherit (self.checks.${system}.git-hooks) shellHook enabledPackages;
