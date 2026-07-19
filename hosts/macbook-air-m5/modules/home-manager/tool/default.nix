@@ -3,6 +3,7 @@
   imports = with modules.home-manager.tool; [
     claude-code
     comma
+    cspell
     direnv
     fd
     fzf
