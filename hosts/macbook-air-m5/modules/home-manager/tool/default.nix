@@ -9,6 +9,7 @@
     gh
     ghq
     lazygit
+    macskk
     mocword
     nix-search-tv
     nix-sweep
@@ -17,6 +18,7 @@
     pnpm
     podman
     ripgrep
+    skk-dictionary
     tree-sitter
     uv
     zoxide
