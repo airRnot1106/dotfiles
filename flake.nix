@@ -44,6 +44,7 @@
       git-hooks,
       home-manager,
       nix-darwin,
+      nix-index-database,
       nixpkgs,
       treefmt-nix,
       ...
@@ -100,6 +101,11 @@
                 builtins.mapAttrs (_: collapse) a
             else
               a;
+          # Load common/ the same way: host-agnostic wiring each host imports directory.
+          common = collapse (load {
+            src = ./common;
+            loader = loaders.path;
+          });
           # Load the modules/ directory as a catalog for hosts to select from.
           # loaders.path treats files as paths rather than imports, mirroring the
           # directory structure as a namespace (e.g., modules.home-manager.core.git).
@@ -119,6 +125,7 @@
                   self
                   inputs
                   profile
+                  common
                   modules
                   ;
               };
