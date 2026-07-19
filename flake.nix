@@ -15,6 +15,7 @@
   };
 
   inputs = {
+    agent-skills.url = "path:./nix/agent-skills";
     flake-utils.url = "github:numtide/flake-utils";
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
@@ -73,6 +74,9 @@
           {
             default = pkgs.mkShell {
               inherit shellHook;
+              inputsFrom = [
+                inputs.agent-skills.devShells.${system}.default
+              ];
               packages =
                 with pkgs;
                 [
@@ -95,6 +99,10 @@
               inherit self pkgs;
             }
           );
+        };
+
+        nput = {
+          inherit (inputs.agent-skills.nput.${system}) skills-claude;
         };
       }
     )
