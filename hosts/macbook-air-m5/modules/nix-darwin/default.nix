@@ -2,5 +2,6 @@
   imports = [
     ./font
     ./homebrew
+    ./nix
   ];
 }
