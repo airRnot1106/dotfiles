@@ -221,6 +221,24 @@
         "type": "github"
       }
     },
+    "nix-claude-code": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1784424673,
+        "narHash": "sha256-9OA3dCN2EcKKdWK3LegYyD7XY+qtZccDpf4GFN3qrkw=",
+        "owner": "ryoppippi",
+        "repo": "nix-claude-code",
+        "rev": "08d1a170742f2a88a7a996adca476d50a7fbff30",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryoppippi",
+        "repo": "nix-claude-code",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -326,6 +344,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1783776592,
+        "narHash": "sha256-UgCQzxeWI75XM8G+hPrPh+MKzEPjG3SpAj7dtqSbksA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e7a3ca8092b61ff85b6a45bf863ea2b2d6a661b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1784347607,
         "narHash": "sha256-VI5cdo27nEZ3m1SlgB8RvBbrqFUO2/dUgrrLWe407oA=",
         "owner": "nixos",
@@ -340,7 +374,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1784176690,
         "narHash": "sha256-RUXu+GHGkY+eShsqx8hp0BIIo51K3V1Q8AY4pPAUcDw=",
@@ -356,7 +390,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1767364772,
         "narHash": "sha256-fFUnEYMla8b7UKjijLnMe+oVFOz6HjijGGNS1l7dYaQ=",
@@ -374,7 +408,7 @@
     },
     "nur-packages": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1784257555,
@@ -398,9 +432,10 @@
         "home-manager": "home-manager",
         "kakehashi": "kakehashi",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
+        "nix-claude-code": "nix-claude-code",
         "nix-darwin": "nix-darwin",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "nur-packages": "nur-packages",
         "treefmt-nix": "treefmt-nix",
         "version-lsp": "version-lsp"
@@ -502,7 +537,7 @@
       "inputs": {
         "crane": "crane",
         "flake-parts": "flake-parts_2",
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
