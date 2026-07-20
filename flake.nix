@@ -15,7 +15,10 @@
   };
 
   inputs = {
-    agent-skills.url = "path:./nix/agent-skills";
+    agent-skills = {
+      url = "path:./nix/agent-skills";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-utils.url = "github:numtide/flake-utils";
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
@@ -25,9 +28,12 @@
       url = "github:nix-community/haumea";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager.url = "github:nix-community/home-manager";
-    mocword.url = "github:blyoa/nix-mocword";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     kakehashi.url = "github:atusy/kakehashi";
+    mocword.url = "github:blyoa/nix-mocword";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nix-darwin = {

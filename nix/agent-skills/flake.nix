@@ -2,6 +2,7 @@
   inputs = {
     agenput-skills.url = "github:airRnot1106/agenput-skills-nix";
     flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs";
 
     inspired-mino-design-skills = {
       url = "github:my-take-dev/inspired-mino-design-skills";
