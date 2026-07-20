@@ -5,6 +5,7 @@
     comma
     cspell
     direnv
+    eza
     fd
     fzf
     gh
