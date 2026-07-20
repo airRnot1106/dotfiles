@@ -9,9 +9,11 @@
     fzf
     gh
     ghq
+    herdr
     lazygit
     macskk
     mocword
+    mosh
     nix-search-tv
     nix-sweep
     nixfmt

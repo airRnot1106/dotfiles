@@ -7,5 +7,7 @@
     ./nix
     ./platform
     ./security
+    ./service
+    ./ssh
   ];
 }
