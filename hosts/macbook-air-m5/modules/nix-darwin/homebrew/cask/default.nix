@@ -8,6 +8,7 @@
     arc
     ghostty
     google-chrome
+    keepingyouawake
     keyboardcleantool
     maccy
     macskk
