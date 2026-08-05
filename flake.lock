@@ -5,11 +5,11 @@
         "nput": "nput"
       },
       "locked": {
-        "lastModified": 1784457208,
-        "narHash": "sha256-AUu/51pkhzfbbAcO7M3akN8NhST4juGYYKQ2VDkcxmc=",
+        "lastModified": 1785074610,
+        "narHash": "sha256-0Y6Xu+Ch2Q1S8fqHgMjOFjKBp/VHpwX8Oyah95ut3F0=",
         "owner": "airRnot1106",
         "repo": "agenput-skills-nix",
-        "rev": "461b8151f8419ee7e7bda2d131d0d9805963bebc",
+        "rev": "9d98926b755b966a3db06152508bf5077194ed1f",
         "type": "github"
       },
       "original": {
@@ -25,6 +25,7 @@
         "cognitive-rhythm-writing": "cognitive-rhythm-writing",
         "find-skills": "find-skills",
         "flake-utils": "flake-utils",
+        "gh-stack": "gh-stack",
         "inspired-mino-design-skills": "inspired-mino-design-skills",
         "japanese-tech-writing": "japanese-tech-writing",
         "mattpocock": "mattpocock",
@@ -47,11 +48,11 @@
     "anthropic-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1784256457,
-        "narHash": "sha256-QZ+zJkyLd/42rxgtJEZSUOz9R75Tse6UXW7G0nOkFS8=",
+        "lastModified": 1784923954,
+        "narHash": "sha256-RH2B03gj4kzw1j5LORezgUZPPu8mW+mWb+Kl2U7WUbY=",
         "owner": "anthropics",
         "repo": "skills",
-        "rev": "fa0fa64bdc967915dc8399e803be67759e1e62b8",
+        "rev": "b29e7cf65e5cb78a5ac33d582270551bc74a14eb",
         "type": "github"
       },
       "original": {
@@ -94,11 +95,11 @@
     "find-skills": {
       "flake": false,
       "locked": {
-        "lastModified": 1784224436,
-        "narHash": "sha256-lxf2ODxgwin83JHRrDynMccTFtCo+tYFb053XrS1IqA=",
+        "lastModified": 1785882603,
+        "narHash": "sha256-ECkobgxV5ZAcpBJVIngSefuDM0SaFWM4KJGKKI5+eeQ=",
         "owner": "vercel-labs",
         "repo": "skills",
-        "rev": "777599e1159e401b11ce4c8a57c20f09a8f1596e",
+        "rev": "ab4fc49265c443279a5deae20297e631470da68c",
         "type": "github"
       },
       "original": {
@@ -257,6 +258,22 @@
         "type": "github"
       }
     },
+    "gh-stack": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785805944,
+        "narHash": "sha256-SBP6z6G35wGY31RMhPpsZ1QDOhmVBlLv7ktLXIA3HwI=",
+        "owner": "github",
+        "repo": "gh-stack",
+        "rev": "14fc42ed9b6c376a53b2f999f138d3bd26dac546",
+        "type": "github"
+      },
+      "original": {
+        "owner": "github",
+        "repo": "gh-stack",
+        "type": "github"
+      }
+    },
     "git-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -402,11 +419,11 @@
     "japanese-tech-writing": {
       "flake": false,
       "locked": {
-        "lastModified": 1783598469,
-        "narHash": "sha256-S8VqzkYfDsjIwuLPgs8TM/E/aLlFJbEgScrpc0qEiq8=",
+        "lastModified": 1784869789,
+        "narHash": "sha256-FeqGir/xjx3h/72WwN0dXtppw6o4KpX9zEAeHGSaCLU=",
         "ref": "refs/heads/main",
-        "rev": "209db7d6d19bc4727139844c0e8d786542e9ff68",
-        "revCount": 5,
+        "rev": "c7189cdc9c2520be50418209834145bdf3a46e97",
+        "revCount": 6,
         "type": "git",
         "url": "https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d.git"
       },
@@ -438,11 +455,11 @@
     "mattpocock": {
       "flake": false,
       "locked": {
-        "lastModified": 1784192592,
-        "narHash": "sha256-S6pARK99oGGSi6XdFm6zYKHT4gjOCN0wIPZFcl1hREE=",
+        "lastModified": 1785933444,
+        "narHash": "sha256-cgCSvISAVFAu77341/qfayaJRENcag1rcKAvCKqu9Tk=",
         "owner": "mattpocock",
         "repo": "skills",
-        "rev": "9603c1cc8118d08bc1b3bf34cf714f62178dea3b",
+        "rev": "2ffb184ffbb752faa664c0b204f3c9241b1428e9",
         "type": "github"
       },
       "original": {
@@ -828,11 +845,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1783871221,
-        "narHash": "sha256-8vELZwe3cAQutL8I4HV2pLXlpMRrAw+8cCR1c0/wcHI=",
+        "lastModified": 1784455821,
+        "narHash": "sha256-ai516XTGPxXi7ohAHWbe5kYTRYzanbB4s5Le9OjbsiY=",
         "owner": "yasunori0418",
         "repo": "nput",
-        "rev": "ee6da8a1b7c050e3c6613ab42ca6b690cb0e9b19",
+        "rev": "a044d500628e18fb6e120d7d6f656eab5aa459e1",
         "type": "github"
       },
       "original": {

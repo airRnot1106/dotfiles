@@ -4,10 +4,6 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs";
 
-    inspired-mino-design-skills = {
-      url = "github:my-take-dev/inspired-mino-design-skills";
-      flake = false;
-    };
     anthropic-skills = {
       url = "github:anthropics/skills";
       flake = false;
@@ -18,6 +14,14 @@
     };
     find-skills = {
       url = "github:vercel-labs/skills";
+      flake = false;
+    };
+    gh-stack = {
+      url = "github:github/gh-stack";
+      flake = false;
+    };
+    inspired-mino-design-skills = {
+      url = "github:my-take-dev/inspired-mino-design-skills";
       flake = false;
     };
     japanese-tech-writing = {
@@ -70,6 +74,11 @@
             name = "gh-fix-ci";
             src = inputs.mizchi;
             subpath = "devops/gh-fix-ci";
+          }
+          {
+            name = "gh-stack";
+            src = inputs.gh-stack;
+            subpath = "skills/gh-stack";
           }
           {
             name = "grill-me";
