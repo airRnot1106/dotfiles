@@ -8,8 +8,8 @@
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-    withNodeJs = true;
-    withPython3 = true;
-    withRuby = true;
+    withNodeJs = false;
+    withPython3 = false;
+    withRuby = false;
   };
 }
