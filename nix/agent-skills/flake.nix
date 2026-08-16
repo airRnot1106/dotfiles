@@ -36,6 +36,10 @@
       url = "github:mizchi/skills";
       flake = false;
     };
+    my-skills = {
+      url = "path:../../skills";
+      flake = false;
+    };
     opensrc = {
       url = "github:vercel-labs/opensrc";
       flake = false;
@@ -56,6 +60,11 @@
         pkgs = nixpkgs.legacyPackages.${system};
 
         skills = [
+          {
+            name = "code-prose-writing";
+            src = inputs.my-skills;
+            subpath = "code-prose-writing";
+          }
           {
             name = "cognitive-rhythm-writing";
             src = inputs.cognitive-rhythm-writing;
