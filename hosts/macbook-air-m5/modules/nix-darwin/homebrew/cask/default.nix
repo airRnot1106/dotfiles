@@ -14,6 +14,7 @@
     macskk
     nani
     raycast
+    steam
     symboliclinker
     thaw
     wakatime
