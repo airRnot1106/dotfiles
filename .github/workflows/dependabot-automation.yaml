@@ -21,7 +21,7 @@ jobs:
         id: metadata
         uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Approve & enable auto-merge for Dependabot PR
         if: |
           steps.metadata.outputs.package-ecosystem == 'nix' ||
