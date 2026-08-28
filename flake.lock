@@ -345,11 +345,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1787536184,
-        "narHash": "sha256-BElMdZnbe7Trt7Rs0u5utMbLm8Fydq6g0XhRHQCixAU=",
+        "lastModified": 1787615997,
+        "narHash": "sha256-wE2qocYaBBXc/CxAgmwSj6I7LD9nH1/T0AtJAVRr2Nk=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "7d56b4c51b046a5d477439bcea4512339f8841aa",
+        "rev": "6e8b138d0f7d7d695530657a6d8dc475bd3fba2b",
         "type": "github"
       },
       "original": {
@@ -388,11 +388,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787540599,
-        "narHash": "sha256-MHwk52ty3NsLhq9a1IbIfBJZlCUJIdiUYFo52JLK9hY=",
+        "lastModified": 1787661347,
+        "narHash": "sha256-THmnBAdAIV+jT348f3r/vyoeb6ilhcVLwVXkBU7Pai8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "03f4cd46bc1dd4f3a96da778d2ce9f7ce39dd450",
+        "rev": "52c3a5881c821ad7367bbde075e52b76cdb378ab",
         "type": "github"
       },
       "original": {
@@ -440,11 +440,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1787389502,
-        "narHash": "sha256-C0ccVJ2HIwHXkcb5WzOlE5QXzeKR/3WxloHpFo0KMjI=",
+        "lastModified": 1787663854,
+        "narHash": "sha256-foxVAAqHzdzYlPdsv33aZm0JYwxxVKrsuZNZcQfzkCY=",
         "owner": "atusy",
         "repo": "kakehashi",
-        "rev": "c3b80cdc47f250372773d05c591fc1726a9fbbdd",
+        "rev": "3522f5f93f9993038095a6026757ff80647a0a6a",
         "type": "github"
       },
       "original": {
@@ -588,11 +588,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1787443393,
-        "narHash": "sha256-N7CGtppummtEqrnJ3QK9cKSJZAGXXboGS4aUZQUumOo=",
+        "lastModified": 1787651548,
+        "narHash": "sha256-CgiKhRPnJ3WIKkiYyAklMPVifeFLdSz6AMYpdQ/OhLk=",
         "owner": "ryoppippi",
         "repo": "nix-claude-code",
-        "rev": "352098bc288130233609505e1cf9eaed165e9d3b",
+        "rev": "e15a7d0695813ffbc705c63553180c59d6f12e7b",
         "type": "github"
       },
       "original": {
@@ -803,11 +803,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1787394516,
-        "narHash": "sha256-pRGOQSClnXNI2iLUG6DYpsGvYcuw0drOutVZFTJNw90=",
+        "lastModified": 1787424095,
+        "narHash": "sha256-dWLO5AHhKaw6rdWCtTes8hnntT1r0/J5yhQGm0f0ZgU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c8f90650c15282fa8656a041bfbbd2403997a9a7",
+        "rev": "174eb786fb68e3a13e4e535a3deea479a0c07a6a",
         "type": "github"
       },
       "original": {
@@ -819,11 +819,11 @@
     },
     "nixpkgs_8": {
       "locked": {
-        "lastModified": 1787172299,
-        "narHash": "sha256-PShzS87awOlE5XWkxUGBd/58/F+AtE2ZMgFffKj4r8s=",
+        "lastModified": 1787209939,
+        "narHash": "sha256-WvvHR4kSQLAbtouMC/ruZ5UpLwlUcY3K4FAllMN+yGk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "07e1d92cdc0ed416cfa11ff3ca40d17e61cfba7a",
+        "rev": "391b592eb44808b3bd0cb80bb71b63a5a118b8bb",
         "type": "github"
       },
       "original": {
@@ -878,11 +878,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1787445861,
-        "narHash": "sha256-7t0gqAoQHnFjEaLPqHRK//nTyrGftlTIYigmBQ232Vw=",
+        "lastModified": 1787622093,
+        "narHash": "sha256-mLvNurTV9yplUW8ejYxZcAmB1pEapVM/PRynlnMMw3U=",
         "owner": "airRnot1106",
         "repo": "nur-packages",
-        "rev": "4f19f73f3c6d94f6e31ee3e6b0e459a8b1af44fe",
+        "rev": "2d6abd07f9b63be5bc21a0219eb112b573d8779a",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1786957606,
-        "narHash": "sha256-rXsGePHKg29+pfFIbWGk6l6RZlrZzOGOuqZnMtAZV6A=",
+        "lastModified": 1787591537,
+        "narHash": "sha256-3h1UGEhpPdDHEH0u+i/6Dhnapddv9YDeQjRtxj933j4=",
         "owner": "skanehira",
         "repo": "version-lsp",
-        "rev": "c321e6b0afd04f02d0a12b388b9d7855a040c54b",
+        "rev": "0ff0c89f057df802bc2f7b1c9f3b025569a4ec25",
         "type": "github"
       },
       "original": {
