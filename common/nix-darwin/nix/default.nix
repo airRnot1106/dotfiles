@@ -19,7 +19,7 @@
         "root"
         "@wheel"
       ]
-      ++ lib.optional pkgs.stdenv.isDarwin "@admin";
+      ++ lib.optional pkgs.stdenv.hostPlatform.isDarwin "@admin";
     };
   };
 }
