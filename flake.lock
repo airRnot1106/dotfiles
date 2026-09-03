@@ -345,11 +345,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1788048205,
-        "narHash": "sha256-66Y3PEB7EeQimbBOld4qXUnYCt/N6Bh4F3eI1zinnpU=",
+        "lastModified": 1788180995,
+        "narHash": "sha256-5r4oU1b2x4A2rW6NfXkvfkzMMQoSjHdVKKPRIdUqaME=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "4a3b04f59ba3b7d8a15cea187b23e1e80c343b0c",
+        "rev": "0cbd1a5aa847ab767334938e3bc858c68e613d70",
         "type": "github"
       },
       "original": {
@@ -388,11 +388,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787797243,
-        "narHash": "sha256-8+Q7NOB7RPajRjA4pbCDLzqH+MTjnG9x6LUPLfL2joA=",
+        "lastModified": 1788146656,
+        "narHash": "sha256-XmJmvk9rytTb7dCotO/aqR+YysB8HOqnprlOdv+LAF4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "99c9ec63390f1d8c14d95d9e8b17cc29cfbd4e11",
+        "rev": "82c265faf4e3161d6015db07c9b0f1ee36a9029b",
         "type": "github"
       },
       "original": {
@@ -554,11 +554,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1788048158,
-        "narHash": "sha256-gCtG4mstTDHcBwU923LMstEx3MYRjPB/BSXm7VoYn5Q=",
+        "lastModified": 1788159151,
+        "narHash": "sha256-kGHPsQCTNb/c+LfjvqSPQwOIejBGM843MFry5daI7cM=",
         "owner": "nix-community",
         "repo": "neovim-nightly-overlay",
-        "rev": "8f695fad19a86e8891309227314443e6248c73c8",
+        "rev": "6ae36a8e30c31233b8f722f341436c1c5c4be7b4",
         "type": "github"
       },
       "original": {
@@ -570,11 +570,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1788044767,
-        "narHash": "sha256-JLNSHf7VOolXxopnh2doHusYyCV2Y2tcWIzq35pC1dQ=",
+        "lastModified": 1788133114,
+        "narHash": "sha256-dn0tY0j5sR6M3i6GkJIOxlIbiN8eHCFqv7emkR+cDHw=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "82ea5a8aac40331579113b961b6cef88865ad5a9",
+        "rev": "b542f3a8f8689a9a033411456fb1c6576916c66b",
         "type": "github"
       },
       "original": {
@@ -771,11 +771,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1787874478,
-        "narHash": "sha256-ubWQiwkhIql/lYwnfK55yKHfAkTBXie2L4iChGNHfI0=",
+        "lastModified": 1787964612,
+        "narHash": "sha256-0N9nghg3nwzX6b6qc77EzjR9cu/Z+UR66FlfsCqiURs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7d1a7c21a4c00ea653fc7ed5c083d261340f185f",
+        "rev": "e8be7818e19ada32105a8af937a6a473b38167ca",
         "type": "github"
       },
       "original": {
@@ -819,11 +819,11 @@
     },
     "nixpkgs_8": {
       "locked": {
-        "lastModified": 1787394516,
-        "narHash": "sha256-pRGOQSClnXNI2iLUG6DYpsGvYcuw0drOutVZFTJNw90=",
+        "lastModified": 1787814960,
+        "narHash": "sha256-PYZq1qzCJXC2zGI0mH07vrZBsw6DRBAOX0jN1pPtqOQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c8f90650c15282fa8656a041bfbbd2403997a9a7",
+        "rev": "c27cdad491a991b11ed731760aa2ef8db0cb0410",
         "type": "github"
       },
       "original": {
@@ -878,11 +878,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1788004367,
-        "narHash": "sha256-Hu+CjWFO3+Udep803eYAr92OwGnqABFkwQnWKx4vC9s=",
+        "lastModified": 1788137227,
+        "narHash": "sha256-Cot7wfkbvQzraoF4pkXVhyNeTGaYGUC5+mqSPe1iyG4=",
         "owner": "airRnot1106",
         "repo": "nur-packages",
-        "rev": "de92fe52eef7d615071f9dc35fc6fc21a64be058",
+        "rev": "55d06eb73e7b4df8736ac991225d6e1ef3750a71",
         "type": "github"
       },
       "original": {
@@ -1125,11 +1125,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1787591537,
-        "narHash": "sha256-3h1UGEhpPdDHEH0u+i/6Dhnapddv9YDeQjRtxj933j4=",
+        "lastModified": 1788167060,
+        "narHash": "sha256-NK8QPZiUTZB2MNaHd43axeYSwrHFPTxXfEjtlefDEyk=",
         "owner": "skanehira",
         "repo": "version-lsp",
-        "rev": "0ff0c89f057df802bc2f7b1c9f3b025569a4ec25",
+        "rev": "08fc916aefb460454ed2fe7bb367b54e29207dff",
         "type": "github"
       },
       "original": {
