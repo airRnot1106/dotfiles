@@ -33,7 +33,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    kakehashi.url = "github:atusy/kakehashi";
     mocword.url = "github:blyoa/nix-mocword";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nix-claude-code.url = "github:ryoppippi/nix-claude-code";
@@ -122,8 +121,8 @@
               packages =
                 with pkgs;
                 [
-                  inputs.kakehashi.packages.${system}.default
                   nixd
+                  nixfmt
                 ]
                 ++ enabledPackages;
             };
