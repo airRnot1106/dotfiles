@@ -327,11 +327,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1788701795,
-        "narHash": "sha256-HvfD235uwVUPaKjgNKUQ/LaF2ydIS1qPu8bLcH/fDjg=",
+        "lastModified": 1788786886,
+        "narHash": "sha256-RV3NIk1D0uer7QaFUoYsOWVFhDbv2obw7mDj/FjAc8E=",
         "owner": "ogulcancelik",
         "repo": "herdr",
-        "rev": "5a64e8da4551990367dd26d77cf3b654dfa27a73",
+        "rev": "e7d8220788b4fa7c266a1e4457591b694478771c",
         "type": "github"
       },
       "original": {
@@ -516,11 +516,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1788652948,
-        "narHash": "sha256-cN514OXPYR6qKmfvdyoX748z4HY6WaqDKQ/NytO4qjE=",
+        "lastModified": 1788739358,
+        "narHash": "sha256-LIth3ea7UZeGfyZ4YqbsMkYM0YgjHmlVZIWPzvN3lT8=",
         "owner": "nix-community",
         "repo": "neovim-nightly-overlay",
-        "rev": "0b73e7a8a794fc8a69002872572ad447e22e2590",
+        "rev": "fcbd308de28547e7c7483907ada8cd5723b5a8a0",
         "type": "github"
       },
       "original": {
@@ -532,11 +532,11 @@
     "neovim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1788629774,
-        "narHash": "sha256-tlG5NItgyRvtGnQuXRhEHyLdGEf1vbgaSxowUtEgoCc=",
+        "lastModified": 1788720648,
+        "narHash": "sha256-kjlohKRzbpAiuwjcTsPeSV+Z4y0jeI7jowuOeD/j9j0=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "050fa30632e3eb540b0fc9be9343580bdecea2f3",
+        "rev": "6cbde6a95f2da043ef8cb66b7e51daedd3bacffb",
         "type": "github"
       },
       "original": {
@@ -717,11 +717,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1788490200,
-        "narHash": "sha256-wX7GJ/pe7147AKZPfmVGIqFnEdlrnAJRhlhciaeKzWs=",
+        "lastModified": 1788549839,
+        "narHash": "sha256-kOrCcSIA6w9J1hX5DqHy2k9pDTJymExTsbV74U9UtCA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e5ead30d0824debba629dcf0720abeddee57b7d6",
+        "rev": "17de0b976395537756f30a3e78f2f06e5cec89ed",
         "type": "github"
       },
       "original": {
@@ -765,11 +765,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1787964612,
-        "narHash": "sha256-0N9nghg3nwzX6b6qc77EzjR9cu/Z+UR66FlfsCqiURs=",
+        "lastModified": 1788372231,
+        "narHash": "sha256-7aqErvrAEz/5OcPA5p3M+tVOqeYc4oJXkNIPXfCqxAw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e8be7818e19ada32105a8af937a6a473b38167ca",
+        "rev": "9387b3fcc0c23c86661636da63faabad4235a0a6",
         "type": "github"
       },
       "original": {
@@ -824,11 +824,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1788485696,
-        "narHash": "sha256-keRNTQEMxDgJF5Rn1/E3ONnhtdpJ+7c2z/2ZLlBJMAk=",
+        "lastModified": 1788742051,
+        "narHash": "sha256-bum+lIq3qVPQnszYvYQ/z2KyXJUAZoA+qnLsalDU5aY=",
         "owner": "airRnot1106",
         "repo": "nur-packages",
-        "rev": "518178f37560910be9f2fd376efacf0e698fd655",
+        "rev": "b31ab6177797e1df68ed51bb64d89ae39d8ae675",
         "type": "github"
       },
       "original": {
@@ -1034,11 +1034,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1788167060,
-        "narHash": "sha256-NK8QPZiUTZB2MNaHd43axeYSwrHFPTxXfEjtlefDEyk=",
+        "lastModified": 1788771921,
+        "narHash": "sha256-8hyyxtrZevy1xw9vauVjrHm9HfPLLE81qqfmyJuNv7s=",
         "owner": "skanehira",
         "repo": "version-lsp",
-        "rev": "08fc916aefb460454ed2fe7bb367b54e29207dff",
+        "rev": "49ecbedfad7ea62f086de4fe74932ca180e41d91",
         "type": "github"
       },
       "original": {
