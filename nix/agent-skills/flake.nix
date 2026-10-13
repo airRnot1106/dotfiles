@@ -8,10 +8,6 @@
       url = "github:anthropics/skills";
       flake = false;
     };
-    cognitive-rhythm-writing = {
-      url = "git+https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432.git";
-      flake = false;
-    };
     find-skills = {
       url = "github:vercel-labs/skills";
       flake = false;
@@ -22,10 +18,6 @@
     };
     inspired-mino-design-skills = {
       url = "github:my-take-dev/inspired-mino-design-skills";
-      flake = false;
-    };
-    japanese-tech-writing = {
-      url = "git+https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d.git";
       flake = false;
     };
     mattpocock = {
@@ -42,6 +34,10 @@
     };
     opensrc = {
       url = "github:vercel-labs/opensrc";
+      flake = false;
+    };
+    yomiyasu = {
+      url = "github:nanaism/yomiyasu";
       flake = false;
     };
   };
@@ -66,8 +62,9 @@
             subpath = "code-prose-writing";
           }
           {
-            name = "cognitive-rhythm-writing";
-            src = inputs.cognitive-rhythm-writing;
+            name = "domain-modeling";
+            src = inputs.mattpocock;
+            subpath = "skills/engineering/domain-modeling";
           }
           {
             name = "empirical-prompt-tuning";
@@ -108,10 +105,6 @@
             name = "handoff";
             src = inputs.mattpocock;
             subpath = "skills/productivity/handoff";
-          }
-          {
-            name = "japanese-tech-writing";
-            src = inputs.japanese-tech-writing;
           }
           {
             name = "mino-architecture-quality-strategy";
@@ -157,6 +150,11 @@
             name = "skill-creator";
             src = inputs.anthropic-skills;
             subpath = "skills/skill-creator";
+          }
+          {
+            name = "yomiyasu";
+            src = inputs.yomiyasu;
+            subpath = "skills/yomiyasu";
           }
         ];
       in
