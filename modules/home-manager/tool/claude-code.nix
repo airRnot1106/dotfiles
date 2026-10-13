@@ -1,6 +1,13 @@
 { inputs, pkgs, ... }:
 {
-  home.packages = [ inputs.nix-claude-code.packages.${pkgs.stdenv.hostPlatform.system}.default ];
+  home.packages = [
+    (inputs.nix-claude-code.packages.${pkgs.stdenv.hostPlatform.system}.claude-minimal.override {
+      additionalPaths = [
+        "${pkgs.gh}/bin"
+        "${pkgs.poppler-utils}/bin"
+      ];
+    })
+  ];
   home.file.".claude/statusline-command.sh".source = pkgs.writers.writeBash "statusline-command.sh" ''
     # Claude Code status line: shows cwd, model, and Claude.ai session/weekly rate limit usage.
 
