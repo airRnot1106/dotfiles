@@ -23,6 +23,7 @@
     podman
     ripgrep
     skk-dictionary
+    textlint
     tree-sitter
     uv
     zoxide
