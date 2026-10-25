@@ -25,12 +25,7 @@ in
       files = "^\.github/workflows/.*\.(yml|yaml)$";
       pass_filenames = false;
     };
-    gitleaks = rec {
-      enable = true;
-      package = pkgs.gitleaks;
-      entry = "${getExe package} git --pre-commit --redact --staged --verbose";
-      pass_filenames = false;
-    };
+    gitleaks.enable = true;
     pinact = rec {
       enable = true;
       package = pkgs.pinact;
