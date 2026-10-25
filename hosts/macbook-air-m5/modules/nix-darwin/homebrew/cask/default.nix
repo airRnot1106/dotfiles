@@ -7,6 +7,7 @@
     arc
     ghostty
     google-chrome
+    kanaemi
     keepingyouawake
     keyboardcleantool
     maccy
