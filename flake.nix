@@ -84,7 +84,7 @@
                   host=$(printf '%s\n' ${pkgs.lib.escapeShellArgs hosts} | ${pkgs.lib.getExe pkgs.fzf} --prompt='host> ')
                   [ -z "$host" ] && exit 1
                   echo "host: $host"
-                  ${pkgs.lib.getExe pkgs.nix-output-monitor} build ".#darwinConfigurations.$host.system"
+                  ${pkgs.lib.getExe pkgs.nh} darwin build ".#$host" -- --show-trace
                 '';
                 exePath = "";
               }
@@ -97,9 +97,7 @@
                   host=$(printf '%s\n' ${pkgs.lib.escapeShellArgs hosts} | ${pkgs.lib.getExe pkgs.fzf} --prompt='host> ')
                   [ -z "$host" ] && exit 1
                   echo "host: $host"
-                  sudo ${
-                    pkgs.lib.getExe' inputs.nix-darwin.packages.${system}.darwin-rebuild "darwin-rebuild"
-                  } switch --flake ".#$host" --show-trace
+                  ${pkgs.lib.getExe pkgs.nh} darwin switch ".#$host" -- --show-trace
                 '';
                 exePath = "";
               }
