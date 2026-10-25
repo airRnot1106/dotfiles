@@ -10,7 +10,7 @@
       mru-spaces = lib.mkDefault false;
       orientation = lib.mkDefault "bottom";
       persistent-apps = lib.mkDefault [
-        "/Applications/Arc.app"
+        "/Applications/Ardia.app"
         "/Applications/Ghostty.app"
         "/Applications/1Password.app"
         "/System/Applications/System\ Settings.app/"
