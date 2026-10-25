@@ -12,7 +12,6 @@
     ghq
     herdr
     lazygit
-    macskk
     mocword
     mosh
     nix-search-tv
@@ -22,7 +21,6 @@
     pnpm
     podman
     ripgrep
-    skk-dictionary
     textlint
     tree-sitter
     uv

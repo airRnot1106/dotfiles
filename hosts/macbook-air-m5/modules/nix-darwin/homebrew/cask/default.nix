@@ -11,7 +11,6 @@
     keepingyouawake
     keyboardcleantool
     maccy
-    macskk
     nani
     raycast
     steam
