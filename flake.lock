@@ -29,7 +29,6 @@
         "inspired-mino-design-skills": "inspired-mino-design-skills",
         "mattpocock": "mattpocock",
         "mizchi": "mizchi",
-        "my-skills": "my-skills",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -49,11 +48,11 @@
     "airrnot": {
       "flake": false,
       "locked": {
-        "lastModified": 1794745105,
-        "narHash": "sha256-JLomen0hVF0nVfUdajA4FOiYzPuK4+nZro3wTI3BTYw=",
+        "lastModified": 1794747071,
+        "narHash": "sha256-U8ZtF+oawR3PtApzo61Q+lS71CI0LJ2/haWvoDHx05A=",
         "owner": "airRnot1106",
         "repo": "skills",
-        "rev": "6347a87e07b014e9f61e9eac32f2f50260a6212d",
+        "rev": "a49783900b43ad52c86688fc2b73616c72f71dc3",
         "type": "github"
       },
       "original": {
@@ -474,20 +473,6 @@
         "repo": "nix-mocword",
         "type": "github"
       }
-    },
-    "my-skills": {
-      "flake": false,
-      "locked": {
-        "path": "../../skills",
-        "type": "path"
-      },
-      "original": {
-        "path": "../../skills",
-        "type": "path"
-      },
-      "parent": [
-        "agent-skills"
-      ]
     },
     "namaka": {
       "inputs": {

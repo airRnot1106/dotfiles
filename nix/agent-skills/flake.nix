@@ -32,10 +32,6 @@
       url = "github:mizchi/skills";
       flake = false;
     };
-    my-skills = {
-      url = "path:../../skills";
-      flake = false;
-    };
     opensrc = {
       url = "github:vercel-labs/opensrc";
       flake = false;
@@ -67,11 +63,10 @@
               {
                 src = inputs.airrnot;
                 dir = "skills";
-                skills = [ "japanese-tech-writing" ];
-              }
-              {
-                src = inputs.my-skills;
-                skills = [ "code-prose-writing" ];
+                skills = [
+                  "code-prose-writing"
+                  "japanese-tech-writing"
+                ];
               }
               {
                 src = inputs.mattpocock;
