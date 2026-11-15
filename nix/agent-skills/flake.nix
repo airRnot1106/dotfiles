@@ -4,6 +4,10 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs";
 
+    airrnot = {
+      url = "github:airRnot1106/skills";
+      flake = false;
+    };
     anthropic-skills = {
       url = "github:anthropics/skills";
       flake = false;
@@ -60,6 +64,11 @@
             scope = "global";
             paths = [ agenput-skills.lib.presets.claude.global ];
             sources = [
+              {
+                src = inputs.airrnot;
+                dir = "skills";
+                skills = [ "japanese-tech-writing" ];
+              }
               {
                 src = inputs.my-skills;
                 skills = [ "code-prose-writing" ];

@@ -21,6 +21,7 @@
     "agent-skills": {
       "inputs": {
         "agenput-skills": "agenput-skills",
+        "airrnot": "airrnot",
         "anthropic-skills": "anthropic-skills",
         "find-skills": "find-skills",
         "flake-utils": "flake-utils",
@@ -44,6 +45,22 @@
         "type": "path"
       },
       "parent": []
+    },
+    "airrnot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794745105,
+        "narHash": "sha256-JLomen0hVF0nVfUdajA4FOiYzPuK4+nZro3wTI3BTYw=",
+        "owner": "airRnot1106",
+        "repo": "skills",
+        "rev": "6347a87e07b014e9f61e9eac32f2f50260a6212d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "airRnot1106",
+        "repo": "skills",
+        "type": "github"
+      }
     },
     "anthropic-skills": {
       "flake": false,
