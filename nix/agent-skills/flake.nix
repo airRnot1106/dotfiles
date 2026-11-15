@@ -44,7 +44,6 @@
 
   outputs =
     {
-      self,
       agenput-skills,
       flake-utils,
       nixpkgs,
@@ -55,126 +54,80 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        skills = [
-          {
-            name = "code-prose-writing";
-            src = inputs.my-skills;
-            subpath = "code-prose-writing";
-          }
-          {
-            name = "domain-modeling";
-            src = inputs.mattpocock;
-            subpath = "skills/engineering/domain-modeling";
-          }
-          {
-            name = "empirical-prompt-tuning";
-            src = inputs.mizchi;
-            subpath = "meta/empirical-prompt-tuning";
-          }
-          {
-            name = "find-skills";
-            src = inputs.find-skills;
-            subpath = "skills/find-skills";
-          }
-          {
-            name = "gh-fix-ci";
-            src = inputs.mizchi;
-            subpath = "devops/gh-fix-ci";
-          }
-          {
-            name = "gh-stack";
-            src = inputs.gh-stack;
-            subpath = "skills/gh-stack";
-          }
-          {
-            name = "grill-me";
-            src = inputs.mattpocock;
-            subpath = "skills/productivity/grill-me";
-          }
-          {
-            name = "grill-with-docs";
-            src = inputs.mattpocock;
-            subpath = "skills/engineering/grill-with-docs";
-          }
-          {
-            name = "grilling";
-            src = inputs.mattpocock;
-            subpath = "skills/productivity/grilling";
-          }
-          {
-            name = "handoff";
-            src = inputs.mattpocock;
-            subpath = "skills/productivity/handoff";
-          }
-          {
-            name = "mino-architecture-quality-strategy";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-architecture-quality-strategy";
-          }
-          {
-            name = "mino-core";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-core";
-          }
-          {
-            name = "mino-design-by-contract";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-design-by-contract";
-          }
-          {
-            name = "mino-domain-model-completeness";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-domain-model-completeness";
-          }
-          {
-            name = "mino-interface-implementation-separation";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-interface-implementation-separation";
-          }
-          {
-            name = "mino-problem-framing";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-problem-framing";
-          }
-          {
-            name = "mino-reproducible-development";
-            src = inputs.inspired-mino-design-skills;
-            subpath = ".agents/skills/mino-reproducible-development";
-          }
-          {
-            name = "opensrc";
-            src = inputs.opensrc;
-            subpath = "skills/opensrc";
-          }
-          {
-            name = "skill-creator";
-            src = inputs.anthropic-skills;
-            subpath = "skills/skill-creator";
-          }
-          {
-            name = "yomiyasu";
-            src = inputs.yomiyasu;
-            subpath = "skills/yomiyasu";
-          }
-        ];
-      in
-      {
-        nput = {
-          skills-claude = agenput-skills.lib.mkSkillsManifest {
-            inherit pkgs skills;
-            root = agenput-skills.lib.homeRoot;
-            prefix = agenput-skills.lib.presets.claude.global;
+        skills = agenput-skills.lib.mkSkills {
+          inherit pkgs;
+          sets.skills-claude = {
+            scope = "global";
+            paths = [ agenput-skills.lib.presets.claude.global ];
+            sources = [
+              {
+                src = inputs.my-skills;
+                skills = [ "code-prose-writing" ];
+              }
+              {
+                src = inputs.mattpocock;
+                dir = "skills";
+                skills = [
+                  "domain-modeling"
+                  "grill-me"
+                  "grill-with-docs"
+                  "grilling"
+                  "handoff"
+                ];
+              }
+              {
+                src = inputs.mizchi;
+                skills = [
+                  "empirical-prompt-tuning"
+                  "gh-fix-ci"
+                ];
+              }
+              {
+                src = inputs.find-skills;
+                dir = "skills";
+                skills = [ "find-skills" ];
+              }
+              {
+                src = inputs.gh-stack;
+                dir = "skills";
+                skills = [ "gh-stack" ];
+              }
+              {
+                src = inputs.inspired-mino-design-skills;
+                dir = ".agents/skills";
+                skills = [
+                  "mino-architecture-quality-strategy"
+                  "mino-core"
+                  "mino-design-by-contract"
+                  "mino-domain-model-completeness"
+                  "mino-interface-implementation-separation"
+                  "mino-problem-framing"
+                  "mino-reproducible-development"
+                ];
+              }
+              {
+                src = inputs.opensrc;
+                dir = "skills";
+                skills = [ "opensrc" ];
+              }
+              {
+                src = inputs.anthropic-skills;
+                dir = "skills";
+                skills = [ "skill-creator" ];
+              }
+              {
+                src = inputs.yomiyasu;
+                dir = "skills";
+                skills = [ "yomiyasu" ];
+              }
+            ];
           };
         };
+      in
+      {
+        inherit (skills) layat;
 
-        devShells.default = pkgs.mkShellNoCC {
-          inputsFrom = [
-            (agenput-skills.lib.mkSkillsDevShell {
-              inherit pkgs;
-              names = builtins.attrNames self.nput.${system};
-            })
-          ];
-        };
+        devShells.default = skills.devShell;
       }
     );
 }

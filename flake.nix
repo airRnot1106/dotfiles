@@ -140,8 +140,8 @@
           );
         };
 
-        nput = {
-          inherit (inputs.agent-skills.nput.${system}) skills-claude;
+        layat = {
+          inherit (inputs.agent-skills.layat.${system}) skills-claude;
         };
       }
     )
