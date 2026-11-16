@@ -17,9 +17,39 @@
   inputs = {
     agent-skills = {
       url = "path:./nix/agent-skills";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        agenput-skills.follows = "agenput-skills";
+        airrnot.follows = "airrnot";
+        anthropic-skills.follows = "anthropic-skills";
+        find-skills.follows = "find-skills";
+        flake-utils.follows = "flake-utils";
+        gh-stack.follows = "gh-stack";
+        inspired-mino-design-skills.follows = "inspired-mino-design-skills";
+        mattpocock.follows = "mattpocock";
+        mizchi.follows = "mizchi";
+        nixpkgs.follows = "nixpkgs";
+        opensrc.follows = "opensrc";
+        yomiyasu.follows = "yomiyasu";
+      };
+    };
+    agenput-skills.url = "github:airRnot1106/agenput-skills-nix";
+    airrnot = {
+      url = "github:airRnot1106/skills";
+      flake = false;
+    };
+    anthropic-skills = {
+      url = "github:anthropics/skills";
+      flake = false;
+    };
+    find-skills = {
+      url = "github:vercel-labs/skills";
+      flake = false;
     };
     flake-utils.url = "github:numtide/flake-utils";
+    gh-stack = {
+      url = "github:github/gh-stack";
+      flake = false;
+    };
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +62,18 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    inspired-mino-design-skills = {
+      url = "github:my-take-dev/inspired-mino-design-skills";
+      flake = false;
+    };
+    mattpocock = {
+      url = "github:mattpocock/skills";
+      flake = false;
+    };
+    mizchi = {
+      url = "github:mizchi/skills";
+      flake = false;
     };
     mocword.url = "github:blyoa/nix-mocword";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
@@ -46,11 +88,19 @@
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nur-packages.url = "github:airRnot1106/nur-packages";
+    opensrc = {
+      url = "github:vercel-labs/opensrc";
+      flake = false;
+    };
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     version-lsp.url = "github:skanehira/version-lsp";
+    yomiyasu = {
+      url = "github:nanaism/yomiyasu";
+      flake = false;
+    };
   };
 
   outputs =
