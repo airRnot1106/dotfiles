@@ -70,11 +70,11 @@
     "airrnot": {
       "flake": false,
       "locked": {
-        "lastModified": 1794833798,
-        "narHash": "sha256-fU+ekmpDqrLSeoH1/6cAMtAWj18LzGC/pnBih75FYn8=",
+        "lastModified": 1795185560,
+        "narHash": "sha256-PSP0k8nM8sV8pxP3F9HIB/SQakNAWTujwZ+8hZuh8E0=",
         "owner": "airRnot1106",
         "repo": "skills",
-        "rev": "3de26c491af2c53ceb1602fca18a885ebe129af2",
+        "rev": "6fe1aa1c7eb944cfa4c57728202b1feb9e5d2b70",
         "type": "github"
       },
       "original": {
