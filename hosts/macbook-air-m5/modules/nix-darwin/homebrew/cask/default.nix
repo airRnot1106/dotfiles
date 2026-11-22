@@ -11,6 +11,7 @@
     keyboardcleantool
     maccy
     nani
+    phi
     raycast
     steam
     symboliclinker
