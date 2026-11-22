@@ -58,7 +58,10 @@
           inherit pkgs;
           sets.skills-claude = {
             scope = "global";
-            paths = [ agenput-skills.lib.presets.claude.global ];
+            paths = with agenput-skills.lib.presets; [
+              agents.global
+              claude.global
+            ];
             sources = [
               {
                 src = inputs.airrnot;
