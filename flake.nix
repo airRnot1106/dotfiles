@@ -59,7 +59,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     herdr.url = "github:ogulcancelik/herdr";
-    hermes-agent.url = "github:airRnot1106/hermes-agent?ref=local/v0.23.3";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

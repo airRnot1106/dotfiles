@@ -11,7 +11,6 @@
     gh
     ghq
     herdr
-    hermes-agent
     lazygit
     mocword
     mosh
