@@ -11,7 +11,6 @@
     keyboardcleantool
     maccy
     nani
-    orca
     phi
     raycast
     steam
