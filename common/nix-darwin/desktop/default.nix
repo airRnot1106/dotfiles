@@ -11,7 +11,9 @@
       orientation = lib.mkDefault "bottom";
       persistent-apps = lib.mkDefault [
         "/Applications/Phi.app"
-        "/Applications/Ghostty.app"
+        "/Applications/Orca.app"
+        "/Applications/Rex.app"
+        "/Applications/Muse.app"
         "/Applications/1Password.app"
         "/System/Applications/System\ Settings.app/"
       ];
